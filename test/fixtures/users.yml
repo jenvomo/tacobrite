@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  password_digest: MyString
+  img_url: MyString
+  session_token: MyString
+  home_loc_ln_one: MyString
+  home_loc_ln_two: MyString
+  home_loc_city: MyString
+  home_loc_state: MyString
+  home_loc_zip: MyString
+  home_loc_lat: 1.5
+  home_loc_long: 1.5
+
+two:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  password_digest: MyString
+  img_url: MyString
+  session_token: MyString
+  home_loc_ln_one: MyString
+  home_loc_ln_two: MyString
+  home_loc_city: MyString
+  home_loc_state: MyString
+  home_loc_zip: MyString
+  home_loc_lat: 1.5
+  home_loc_long: 1.5
