@@ -1,12 +1,12 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
-      t.string :email
-      t.string :first_name
-      t.string :last_name
-      t.string :password_digest
+      t.string :email, null: false, unique: true
+      t.string :first_name, null: false
+      t.string :last_name, null: false
+      t.string :password_digest, null: false
       t.string :img_url
-      t.string :session_token
+      t.string :session_token, null: false, unique: true
       t.string :home_loc_ln_one
       t.string :home_loc_ln_two
       t.string :home_loc_city
@@ -17,5 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :users, :email
   end
 end
