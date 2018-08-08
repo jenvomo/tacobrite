@@ -1,3 +1,81 @@
 // Place all the styles related to the Api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  // font-family: Benton Sans
+
+  .welcome-main {
+    font-size: 1.728rem;
+    font-weight: 200;
+    letter-spacing: -.1px;
+    line-height: 1.3;
+    color: #45494e;
+  }
+
+  .welcome-sub {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666a73;
+  }
+
+  .user-form-field {
+    line-height: 1.5;
+    width: 167px;
+    height: 89px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .names {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .first-name {
+    line-height: 1.5;
+    width: 149px;
+    height: 89px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    padding-right: 8;
+  }
+
+  .last-name {
+    line-height: 1.5;
+    width: 149px;
+    height: 89px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 8;
+    
+    input {
+      padding: 8px 12px 9px 12px;
+      height: 24px;
+      border: 1px solid lightgray;
+      box-sizing: border-box;
+      border-radius: 2px;
+      width: 149px;
+    }
+  }
+
+
+
+  // .name {
+  //   padding-left: 16px;
+  //   border: solid lightgray 1px;
+  //   border-radius: 2px;
+  //   width: 165px;
+  //   height: 41px;
+  //
+  // }
+}

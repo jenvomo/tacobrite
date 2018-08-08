@@ -20,3 +20,11 @@ export const logout = () => (
     url: '/api/session'
   })
 );
+
+export const loginStepOne = user => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${user.id}`,
+    data: { user }
+  })
+)

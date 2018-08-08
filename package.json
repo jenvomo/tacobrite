@@ -16,10 +16,7 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.16.5"
   },
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.5"
-  },
   "scripts": {
-    "start": "webpack --watch --mode=developement"
+    "start": "webpack --watch --mode=development"
   }
 }
