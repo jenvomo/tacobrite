@@ -16,7 +16,12 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.16.5"
   },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
   "scripts": {
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   }
 }
