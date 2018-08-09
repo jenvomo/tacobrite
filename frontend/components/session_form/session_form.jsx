@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
 
             <div className='sign-up-reqs'>
               <p className='pass-reqs'>Your password must be at least 8 characters</p>
-              <p className='agreement'>By signin up, I agree to give Eventliter a 5 star rating on google.</p>
+              <p className='agreement'>By signin up, I agree to give Eventliter  a 5 star rating on google.</p>
             </div>
 
             <button>Sign Up</button>
