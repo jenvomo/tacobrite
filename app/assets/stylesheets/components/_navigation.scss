@@ -1,0 +1,24 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 59px;
+  border-bottom: 1px solid #eff2f5;
+
+
+  .main-nav-options {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #666a73;
+    font-size: 14.5px;
+    letter-spacing: -.1px;
+
+    .nav-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

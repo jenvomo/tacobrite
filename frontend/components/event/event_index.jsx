@@ -4,7 +4,10 @@ class EventIndex extends React.Component {
 
   render () {
     return (
-      <p>Events</p>
+      <div>
+        <p>Events</p>
+        <button onClick={this.props.logout}>Log Out</button>
+      </div>
     );
   }
 }

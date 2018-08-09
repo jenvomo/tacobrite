@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -27,17 +28,16 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  demoLogin (e) {
+    e.preventDefault();
+    const demoUser = {email: 'demo@demo.com', password: 'password'}
+    this.props.processForm(demoUser);
+  }
+
   render () {
     if (this.props.formType === 'login') {
       return (
         <div>
-          <section className='nav-bar'>
-            <p className='title'>Eventliter</p>
-            <ul>
-              <li>BROWSE EVENTS</li>
-              <li>ORGANIZE</li>
-            </ul>
-          </section>
 
           <div className='icon'></div>
 
@@ -64,6 +64,7 @@ class SessionForm extends React.Component {
             <p>{this.props.errors}</p>
 
             <button>Log In</button>
+            <button onClick={this.demoLogin}>Demo Log In</button>
           </form>
         </div>
       );
@@ -92,13 +93,13 @@ class SessionForm extends React.Component {
               <label className='first-name'>First Name
                 <input
                   type='text'
-                  onChange={this.update('first_name')} />
+                  onChange={this.update('firstName')} />
               </label>
 
               <label className='last-name'>Last Name
                 <input
                   type='text'
-                  onChange={this.update('last_name')} />
+                  onChange={this.update('lastName')} />
               </label>
             </div>
 
