@@ -8,7 +8,7 @@ import { receiveErrors } from '../../actions/session_actions';
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
   formType: 'login',
-  navLink: <Link to='/signup'>Sign Up</Link>
+  navLink: <Link className='login-switch' to='/signup'>Sign Up</Link>
 });
 
 const mapDispatchToProps = dispatch => ({
