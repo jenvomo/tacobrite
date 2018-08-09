@@ -31,18 +31,25 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <p>Welcome back</p>
-            <p>Please enter your email and password to log in.</p>
-            {this.props.navLink}
 
-            <label>Email address
-              <input
-                type='text'
-                onChange={this.update('email')} />
-            </label>
+          <div className='icon'></div>
 
-            <label>Password
+          <form className='login-form' onSubmit={this.handleSubmit}>
+            <p className='welcome-main'>Welcome back</p>
+            <div className='welcome-sub'>
+              <p>Please enter your email and password to log in.</p>
+              {this.props.navLink}
+            </div>
+
+            <div className='email-field'>
+              <label className='user-form-field'>Email address
+                <input
+                  type='text'
+                  onChange={this.update('email')} />
+              </label>
+            </div>
+
+            <label className='user-form-field'>Password
               <input type='password'
                 onChange={this.update('password')} />
             </label>
@@ -56,12 +63,16 @@ class SessionForm extends React.Component {
     } else {
       return (
         <div className='main-form'>
+
+          <div className='icon'></div>
+
           <form className='login-form' onSubmit={this.handleSubmit}>
-            <p className='welcome-main'>Welcome back</p>
+            <p className='welcome-main'>Welcome</p>
             <div className='welcome-sub'>
               <p>Create an account.</p>
               {this.props.navLink}
             </div>
+
             <div className='email-field'>
               <label className='user-form-field'>Email address
                 <input
