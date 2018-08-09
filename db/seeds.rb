@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+demo_user = User.create({email: 'demo@demo.com', password: 'password', first_name: 'demo', last_name: 'demo'})
+users = User.create({email: 'haseeb@aa.io', password: 'usersarestupid', first_name: 'haseeb', last_name: 'local celebrity'})
+
+Event.destroy_all
+events = Event.create([{ title: 'aA Happy Hour', description: 'Come network and have a brewski', date: Date.today, time: Time.now, organizer_id: 2},
+  { title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2},
+  { title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2}])

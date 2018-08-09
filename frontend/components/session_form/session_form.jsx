@@ -60,12 +60,11 @@ class SessionForm extends React.Component {
               </label>
             </div>
 
-            <label className='user-form-field'>Password
+            <label id='password' className='user-form-field'>Password
               <input type='password'
                 onChange={this.update('password')} />
               <p className='login-errors'>{this.props.errors}</p>
             </label>
-
 
             <button>Log In</button>
             <button onClick={this.demoLogin}>Demo Log In</button>
@@ -107,7 +106,7 @@ class SessionForm extends React.Component {
               </label>
             </div>
 
-            <label className='user-form-field'>Password
+            <label id='password' className='user-form-field'>Password
               <input
                 type='password'
                 onChange={this.update('password')} />
