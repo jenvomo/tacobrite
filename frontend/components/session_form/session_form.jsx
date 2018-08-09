@@ -58,14 +58,17 @@ class SessionForm extends React.Component {
         <div className='main-form'>
           <form className='login-form' onSubmit={this.handleSubmit}>
             <p className='welcome-main'>Welcome back</p>
-            <p className='welcome-sub'>Create an account.</p>
-            {this.props.navLink}
-
-            <label className='user-form-field'>Email address
-              <input
-                type='text'
-                onChange={this.update('email')} />
-            </label>
+            <div className='welcome-sub'>
+              <p>Create an account.</p>
+              {this.props.navLink}
+            </div>
+            <div className='email-field'>
+              <label className='user-form-field'>Email address
+                <input
+                  type='text'
+                  onChange={this.update('email')} />
+              </label>
+            </div>
 
             <div className='names'>
               <label className='first-name'>First Name
@@ -89,8 +92,12 @@ class SessionForm extends React.Component {
 
             <p>{this.props.errors}</p>
 
-            <p>Your password must be at least 8 characters</p>
-            <p>By signin up, I agree to give Eventlite a 5 star rating on google.</p>
+            <div className='line'></div>
+
+            <div className='sign-up-reqs'>
+              <p className='pass-reqs'>Your password must be at least 8 characters</p>
+              <p className='agreement'>By signin up, I agree to give Eventliter a 5 star rating on google.</p>
+            </div>
 
             <button>Sign Up</button>
 

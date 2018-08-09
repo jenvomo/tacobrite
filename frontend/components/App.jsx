@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <h1>Eventlite</h1>
+    <h1>Eventliter</h1>
     <Route path='/login' component={LoginContainer} />
     <Route path='/signup' component={SignupContainer} />
   </div>
