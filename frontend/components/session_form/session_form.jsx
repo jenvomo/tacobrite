@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
@@ -31,6 +31,13 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <div>
+          <section className='nav-bar'>
+            <p className='title'>Eventliter</p>
+            <ul>
+              <li>BROWSE EVENTS</li>
+              <li>ORGANIZE</li>
+            </ul>
+          </section>
 
           <div className='icon'></div>
 
