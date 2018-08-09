@@ -129,4 +129,12 @@ body {
     background-image: radial-gradient(farthest-corner at 80% 100%,#f86044 0,#fd348b 100%);
     cursor: pointer;
   }
+
+  .login-errors {
+    text-align: left;
+    color: red;
+    font-size: 12px;
+    height: 17px;
+    padding-top: 4px;
+  }
 }

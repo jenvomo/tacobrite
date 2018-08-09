@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
+  componentWillUnmount () {
+    this.props.receiveErrors([]);
+  }
+
   update(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
@@ -59,9 +63,9 @@ class SessionForm extends React.Component {
             <label className='user-form-field'>Password
               <input type='password'
                 onChange={this.update('password')} />
+              <p className='login-errors'>{this.props.errors}</p>
             </label>
 
-            <p>{this.props.errors}</p>
 
             <button>Log In</button>
             <button onClick={this.demoLogin}>Demo Log In</button>
@@ -107,9 +111,9 @@ class SessionForm extends React.Component {
               <input
                 type='password'
                 onChange={this.update('password')} />
+              <p className='login-errors'>{this.props.errors}</p>
             </label>
 
-            <p>{this.props.errors}</p>
 
             <div className='line'></div>
 

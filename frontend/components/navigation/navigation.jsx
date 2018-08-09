@@ -6,7 +6,7 @@ const Navigation = ({ currentUser, logout }) => {
     <section className="main-nav">
       <img src={window.images.logo}></img>
       <ul className='main-nav-options'>
-        <li>Browse Events</li>
+        <Link className='nav-link' to='/events'>Browse Events</Link>
         <li>Help</li>
         <Link  className='nav-link'to='/login'>Sign In</Link>
       </ul>
@@ -17,7 +17,7 @@ const Navigation = ({ currentUser, logout }) => {
     <section className="main-nav">
       <img src={window.images.logo}></img>
       <ul className='main-nav-options'>
-        <li>Browse Events</li>
+        <Link className='nav-link' to='/events'>Browse Events</Link>
         <Link className='nav-link' to='/event/new'>Create Event</Link>
         <li>Help</li>
         <li>{currentUser.first_name}</li>

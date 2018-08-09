@@ -3,6 +3,7 @@ import SessionForm from './session_form';
 import { signup } from '../../actions/session_actions'
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { receiveErrors } from '../../actions/session_actions';
 
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
@@ -11,7 +12,8 @@ const mapStateToProps = ({ errors }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  processForm: user => dispatch(signup(user))
+  processForm: user => dispatch(signup(user)),
+  receiveErrors: errors => dispatch(receiveErrors(errors))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
