@@ -8,7 +8,7 @@ body {
   width: 72px;
   border-radius: 50%;
   background-color: #f8f8fa;
-  margin: 30px auto;
+  margin: 50px auto 30px auto;
 }
 
 .login-form {
@@ -19,8 +19,8 @@ body {
   width: 320px;
 
   .welcome-main {
-    height: 31px;
-    font-size: 26px;
+    height: auto;
+    font-size: 36px;
     font-weight: 200;
     letter-spacing: -.1px;
     line-height: 1.3;
