@@ -1,0 +1,55 @@
+@media (min-width: 400px) {
+  .index-event {
+    padding: 16px 12px;
+  }
+}
+
+@media (min-width: 480px) {
+  .index-event {
+    width: 50vw;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 960px) {
+  .index-event {
+    width: 33vw;
+    padding: 16px 12px;
+  }
+}
+
+
+.index-events-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .index-event {
+    box-sizing: border-box;
+
+    img {
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .event-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 24px;
+
+      .event-fancy-date {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+      }
+
+      .event-verbage {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

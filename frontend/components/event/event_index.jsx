@@ -12,7 +12,7 @@ class EventIndex extends React.Component {
       <div>
         <div>Browsing in San Francisco, CA</div>
         { events ?
-          (<ul>
+          (<ul className='index-events-list'>
             {events.map(event => (
               <EventIndexItem key={event.id} event={event} />
             ))}

@@ -1,7 +1,7 @@
 
 @events.each do |event|
   json.set! event.id do
-    json.extract! event, :title, :description
+    json.extract! event, :id, :title, :description
     json.date do
       json.month event.date.month
       json.day event.date.day

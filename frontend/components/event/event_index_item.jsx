@@ -8,11 +8,20 @@ class EventIndexItem extends React.Component {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     return (
-      <li>
-        <p>{months[date.month - 1].toUpperCase()}</p>
-        <p>{date.day}</p>
-        <p>{title}</p>
-        <p>{days[date.day % 7]}, {months[date.month - 1]} {date.day}, {time.hour}:{time.min}</p>
+      <li className='index-event'>
+        <img className='index-event-img' src={window.images.concert}></img>
+        <div className='event-info'>
+          <div className='event-fancy-date'>
+            <p className='month'>{months[date.month - 1].toUpperCase()}</p>
+            <p className='day'>{date.day}</p>
+          </div>
+
+          <div className='event-verbage'>
+            <p className='title'>{title}</p>
+            <p className='date'>{days[date.day % 7]}, {months[date.month - 1]} {date.day}, {time.hour}:{time.min}</p>
+            <p className='location'>Location</p>
+          </div>
+        </div>
       </li>
     )
   }
