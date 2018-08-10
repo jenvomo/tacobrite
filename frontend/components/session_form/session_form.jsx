@@ -96,13 +96,13 @@ class SessionForm extends React.Component {
               <label className='first-name'>First Name
                 <input
                   type='text'
-                  onChange={this.update('firstName')} />
+                  onChange={this.update('first_name')} />
               </label>
 
               <label className='last-name'>Last Name
                 <input
                   type='text'
-                  onChange={this.update('lastName')} />
+                  onChange={this.update('last_name')} />
               </label>
             </div>
 
