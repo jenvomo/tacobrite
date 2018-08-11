@@ -1,6 +1,12 @@
 @media (min-width: 400px) {
   .index-event {
     padding: 16px 12px;
+
+    img {
+      border-radius: 4px;
+      overflow: hidden;
+      height: 48vw;
+    }
   }
 }
 
@@ -9,12 +15,30 @@
     width: 50vw;
     padding: 24px;
   }
+  .index-event img {
+    height: 22vw;
+  }
+
 }
 
 @media (min-width: 960px) {
   .index-event {
     width: 33vw;
     padding: 16px 12px;
+  }
+
+  .index-event img {
+    height: 16.665vw;
+  }
+
+  .index-event:hover {
+    .event-info {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+      //
+      // img {
+      //   border-radius: 4px 4px 0px 0px;
+      // }
+    }
   }
 }
 
@@ -28,7 +52,6 @@
 
     img {
       overflow: hidden;
-      border-radius: 4px;
     }
 
     .event-info {
@@ -37,11 +60,25 @@
       justify-content: space-between;
       box-sizing: border-box;
       padding: 24px;
+      border-radius: 0 0 4px 4px;
 
       .event-fancy-date {
         display: flex;
         flex-direction: column;
         width: 15%;
+        padding-right: 16px;
+
+        .month {
+          font-size: 12px;
+          text-align: center;
+          color: #f6682f;
+        }
+
+        .day {
+          text-align: center;
+          color: #666a73;
+        }
+
       }
 
       .event-verbage {
@@ -49,6 +86,22 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        .title {
+          color: #363a43;
+          font-size: 18px;
+        }
+
+        .date {
+          color: #666a73;
+          font-size: 12px;
+          margin-top: 4px;
+        }
+
+        .location {
+          color: #666a73;
+          font-size: 12px;
+        }
       }
     }
   }

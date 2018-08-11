@@ -11,6 +11,7 @@ class EventIndex extends React.Component {
     return (
       <div>
         <div>Browsing in San Francisco, CA</div>
+        <img src={window.images.sf}></img>
         { events ?
           (<ul className='index-events-list'>
             {events.map(event => (

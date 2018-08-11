@@ -10,6 +10,7 @@ class EventIndexItem extends React.Component {
     return (
       <li className='index-event'>
         <img className='index-event-img' src={window.images.concert}></img>
+        
         <div className='event-info'>
           <div className='event-fancy-date'>
             <p className='month'>{months[date.month - 1].toUpperCase()}</p>
