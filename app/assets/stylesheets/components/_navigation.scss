@@ -1,4 +1,5 @@
 .main-nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,7 +13,8 @@
 
 
   .main-nav-options {
-    width: 325px;
+    position: relative;
+    width: 450px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -21,8 +21,9 @@ const Navigation = ({ currentUser, logout }) => {
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <Link className='nav-link' to='/event/new'>Create Event</Link>
         <li>Help</li>
-        <li></li>
-        <UserNavigation currentUser={currentUser} logout={logout} />
+        <li className='user-dropdown'>{currentUser.first_name}
+          <UserNavigation currentUser={currentUser} logout={logout} />
+        </li>
       </ul>
     </section>
   );

@@ -1,0 +1,20 @@
+.user-dropdown-items {
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+.user-dropdown:hover .user-dropdown-items {
+  display: block;
+  border: 1px solid lightgray;
+
+  .item {
+    width: 200px;
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    
+  }
+}
