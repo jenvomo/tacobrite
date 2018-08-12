@@ -11,6 +11,13 @@
 }
 
 @media (min-width: 480px) {
+  .event-index-img {
+    width: 100vw;
+    height: 66vw;
+  }
+  .city-info {
+    width: 40vw;
+  }
   .index-event {
     width: 50vw;
     padding: 24px;
@@ -18,10 +25,29 @@
   .index-event img {
     height: 22vw;
   }
-
 }
 
 @media (min-width: 960px) {
+  .browse-events-header {
+    display: flex;
+    flex-direction: row;
+
+    .event-index-img {
+      width: 60vw;
+      height: 37.5vw;
+    }
+
+    .city-stuff {
+      width: 35vw;
+      margin-left: 5%;
+
+      .city-description {
+        padding: 0 16px;
+        width: 20vw;
+      }
+    }
+  }
+
   .index-event {
     width: 33vw;
     padding: 16px 12px;
@@ -34,18 +60,15 @@
   .index-event:hover {
     .event-info {
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
-      //
-      // img {
-      //   border-radius: 4px 4px 0px 0px;
-      // }
     }
   }
 }
 
-
 .index-events-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 80px 0;
+
 
   .index-event {
     box-sizing: border-box;

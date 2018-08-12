@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserNavigation from '../user_navigation/user_navigation';
 
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -20,7 +21,8 @@ const Navigation = ({ currentUser, logout }) => {
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <Link className='nav-link' to='/event/new'>Create Event</Link>
         <li>Help</li>
-        <li>{currentUser.first_name}</li>
+        <li></li>
+        <UserNavigation currentUser={currentUser} logout={logout} />
       </ul>
     </section>
   );
