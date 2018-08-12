@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
       return (
         <div>
 
-          <div className='icon'></div>
+          <img className="icon" src={window.images.user}></img>
 
           <form className='login-form' onSubmit={this.handleSubmit}>
             <p className='welcome-main'>Welcome back</p>

@@ -13,8 +13,10 @@ class EventIndex extends React.Component {
 
         <div className='browse-events-header'>
           <div className='city-stuff'>
-            <div className='browsing'>Browsing in </div>
-            <div className='browse-loc'>San Francisco, CA</div>
+            <div className='browse-loc-container'>
+              <div className='browsing'>Browsing in </div>
+              <div className='browse-loc'>San Francisco, CA</div>
+            </div>
             <div className='city-info'>
                 <p className='to-do'>Things to do in</p>
                 <p className='city'>San Francisco</p>

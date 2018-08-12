@@ -20,8 +20,8 @@ const Navigation = ({ currentUser, logout }) => {
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <Link className='nav-link' to='/event/new'>Create Event</Link>
-        <li>Help</li>
-        <li className='user-dropdown'>{currentUser.first_name}
+        <li className='nav-link'>Help</li>
+        <li className='user-dropdown'><img className="user-drop-img" src={window.images.user}></img>
           <UserNavigation currentUser={currentUser} logout={logout} />
         </li>
       </ul>
