@@ -72,6 +72,16 @@ class EventForm extends React.Component {
           <textarea
           onChange={this.update('description')}></textarea>
         </label>
+
+        <label className="input-title">ORGANIZER NAME
+          <textarea
+          onChange={this.update('organizer_name')}></textarea>
+        </label>
+
+        <label className="input-title">ORGANIZER DESCRIPTION
+          <textarea
+          onChange={this.update('organizer_description')}></textarea>
+        </label>
       <button>MAKE YOUR EVENT LIVE</button>
       </form>
     )
