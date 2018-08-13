@@ -3,6 +3,7 @@ import LoginContainer from './session_form/login_form_container';
 import SignupContainer from './session_form/signup_form_conatiner';
 import EventIndexContainer from './event/event_index_container';
 import NavigationContainer from './navigation/nav_container';
+import NewEventContainer from './event/new_event';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
@@ -15,6 +16,7 @@ const App = () => (
       <AuthRoute path='/login' component={LoginContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
       <Route path='/events' component={EventIndexContainer} />
+      <Route path='/event/new' component={NewEventContainer} />
       <Redirect to='/' />
     </Switch>
   </div>
