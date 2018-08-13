@@ -7,7 +7,8 @@ class EventForm extends React.Component {
     this.state = {
       title: '',
       description: '',
-      date: ''
+      date: '',
+      time: ''
     };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -97,8 +98,12 @@ class EventForm extends React.Component {
               <textarea
                 onChange={this.update('organizer_description')}></textarea>
             </label>
-            <button>MAKE YOUR EVENT LIVE</button>
           </form>
+        </div>
+
+        <div className="complete-create">
+          <p className="almost-msg">Nice job! You're almost done.</p>
+          <button onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
         </div>
       </div>
     )

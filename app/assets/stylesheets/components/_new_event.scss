@@ -39,7 +39,7 @@
     .new-event-form {
       display: flex;
       flex-direction: column;
-      width: 70%;
+      width: 80%;
       margin: auto;
 
       .section-info {
@@ -84,7 +84,7 @@
         }
 
         input {
-          background-color: white;
+          background-color: #fff;
           border: 1px solid #D2D6DF;
           border-radius: 3px;
           height: 24px;
@@ -102,7 +102,6 @@
           background-color: white;
           border: 1px solid #D2D6DF;
           border-radius: 3px;
-          // height: 24px;
           padding: 9px 12px;
           color: #45494E;
           height: 110px;
@@ -111,19 +110,37 @@
         }
       }
 
-      button {
-        background-color: #00ab44;
-        width: 177px;
-        margin: 10px 0 0 10px;
-        border-radius: 3px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 22px;
-        padding: 11px 20px;
-        cursor: pointer;
-      }
 
+    }
+  }
+  .complete-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 60px 10px;
+    border-top: 1px solid #D2D6DF;
+
+    .almost-msg {
+      color: #282C35;
+      font-weight: 600;
+      font-size: 35px;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    button {
+      background-color: #00ab44;
+      width: 177px;
+      margin: 10px auto 0 auto;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      padding: 11px 20px;
+      cursor: pointer;
     }
   }
 }
