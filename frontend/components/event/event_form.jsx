@@ -32,58 +32,62 @@ class EventForm extends React.Component {
 
   render () {
     return (
-      <form className="new-event-form" onSubmit={this.handleSubmit}>
-        <p className="section-num">1</p>
-        <label className="section-title">Event Details</label>
-        <label className="input-title">EVENT TITLE
-          <input
-            type="text"
-            placeholder="Give it a short distinct name"
-            onChange={this.update('title')}></input>
-        </label>
+      <div className="new-event-page">
+        <form className="new-event-form" onSubmit={this.handleSubmit}>
+          <div className="section-info">
+            <p className="section-num">1</p>
+            <p className="section-title">Event Details</p>
+          </div>
+          <label className="input-title">EVENT TITLE
+            <input
+              type="text"
+              placeholder="Give it a short distinct name"
+              onChange={this.update('title')}></input>
+          </label>
 
-        <label className="input-title">LOCATION
-          <input
-            type="text"
-            placeholder="Search for a venue or address."></input>
-        </label>
+          <label className="input-title">LOCATION
+            <input
+              type="text"
+              placeholder="Search for a venue or address."></input>
+          </label>
 
-        <label className="input-title">STARTS
-          <input
-            type="date"
-            onChange={this.update('date')}></input>
-        </label>
+          <label className="input-title">STARTS
+            <input
+              type="date"
+              onChange={this.update('date')}></input>
+          </label>
 
-        <label className="input-title">START TIME
-          <input
-            type="time"
-            onChange={this.update('time')}></input>
-        </label>
+          <label className="input-title">START TIME
+            <input
+              type="time"
+              onChange={this.update('time')}></input>
+          </label>
 
-        <label className="input-title">ENDS
-          <input type="date"></input>
-        </label>
+          <label className="input-title">ENDS
+            <input type="date"></input>
+          </label>
 
-        <label className="input-title">EVENT IMAGE
-          <input></input>
-        </label>
+          <label className="input-title">EVENT IMAGE
+            <input></input>
+          </label>
 
-        <label className="input-title">EVENT DESCRIPTION
-          <textarea
-          onChange={this.update('description')}></textarea>
-        </label>
+          <label className="input-title">EVENT DESCRIPTION
+            <textarea
+              onChange={this.update('description')}></textarea>
+          </label>
 
-        <label className="input-title">ORGANIZER NAME
-          <textarea
-          onChange={this.update('organizer_name')}></textarea>
-        </label>
+          <label className="input-title">ORGANIZER NAME
+            <input
+              onChange={this.update('organizer_name')}></input>
+          </label>
 
-        <label className="input-title">ORGANIZER DESCRIPTION
-          <textarea
-          onChange={this.update('organizer_description')}></textarea>
-        </label>
-      <button>MAKE YOUR EVENT LIVE</button>
-      </form>
+          <label className="input-title">ORGANIZER DESCRIPTION
+            <textarea
+              onChange={this.update('organizer_description')}></textarea>
+          </label>
+          <button>MAKE YOUR EVENT LIVE</button>
+        </form>
+      </div>
     )
   }
 }

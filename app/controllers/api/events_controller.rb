@@ -1,6 +1,7 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
+    @event.organizer_id = current_user.id
 
     if @event.save
       render json: "api/events/show"
@@ -20,7 +21,6 @@ class Api::EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @event.update_attributes(event_params)
-    @event.organizer_id = current_user.id
 
     if @event.save
       render json: "api/events/show"
@@ -35,6 +35,6 @@ class Api::EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:title, :description, :date, :time, :organizer_id, :organizer_description)
+    params.require(:event).permit(:title, :description, :date, :time, :organizer_description, :organizer_name)
   end
 end
