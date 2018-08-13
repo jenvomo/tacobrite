@@ -23,7 +23,9 @@
         description: 'Come join your cohort mates for a brewski',
         date: 'Aug 3 2018',
         time: ,
-        creatorId: 1,
+        organizerId: 1,
+        organizerName: 'Justin',
+        organizerDescription: 'Office manager at aA.'
         locLnOne: '825 Battery St',
         locLnTwo: '',
         locCity: 'San Francisco',

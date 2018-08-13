@@ -96,7 +96,8 @@ class EventForm extends React.Component {
 
             <label className="input-title">ORGANIZER NAME
               <input
-                onChange={this.update('organizer_name')}></input>
+                onChange={this.update('organizer_name')}
+                placeholder="Who's organizing this event?"></input>
             </label>
 
             <label className="input-title">ORGANIZER DESCRIPTION
