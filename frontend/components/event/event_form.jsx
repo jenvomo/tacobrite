@@ -41,16 +41,15 @@ class EventForm extends React.Component {
             className="publish"
             >Publish</button>
         </div>
+
         <div className="event-form-options"></div>
+
         <div className="new-event-container">
-
-
-
           <form className="new-event-form" onSubmit={this.handleSubmit}>
 
             <div className="section-info">
               <p className="section-num">1</p>
-              <p className="section-title">Event Details</p>
+              <div className="section-title">Event Details</div>
             </div>
             <label className="input-title">EVENT TITLE
               <input
@@ -65,20 +64,26 @@ class EventForm extends React.Component {
                 placeholder="Search for a venue or address."></input>
             </label>
 
-            <label className="input-title">STARTS
-              <input
-                type="date"
-                onChange={this.update('date')}></input>
+            <div className="event-date-info">
+              <label className="input-title">STARTS
+                <div className="date">
+                  <input
+                    type="date"
+                    onChange={this.update('date')}></input>
 
-              <input
-                type="time"
-                onChange={this.update('time')}></input>
-            </label>
+                  <input
+                    type="time"
+                    onChange={this.update('time')}></input>
+                </div>
+              </label>
 
-            <label className="input-title">ENDS
-              <input type="date"></input>
-              <input type="time"></input>
-            </label>
+              <label className="input-title">ENDS
+                <div className="date">
+                  <input type="date"></input>
+                  <input type="time"></input>
+                </div>
+              </label>
+            </div>
 
             <label className="input-title">EVENT IMAGE
               <input></input>

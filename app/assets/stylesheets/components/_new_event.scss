@@ -8,6 +8,7 @@
     padding: 20px 24px;
     font-size: 24px;
     font-weight: 200;
+    letter-spacing: .4px;
 
     button {
       width: 115px;
@@ -32,15 +33,16 @@
   }
 
   .new-event-container {
-    background-color: #eff3f9;
+    background-color: #f2f4f7;
     padding-top: 20px;
 
 
     .new-event-form {
       display: flex;
       flex-direction: column;
-      width: 80%;
+      width: 68%;
       margin: auto;
+      padding-bottom: 75px;
 
       .section-info {
         display: flex;
@@ -62,19 +64,35 @@
         }
 
         .section-title {
-          height: 50px;
+          line-height: 50px;
           width: 200px;
           padding: 0 5px 0 10px;
-          font-size: 25px;
+          font-size: 27px;
           color: #666a73;
           font-weight: 400;
+          vertical-align: middle;
         }
+      }
+      .event-date-info {
+        display: flex;
+        flex-direction: row;
       }
 
       .input-title {
         display: flex;
         flex-direction: column;
         margin-top: 15px;
+
+        .date {
+          display: flex;
+          flex-direction: row;
+          padding-right: 15px;
+
+          input {
+            width: 104px;
+            margin-right: 15px;
+          }
+        }
 
         label {
           color: #282C35;
@@ -84,6 +102,7 @@
         }
 
         input {
+          width: 664px;
           background-color: #fff;
           border: 1px solid #D2D6DF;
           border-radius: 3px;
@@ -94,11 +113,16 @@
           cursor: text;
         }
 
+        input::placeholder {
+          color: #c6c9d1;
+        }
+
         input:focus {
           border: 1px solid #3a6ec1;
         }
 
         textarea {
+          width: 664px;
           background-color: white;
           border: 1px solid #D2D6DF;
           border-radius: 3px;
@@ -133,14 +157,20 @@
     button {
       background-color: #00ab44;
       width: 177px;
+      padding: 11px 20px;
       margin: 10px auto 0 auto;
       border-radius: 3px;
+      text-align: center;
+      vertical-align: middle;
       color: #fff;
       font-size: 14px;
       font-weight: 600;
       line-height: 22px;
-      padding: 11px 20px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b421b;
     }
   }
 }
