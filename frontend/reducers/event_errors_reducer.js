@@ -1,4 +1,4 @@
-import { RECEIVE_EVENT_ERRORS } from '../../event_actions';
+import { RECEIVE_EVENT_ERRORS } from '../actions/event_actions';
 
 const eventErrorsReducer = (state = [], action) => {
   Object.freeze(state);

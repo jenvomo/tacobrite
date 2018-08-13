@@ -16,6 +16,12 @@ export const fetchEvent = id => dispatch => {
     errors => dispatch(receiveErrors(errors.responseJSON)))
 };
 
+export const createEvent = event => dispatch => {
+  return EventApiUtil.createEvent(event)
+    .then(event => dispatch(receiveEvent(event)),
+    errors => dispatch(receiveErrors(errors.responseJSON)))
+};
+
 export const receiveEvents = events => ({
   type: RECEIVE_EVENTS,
   events

@@ -1,0 +1,11 @@
+.new-event-form {
+  background: lightgray;
+  display: flex;
+  flex-direction: column;
+  background-color: #eff3f9;
+
+  .input-title {
+    display: flex;
+    flex-direction: column;
+  }
+}
