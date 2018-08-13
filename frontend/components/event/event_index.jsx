@@ -29,7 +29,7 @@ class EventIndex extends React.Component {
 
         { events ?
           (<ul className='index-events-list'>
-            {events.map(event => (
+            {Object.values(events).map(event => (
               <EventIndexItem key={event.id} event={event} />
             ))}
           </ul>) : (
