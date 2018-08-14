@@ -6,7 +6,6 @@ class Api::EventsController < ApplicationController
     @event.time = Time.parse(@event.time.to_s)
 
     if @event.save
-      debugger
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422

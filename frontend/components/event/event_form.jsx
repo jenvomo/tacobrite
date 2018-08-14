@@ -23,7 +23,7 @@ class EventForm extends React.Component {
 
   update(field) {
     return (e) => {
-      this.setState({ [field]: e.currentTarget.value })
+      this.setState({ [field]: e.currentTarget.value });
     }
   }
 
@@ -41,11 +41,10 @@ class EventForm extends React.Component {
   }
 
   handleFile(e) {
-    this.setState({ photoFile: e.currentTarget.files[0] })
+    this.setState({ photoFile: e.currentTarget.files[0] });
   }
 
   render () {
-    console.log(this.state);
     return (
       <div className="new-event-page">
         <div className="new-event-titleblock">
