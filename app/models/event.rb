@@ -17,6 +17,8 @@
 class Event < ApplicationRecord
   validates :title, :date, :time, :organizer_id, presence: true
 
+  has_one_attached :photo
+  
   belongs_to :organizer,
   foreign_key: :organizer_id,
   class_name: :User

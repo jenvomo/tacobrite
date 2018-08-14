@@ -12,5 +12,6 @@
       json.min event.time.min
     end
 
+    json.imageUrl url_for(event.photo)
   end
 end
