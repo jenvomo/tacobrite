@@ -98,10 +98,17 @@ class EventForm extends React.Component {
               </label>
             </div>
 
-            <label className="input-title">EVENT IMAGE
-              <input
-                type="file"
-                onChange={this.handleFile}></input>
+            <label className="event-img">EVENT IMAGE
+              <div className="img-input-container">
+                <div className="border-container">
+                  ADD EVENT IMAGE
+                  <div className="img-upload-desc">
+                    Choose a compelling image that brings your event to life.</div>
+                  <input
+                    type="file"
+                    onChange={this.handleFile}></input>
+                </div>
+              </div>
             </label>
 
             <label className="input-title">EVENT DESCRIPTION

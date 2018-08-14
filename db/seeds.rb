@@ -14,13 +14,19 @@ Event.destroy_all
 event1 = Event.create({ title: 'aA Happy Hour', description: 'Come network and have a brewski', date: Date.today, time: Time.now, organizer_id: 2})
 event2 = Event.create({ title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2})
 event3 = Event.create({ title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2})
+event4 = Event.create({ title: 'Food Truck: Breakfast Tacos', description: 'Come get your taco fix', date: Date.new(2018,8,25), time: Time.now, organizer_id: 2})
+event5 = Event.create({ title: 'BISCUIT FESTIVAL', description: 'PUT SOME SOUTH IN YOUR MOUTH!', date: Date.new(2018,10,27), time: Time.now, organizer_id: 2})
 
 # heroku
 event1.photo.attach(io: File.open("app/assets/images/happyhour.jpg"), filename: "happyhour.jpg")
 event2.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
 event3.photo.attach(io: File.open("app/assets/images/bagels.jpg"), filename: "bagels.jpg")
+event4.photo.attach(io: File.open("app/assets/images/kimchi-egg-breakfast-tacos.jpg"), filename: "kimchi-egg-breakfast-tacos.jpg")
+event5.photo.attach(io: File.open("app/assets/images/biscuits.jpg"), filename: "biscuits.jpg")
 
 # local
 # event1.photo.attach(io: File.open("./app/assets/images/happyhour.jpg"), filename: "happyhour.jpg")
 # event2.photo.attach(io: File.open("./app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
 # event3.photo.attach(io: File.open("./app/assets/images/bagels.jpg"), filename: "bagels.jpg")
+# event4.photo.attach(io: File.open("./app/assets/images/kimchi-egg-breakfast-tacos.jpg"), filename: "kimchi-egg-breakfast-tacos.jpg")
+# event5.photo.attach(io: File.open("./app/assets/images/biscuits.jpg"), filename: "biscuits.jpg")
