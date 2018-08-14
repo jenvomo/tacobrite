@@ -8,10 +8,12 @@ class EventForm extends React.Component {
       title: '',
       description: '',
       date: '',
-      time: ''
+      time: '',
+      photoFile: null
     };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
 
   componentDidMount () {
@@ -31,7 +33,12 @@ class EventForm extends React.Component {
     this.props.createEvent(this.state);
   }
 
+  handleFile(e) {
+    this.setState({photoFile: e.currentTarget.files[0]})
+  }
+
   render () {
+    console.log(this.state);
     return (
       <div className="new-event-page">
         <div className="new-event-titleblock">
@@ -86,7 +93,9 @@ class EventForm extends React.Component {
             </div>
 
             <label className="input-title">EVENT IMAGE
-              <input></input>
+              <input
+                type="file"
+                onChange={this.handleFile}></input>
             </label>
 
             <label className="input-title">EVENT DESCRIPTION
