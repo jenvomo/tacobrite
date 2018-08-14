@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import EventShow from './event_show';
 
-const mapStateToProps = state => ({
-
+const mapStateToProps = (state, ownProps) => ({
+  event: ownProps.match.params.eventId
 });
 
 const mapDispatchToProps = dispatch => ({
