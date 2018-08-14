@@ -6,7 +6,7 @@ class Api::EventsController < ApplicationController
     @event.time = Time.parse(@event.time.to_s)
 
     if @event.save
-      # debugger
+      debugger
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422
@@ -39,6 +39,6 @@ class Api::EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:title, :description, :date, :time, :organizer_description, :organizer_name)
+    params.require(:event).permit(:title, :description, :date, :time, :organizer_description, :organizer_name, :photo)
   end
 end

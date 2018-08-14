@@ -29,12 +29,19 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const event = Object.assign({}, this.state)
-    this.props.createEvent(this.state);
+    const formData = new FormData();
+    formData.append('event[title]', this.state.title);
+    formData.append('event[description]', this.state.description);
+    formData.append('event[date]', this.state.date);
+    formData.append('event[time]', this.state.time);
+    formData.append('event[photo]', this.state.photoFile);
+    formData.append('event[organizer_name]', this.state.organizer_name);
+    formData.append('event[organizer_description]', this.state.organizer_description);
+    this.props.createEvent(formData);
   }
 
   handleFile(e) {
-    this.setState({photoFile: e.currentTarget.files[0]})
+    this.setState({ photoFile: e.currentTarget.files[0] })
   }
 
   render () {
