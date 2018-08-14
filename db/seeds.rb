@@ -15,6 +15,6 @@ event1 = Event.create({ title: 'aA Happy Hour', description: 'Come network and h
 event2 = Event.create({ title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2})
 event3 = Event.create({ title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2})
 
-event1.photo.attach(io: File.open("/Users/JenniferKennedyHome/Documents/SCORE.jpg"), filename: "SCORE.jpg")
-event2.photo.attach(io: File.open("/Users/JenniferKennedyHome/Documents/SCORE.jpg"), filename: "SCORE.jpg")
-event3.photo.attach(io: File.open("/Users/JenniferKennedyHome/Documents/SCORE.jpg"), filename: "SCORE.jpg")
+event1.photo.attach(io: File.open("app/assets/images/happyhour.jpg"), filename: "happyhour.jpg")
+event2.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
+event3.photo.attach(io: File.open("app/assets/images/bagels.jpg"), filename: "bagels.jpg")
