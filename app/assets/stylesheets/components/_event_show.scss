@@ -1,0 +1,65 @@
+.event-show {
+  background: lightgray;
+
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    width: 1080px;
+    margin: auto;
+    padding-top: 40px;
+
+    .event-show-header {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 720px;
+        height: 360px;
+        border-top-left-radius: 5px;
+      }
+
+      .header-info {
+        width: 360px;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-top-right-radius: 5px;
+        box-sizing: border-box;
+        padding: 30px 30px 20px 30px;
+
+        .event-fancy-date {
+
+          .month {
+            font-size: 12px;
+            color: #666a73;
+            font-weight: 600;
+          }
+
+          .day {
+            font-size: 20px;
+            color: #666a73;
+            line-height: 1.25em;
+          }
+        }
+
+        .title {
+          color: #282C35;
+          font-weight: 600;
+          font-size: 25px;
+          padding-top: 30px;
+        }
+
+        .loc {
+          margin-top: 20px;
+          color: #666A73;
+        }
+
+        .price {
+          color: #666a73;
+          margin-top: 120px;
+        }
+      }
+    }
+  }
+}

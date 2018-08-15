@@ -20,22 +20,24 @@ class EventShow extends React.Component {
     // const { date, time, title, description, imageUrl } = this.props.event;
 
     return (
-      <div>
+      <div className="event-show">
         { event ? (
-          <div>
-            <div>
+            <div className="event-container">
               <div className="event-show-header">
                 <img src={event.imageUrl} />
-                <div className='event-fancy-date'>
-                  <p className='month'>{months[event.date.month - 1].toUpperCase()}</p>
-                  <p className='day'>{event.date.day}</p>
+
+                <div className="header-info">
+                  <div className='event-fancy-date'>
+                    <p className='month'>{months[event.date.month - 1].toUpperCase()}</p>
+                    <p className='day'>{event.date.day}</p>
+                  </div>
+
+                  <div className="title">{event.title}</div>
+
+                  <div className="loc">Location</div>
+
+                  <div className="price">FREE</div>
                 </div>
-
-                <div>{event.title}</div>
-
-                <div>Location</div>
-
-                <div>FREE</div>
               </div>
 
               <div>
@@ -61,7 +63,6 @@ class EventShow extends React.Component {
                 <div>{event.organizer_description}</div>
               </div>
             </div>
-          </div>
         ) : (
           <div>loading</div>
         )}
