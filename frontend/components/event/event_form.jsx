@@ -10,7 +10,10 @@ class EventForm extends React.Component {
       description: '',
       date: '',
       time: '',
+      organizer_name: '',
+      organizer_description: '',
       photoFile: null,
+      imageUrl: '',
       submit: false
     };
     this.update = this.update.bind(this);
@@ -44,10 +47,20 @@ class EventForm extends React.Component {
   }
 
   handleFile(e) {
-    this.setState({ photoFile: e.currentTarget.files[0] });
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, imageUrl: fileReader.result });
+    };
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    };
+
   }
 
   render () {
+    const preview = this.state.imageUrl ? <img className="preview" src={this.state.imageUrl} /> : null;
     return (
       <div className="new-event-page">
         <div className="new-event-titleblock">
@@ -103,14 +116,23 @@ class EventForm extends React.Component {
 
             <label className="event-img">EVENT IMAGE
               <div className="img-input-container">
-                <div className="border-container">
-                  ADD EVENT IMAGE
-                  <div className="img-upload-desc">
-                    Choose a compelling image that brings your event to life.</div>
+
+              {preview ?
+                (<div className="border-container">
                   <input
                     type="file"
                     onChange={this.handleFile}></input>
-                </div>
+                  {preview}
+                </div>)
+               : (<div className="border-container">
+                   ADD EVENT IMAGE
+                   <div className="img-upload-desc">
+                     Choose a compelling image that brings your event to life.</div>
+                   <input
+                     type="file"
+                     onChange={this.handleFile}></input>
+                 </div>)}
+
               </div>
             </label>
 

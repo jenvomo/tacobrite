@@ -1,9 +1,12 @@
 class Api::EventsController < ApplicationController
   def create
+    # byebug
     @event = Event.new(event_params)
     @event.organizer_id = current_user.id
-    @event.date = Date.parse(@event.date.to_s)
-    @event.time = Time.parse(@event.time.to_s)
+    if @event.date.class == Date && @event.time.class == Time
+      @event.date = Date.parse(@event.date.to_s)
+      @event.time = Time.parse(@event.time.to_s)
+    end
 
     if @event.save
       render "api/events/show"
@@ -37,6 +40,7 @@ class Api::EventsController < ApplicationController
   end
 
   private
+
   def event_params
     params.require(:event).permit(:title, :description, :date, :time, :organizer_description, :organizer_name, :photo)
   end

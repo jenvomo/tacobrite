@@ -17,9 +17,17 @@
 class Event < ApplicationRecord
   validates :title, :date, :time, :organizer_id, presence: true
 
+  after_initialize :ensure_photo
+
   has_one_attached :photo
-  
+
   belongs_to :organizer,
   foreign_key: :organizer_id,
   class_name: :User
+
+  def ensure_photo
+    unless self.photo.attached?
+      self.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
+    end
+  end
 end
