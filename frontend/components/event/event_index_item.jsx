@@ -22,8 +22,8 @@ class EventIndexItem extends React.Component {
           <div className='event-verbage'>
             <p className='title'>{title}</p>
             { time.min < 10 ?
-              <p className='date'>{days[date.day % 7]}, {months[date.month - 1]} {date.day}, {time.hour}:0{time.min}</p> :
-              <p className='date'>{days[date.day % 7]}, {months[date.month - 1]} {date.day}, {time.hour}:{time.min}</p>}
+              <p className='date'>{days[date.cwday]}, {months[date.month - 1]} {date.day}, {time.hour}:0{time.min}</p> :
+              <p className='date'>{days[date.cwday]}, {months[date.month - 1]} {date.day}, {time.hour}:{time.min}</p>}
             <p className='location'>Location</p>
           </div>
         </div>

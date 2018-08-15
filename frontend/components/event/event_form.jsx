@@ -39,7 +39,9 @@ class EventForm extends React.Component {
     formData.append('event[description]', this.state.description);
     formData.append('event[date]', this.state.date);
     formData.append('event[time]', this.state.time);
-    formData.append('event[photo]', this.state.photoFile);
+    if (this.state.photoFile) {
+      formData.append('event[photo]', this.state.photoFile);
+    }
     formData.append('event[organizer_name]', this.state.organizer_name);
     formData.append('event[organizer_description]', this.state.organizer_description);
     this.props.createEvent(formData);

@@ -1,6 +1,5 @@
 class Api::EventsController < ApplicationController
   def create
-    # byebug
     @event = Event.new(event_params)
     @event.organizer_id = current_user.id
     if @event.date.class == Date && @event.time.class == Time

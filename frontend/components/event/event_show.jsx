@@ -54,8 +54,8 @@ class EventShow extends React.Component {
               <div className="timing">
                 <div className="header">DATE AND TIME</div>
                 { event.time.min < 10 ?
-                  <div className="date">{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
-                  <div className="date">{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
+                  <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
+                  <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
                 }
               </div>
             </div>
