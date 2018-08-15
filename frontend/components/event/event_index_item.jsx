@@ -7,6 +7,7 @@ class EventIndexItem extends React.Component {
     const { title, date, time, imageUrl } = this.props.event;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
     return (
       <li className='index-event'>
         <img className='index-event-img' src={imageUrl}></img>

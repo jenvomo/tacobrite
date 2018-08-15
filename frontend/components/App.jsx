@@ -16,9 +16,9 @@ const App = () => (
     <Switch>
       <AuthRoute path='/login' component={LoginContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
+      <Route path='/event/:eventId' component={EventShowContainer} />
       <Route path='/events' component={EventIndexContainer} />
       <Route path='/event/new' component={NewEventContainer} />
-      <Route path='/event/:eventId' component={EventShowContainer} />
       <Redirect to='/' />
     </Switch>
   </div>
