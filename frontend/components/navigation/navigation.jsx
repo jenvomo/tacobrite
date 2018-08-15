@@ -5,7 +5,9 @@ import UserNavigation from '../user_navigation/user_navigation';
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <section className="main-nav">
-      <img src={window.images.logo}></img>
+      <Link to="/events">
+        <img src={window.images.logo}></img>
+      </Link>
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <li>Help</li>
@@ -16,7 +18,9 @@ const Navigation = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <section className="main-nav">
-      <img src={window.images.logo}></img>
+      <Link to="/events">
+        <img src={window.images.logo}></img>
+      </Link>
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <Link className='nav-link' to='/event/new'>Create Event</Link>

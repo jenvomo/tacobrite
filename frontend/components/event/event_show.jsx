@@ -26,7 +26,16 @@ class EventShow extends React.Component {
             <div>
               <div className="event-show-header">
                 <img src={event.imageUrl} />
+                <div className='event-fancy-date'>
+                  <p className='month'>{months[event.date.month - 1].toUpperCase()}</p>
+                  <p className='day'>{event.date.day}</p>
+                </div>
+
                 <div>{event.title}</div>
+
+                <div>Location</div>
+
+                <div>FREE</div>
               </div>
 
               <div>
@@ -47,6 +56,10 @@ class EventShow extends React.Component {
                 }
               </div>
 
+              <div>
+                <div>{event.organizer_name}</div>
+                <div>{event.organizer_description}</div>
+              </div>
             </div>
           </div>
         ) : (

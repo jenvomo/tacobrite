@@ -1,5 +1,5 @@
 json.set! @event.id do
-  json.extract! @event, :id, :title, :description
+  json.extract! @event, :id, :title, :description, :organizer_description, :organizer_name
   json.date do
     json.month @event.date.month
     json.day @event.date.day
@@ -11,4 +11,5 @@ json.set! @event.id do
   end
 
   json.imageUrl url_for(@event.photo)
+
 end

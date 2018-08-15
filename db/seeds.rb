@@ -14,7 +14,7 @@ Event.destroy_all
 event1 = Event.create({ title: 'aA Happy Hour', description: 'Come network and have a brewski', date: Date.today, time: Time.now, organizer_id: 2})
 event2 = Event.create({ title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2})
 event3 = Event.create({ title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2})
-event4 = Event.create({ title: 'Food Truck: Breakfast Tacos', description: 'Come get your taco fix', date: Date.new(2018,8,25), time: Time.now, organizer_id: 2})
+event4 = Event.create({ title: 'Food Truck: Breakfast Tacos', description: 'Come get your taco fix', date: Date.new(2018,8,25), time: Time.now, organizer_id: 2, organizer_name: 'Jen', organizer_description: 'Lover of tacos'})
 event5 = Event.create({ title: 'BISCUIT FESTIVAL', description: 'PUT SOME SOUTH IN YOUR MOUTH!', date: Date.new(2018,10,27), time: Time.now, organizer_id: 2})
 
 # heroku
