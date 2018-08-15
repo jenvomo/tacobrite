@@ -61,5 +61,109 @@
         }
       }
     }
+
+    .tickets-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 10px 0;
+      border-top: 1px solid #D2D6DF;
+      border-bottom: 1px solid #D2D6DF;
+
+      button {
+        width: 330px;
+        height: 44px;
+        background-color: #00ab44;
+        margin: 0 15px;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+
+      }
+    }
+
+    .event-content {
+      display: flex;
+      flex-direction: row;
+      padding-top: 60px;
+      background-color: #fff;
+
+      .event-desc {
+        display: flex;
+        flex-direction: column;
+        width: 720px;
+        justify-content: center;
+        align-items: center;
+
+        .desc-header {
+          color: #282C35;
+          width: 530px;
+          font-weight: 600;
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
+        .desc {
+          color: #666A73;
+          width: 530px;
+          padding-bottom: 30px;
+          margin-bottom: 30px;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      .timing {
+        margin-left: 20px;
+
+
+        .header {
+          font-size: 12px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #282C35;
+        }
+
+        .date {
+          color: #666a73;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .organizer {
+      background-color: #fff;
+      border-top: 1px solid #D2D6DF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0278b8;
+      padding: 10px 10.5px;
+    }
+
+    .info {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #282C35;
+    }
+
+    .desc {
+      color: #666A73;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+    }
   }
 }

@@ -40,27 +40,30 @@ class EventShow extends React.Component {
                 </div>
               </div>
 
-              <div>
+              <div className="tickets-bar">
                 <div>Bookmark</div>
                 <button>TICKETS</button>
               </div>
 
-              <div>
-                <div>DESCRIPTION</div>
-                <div>{event.description}</div>
-              </div>
+              <div className="event-content">
+                <div className="event-desc">
+                  <div className="desc-header">DESCRIPTION</div>
+                  <div className="desc">{event.description}</div>
+                </div>
 
-              <div>
-                <div>DATE AND TIME</div>
+              <div className="timing">
+                <div className="header">DATE AND TIME</div>
                 { event.time.min < 10 ?
-                  <div>{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
-                  <div>{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
+                  <div className="date">{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
+                  <div className="date">{days[event.date.day % 7]}, {months[event.date.month]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
                 }
               </div>
+            </div>
 
-              <div>
-                <div>{event.organizer_name}</div>
-                <div>{event.organizer_description}</div>
+              <div className="organizer">
+                <div className="name">{event.organizer_name}</div>
+                <div className="info">Organizer of {event.title}</div>
+                <div className="desc">{event.organizer_description}</div>
               </div>
             </div>
         ) : (
