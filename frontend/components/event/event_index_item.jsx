@@ -4,6 +4,7 @@ import { withRouter, Link } from 'react-router-dom';
 class EventIndexItem extends React.Component {
 
   render () {
+    
     const { id, title, date, time, imageUrl } = this.props.event;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

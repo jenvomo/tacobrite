@@ -13,8 +13,7 @@ class EventForm extends React.Component {
       organizer_name: '',
       organizer_description: '',
       photoFile: null,
-      imageUrl: '',
-      submit: false
+      imageUrl: ''
     };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,8 +43,11 @@ class EventForm extends React.Component {
     }
     formData.append('event[organizer_name]', this.state.organizer_name);
     formData.append('event[organizer_description]', this.state.organizer_description);
-    this.props.createEvent(formData);
-    this.setState({submit: true});
+    this.props.createEvent(formData).then(
+      railsitem => {
+        this.props.history.push(`/event/${railsitem.event.id}`);
+      }
+    );
   }
 
   handleFile(e) {
@@ -159,9 +161,6 @@ class EventForm extends React.Component {
         <div className="complete-create">
           <p className="almost-msg">Nice job! You're almost done.</p>
           <button onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
-          { this.state.submit ?
-          <Redirect to="/events" /> :
-          null}
         </div>
       </div>
     )

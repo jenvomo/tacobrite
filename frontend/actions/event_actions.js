@@ -12,7 +12,7 @@ export const fetchEvents = () => dispatch => {
 
 export const fetchEvent = id => dispatch => {
   return EventApiUtil.fetchEvent(id)
-    .then(event => dispatch(receiveEvents(event)),
+    .then(event => dispatch(receiveEvent(event)),
     errors => dispatch(receiveErrors(errors.responseJSON)))
 };
 
