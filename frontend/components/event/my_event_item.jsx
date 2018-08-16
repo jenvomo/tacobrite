@@ -5,12 +5,13 @@ class MyEventItem extends React.Component {
 
   render () {
     const { id, title, date, time } = this.props.event;
+    // console.log(this.props);
     return (
       <div>
-        <div>{this.props.event.title}</div>
+        <div>{title}</div>
         { time.min < 10 ?
-          <p className='date'>{date.day} {months[date.month - 1]} {date.yr} {time.hour}:0{time.min}</p> :
-          <p className='date'>{date.day} {months[date.month - 1]} {date.yr} {time.hour}:{time.min}</p>}
+          <p className='date'>{date.day} {date.month} {date.yr} {time.hour}:0{time.min}</p> :
+          <p className='date'>{date.day} {date.month} {date.yr} {time.hour}:{time.min}</p>}
 
           <div>
             <img></img>
@@ -26,3 +27,5 @@ class MyEventItem extends React.Component {
   }
 
 }
+
+export default MyEventItem;

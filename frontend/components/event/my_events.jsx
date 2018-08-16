@@ -3,26 +3,25 @@ import MyEventItem from './my_event_item';
 
 class MyEvents extends React.Component {
   componentDidMount () {
-    this.props.fetchUsersEvents();
+    this.props.fetchEvents();
   }
 
   render () {
-    console.log(this.props);
-    if (this.props.myEvents) {
+    if (this.props.events) {
       return (
         <div>
           <div>Manage Events</div>
 
           <div>
-            {this.props.myEvents.map(event =>
-              <MyEventItem event={event} />
+            {this.props.myEvents.map(id =>
+              <MyEventItem key={id} event={this.props.events[id]} />
             )}
           </div>
         </div>
       )
     } else {
       return
-      <div></div>
+      <div>Hello</div>
     }
   }
 }

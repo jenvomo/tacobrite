@@ -2,6 +2,7 @@ import { logout } from '../../actions/session_actions';
 import { connect } from 'react/redux';
 
 const mapStateToProps = state => ({
+  currentUser: state.session.id
 });
 
 const map mapDispatchToProps = dispatch => ({

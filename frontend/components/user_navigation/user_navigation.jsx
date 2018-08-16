@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { Navbar, NavDropdown, MenuItem } from 'react-bootstrap';
 
 export class UserNavigation extends React.Component {
   constructor(props) {

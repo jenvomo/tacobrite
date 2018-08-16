@@ -33,6 +33,14 @@ class User < ApplicationRecord
   foreign_key: :organizer_id,
   class_name: :Event
 
+  def my_events
+    events = []
+    self.events.each do |event|
+      events.push(event.id)
+    end
+    events
+  end
+
   def ensure_session_token
     self.session_token ||= User.generate_session_token
   end
@@ -63,6 +71,5 @@ class User < ApplicationRecord
     else
       return false
     end
-    # return @user.is_password?(password) ? user : nil
   end
 end
