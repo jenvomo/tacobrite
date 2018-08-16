@@ -23,50 +23,56 @@ class EventForm extends React.Component {
   }
 
   componentDidMount () {
-    this.props.fetchEvent(this.props.eventId).then(() => {
-      const { event } = this.props;
-      if ((event.date.month < 10) && (event.date.day < 10)) {
-        this.setState({
-          date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
-        })
-      } else if ((event.date.month < 10) && (event.date.day >= 10)){
-        this.setState({
-          date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
-        })
-      } else if ((event.date.month >= 10) && (event.date.day < 10)){
-        this.setState({
-          date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
-        })
-      } else {
-        this.setState({
-          date: `${event.date.yr}-${event.date.month}-${event.date.day}`
-        })
-      }
-      if ((event.time.hour < 10) && (event.time.min < 10)) {
-        this.setState({
-          time: `0${event.time.hour}:0${event.time.min}`
-        })
-      } else if ((event.time.hour < 10) && (event.time.min >= 10)){
-        this.setState({
-          time: `0${event.time.hour}:${event.time.min}`
-        })
-      } else if ((event.time.hour >= 10) && (event.time.min < 10)){
-        this.setState({
-          time: `${event.time.hour}:0${event.time.min}`
-        })
-      } else {
-        this.setState({
-          time: `${event.time.hour}:${event.time.min}`
-        })
-      }
+    if (this.props.formType === 'edit') {
+      this.props.fetchEvent(this.props.eventId).then(() => {
+        const { event } = this.props;
+        this.setState(event);
+        this.setState({id: event.id});
 
-      this.setState({
-        title: event.title,
-        description: event.description,
-        organizer_name: event.organizer_name,
-        organizer_description: event.organizer_description,
-        imageUrl: event.imageUrl})
-    })
+        if ((event.date.month < 10) && (event.date.day < 10)) {
+          this.setState({
+            date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
+          })
+        } else if ((event.date.month < 10) && (event.date.day >= 10)){
+          this.setState({
+            date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
+          })
+        } else if ((event.date.month >= 10) && (event.date.day < 10)){
+          this.setState({
+            date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
+          })
+        } else {
+          this.setState({
+            date: `${event.date.yr}-${event.date.month}-${event.date.day}`
+          })
+        }
+        if ((event.time.hour < 10) && (event.time.min < 10)) {
+          this.setState({
+            time: `0${event.time.hour}:0${event.time.min}`
+          })
+        } else if ((event.time.hour < 10) && (event.time.min >= 10)){
+          this.setState({
+            time: `0${event.time.hour}:${event.time.min}`
+          })
+        } else if ((event.time.hour >= 10) && (event.time.min < 10)){
+          this.setState({
+            time: `${event.time.hour}:0${event.time.min}`
+          })
+        } else {
+          this.setState({
+            time: `${event.time.hour}:${event.time.min}`
+          })
+        }
+
+        // this.setState({
+        //   id: event.id,
+        //   title: event.title,
+        //   description: event.description,
+        //   organizer_name: event.organizer_name,
+        //   organizer_description: event.organizer_description,
+        //   imageUrl: event.imageUrl})
+        })
+    }
 
   }
 
@@ -89,7 +95,11 @@ class EventForm extends React.Component {
     }
     formData.append('event[organizer_name]', this.state.organizer_name);
     formData.append('event[organizer_description]', this.state.organizer_description);
-    this.props.createEvent(formData).then(
+    if (this.props.formType === 'edit') {
+      formData.append('event[id]', this.state.id);
+
+    }
+    this.props.processForm(formData).then(
       railsitem => {
         this.props.history.push(`/event/${railsitem.event.id}`);
       }
@@ -110,8 +120,6 @@ class EventForm extends React.Component {
   }
 
   render () {
-    console.log(this.state);
-    console.log(this.props);
     const preview = this.state.imageUrl ? <img className="preview" src={this.state.imageUrl} /> : null;
     return (
       <div className="new-event-page">

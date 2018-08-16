@@ -24,7 +24,7 @@ class Api::EventsController < ApplicationController
   end
 
   def update
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:event][:id])
     @event.update_attributes(event_params)
 
     if @event.save
