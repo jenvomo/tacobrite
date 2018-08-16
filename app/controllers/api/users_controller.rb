@@ -15,6 +15,11 @@ class Api::UsersController < ApplicationController
     render "api/users/show"
   end
 
+  def my_events
+    @event = current_user.events
+    render "api/users/my_events"
+  end
+
   private
 
   def user_params

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 class MyEventItem extends React.Component {
 
@@ -13,12 +14,12 @@ class MyEventItem extends React.Component {
 
           <div>
             <img></img>
-            <Link to={`/api/event/${this.props.event.id}`}
+            <Link to={`/api/event/${this.props.event.id}`} />
           </div>
 
           <div>
             <img></img>
-            <Link to={`/event/${this.props.event.id}`}
+            <Link to={`/event/${this.props.event.id}`} />
           </div>
       </div>
     )

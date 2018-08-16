@@ -27,4 +27,4 @@ export const loginStepOne = user => (
     url: `/api/users/${user.id}`,
     data: { user }
   })
-)
+);

@@ -5,7 +5,7 @@ import EventIndexContainer from './event/event_index_container';
 import NavigationContainer from './navigation/nav_container';
 import NewEventContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
-import MyEventsContainer from './event/my_events_conatainer';
+import MyEventsContainer from './event/my_events_container';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
