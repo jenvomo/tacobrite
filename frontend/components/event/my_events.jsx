@@ -22,7 +22,7 @@ class MyEvents extends React.Component {
 
             <div>
               {this.props.myEvents.map(id =>
-                <MyEventItem key={id} event={this.props.events[id]} />
+                <MyEventItem key={id} event={this.props.events[id]} deleteEvent={this.props.deleteEvent} />
               )}
             </div>
           </div>

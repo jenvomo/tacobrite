@@ -18,15 +18,11 @@ class MyEventItem extends React.Component {
             <p className='date'>{date.day} {date.month} {date.yr} {time.hour}:0{time.min}</p> :
             <p className='date'>{date.day} {date.month} {date.yr} {time.hour}:{time.min}</p>}
 
-            <div>
-              <img></img>
-              <Link to={`/event/${this.props.event.id}/edit`}>Edit</Link>
-            </div>
+              <button onClick={() => this.props.deleteEvent(id)}>Delete</button>
 
-            <div>
-              <img></img>
-              <Link to={`/event/${this.props.event.id}`} />
-            </div>
+              <Link to={`/event/${this.props.event.id}/edit`}>Edit</Link>
+
+              <Link to={`/event/${this.props.event.id}`}>View</Link>
         </div>
 
         <div className='tickets'>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchEvents } from '../../actions/event_actions';
+import { fetchEvents, deleteEvent } from '../../actions/event_actions';
 import MyEvents from './my_events';
 import React from 'react';
 
@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchEvents: () => dispatch(fetchEvents())
+  fetchEvents: () => dispatch(fetchEvents()),
+  deleteEvent: id => dispatch(deleteEvent(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MyEvents);
