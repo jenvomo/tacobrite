@@ -2,10 +2,10 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.organizer_id = current_user.id
-    if @event.date.class == Date && @event.time.class == Time
+    # if @event.date.class == Date && @event.time.class == Time
       @event.date = Date.parse(@event.date.to_s)
       @event.time = Time.parse(@event.time.to_s)
-    end
+    # end
 
     if @event.save
       render "api/events/show"
@@ -28,7 +28,7 @@ class Api::EventsController < ApplicationController
     @event.update_attributes(event_params)
 
     if @event.save
-      render json: "api/events/show"
+      render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422
     end

@@ -99,6 +99,7 @@ class EventForm extends React.Component {
       formData.append('event[id]', this.state.id);
 
     }
+    console.log(this.props);
     this.props.processForm(formData).then(
       railsitem => {
         this.props.history.push(`/event/${railsitem.event.id}`);
@@ -222,6 +223,7 @@ class EventForm extends React.Component {
 
         <div className="complete-create">
           <p className="almost-msg">Nice job! You're almost done.</p>
+          <p className='login-errors'>{this.props.errors}</p>
           <button onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
         </div>
       </div>

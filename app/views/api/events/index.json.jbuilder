@@ -6,6 +6,7 @@
       json.day event.date.day
       json.cwday event.date.cwday
       json.yr event.date.year
+      json.date event.date
     end
 
     json.time do
