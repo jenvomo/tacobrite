@@ -3,7 +3,8 @@ import LoginContainer from './session_form/login_form_container';
 import SignupContainer from './session_form/signup_form_conatiner';
 import EventIndexContainer from './event/event_index_container';
 import NavigationContainer from './navigation/nav_container';
-import NewEventContainer from './event/event_form_container';
+import NewEventContainer from './event/new_event_form_container';
+import EditEventContainer from './event/edit_event_form_container';
 import EventShowContainer from './event/event_show_container';
 import MyEventsContainer from './event/my_events_container';
 import { Route, Switch, Redirect } from 'react-router-dom';
@@ -18,10 +19,11 @@ const App = () => (
       <AuthRoute path='/login' component={LoginContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
       <ProtectedToEventsRoute path='/myevents' component={MyEventsContainer} />
-      <ProtectedToLoginRoute path='/event/new' component={NewEventContainer} />
+      <ProtectedToLoginRoute path='/event/new' component={NewEventContainer} formType='new' />
+      <ProtectedToLoginRoute path='/event/:eventId/edit' component={EditEventContainer} formType='edit' />
       <Route path='/event/:eventId' component={EventShowContainer} />
       <Route path='/events' component={EventIndexContainer} />
-      <Redirect to='/' />
+      <Redirect to='/events' />
     </Switch>
   </div>
 );

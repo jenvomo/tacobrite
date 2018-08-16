@@ -5,23 +5,69 @@ import { Redirect } from 'react-router';
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: '',
-      description: '',
-      date: '',
-      time: '',
-      organizer_name: '',
-      organizer_description: '',
-      photoFile: null,
-      imageUrl: ''
-    };
+
+      this.state = {
+        title: '',
+        description: '',
+        date: '',
+        time: '',
+        organizer_name: '',
+        organizer_description: '',
+        photoFile: null,
+        imageUrl: ''
+      };
+
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
   }
 
   componentDidMount () {
-    this.props.fetchEvents();
+    this.props.fetchEvent(this.props.eventId).then(() => {
+      const { event } = this.props;
+      if ((event.date.month < 10) && (event.date.day < 10)) {
+        this.setState({
+          date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
+        })
+      } else if ((event.date.month < 10) && (event.date.day >= 10)){
+        this.setState({
+          date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
+        })
+      } else if ((event.date.month >= 10) && (event.date.day < 10)){
+        this.setState({
+          date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
+        })
+      } else {
+        this.setState({
+          date: `${event.date.yr}-${event.date.month}-${event.date.day}`
+        })
+      }
+      if ((event.time.hour < 10) && (event.time.min < 10)) {
+        this.setState({
+          time: `0${event.time.hour}:0${event.time.min}`
+        })
+      } else if ((event.time.hour < 10) && (event.time.min >= 10)){
+        this.setState({
+          time: `0${event.time.hour}:${event.time.min}`
+        })
+      } else if ((event.time.hour >= 10) && (event.time.min < 10)){
+        this.setState({
+          time: `${event.time.hour}:0${event.time.min}`
+        })
+      } else {
+        this.setState({
+          time: `${event.time.hour}:${event.time.min}`
+        })
+      }
+
+      this.setState({
+        title: event.title,
+        description: event.description,
+        organizer_name: event.organizer_name,
+        organizer_description: event.organizer_description,
+        imageUrl: event.imageUrl})
+    })
+
   }
 
 
@@ -64,6 +110,8 @@ class EventForm extends React.Component {
   }
 
   render () {
+    console.log(this.state);
+    console.log(this.props);
     const preview = this.state.imageUrl ? <img className="preview" src={this.state.imageUrl} /> : null;
     return (
       <div className="new-event-page">
@@ -87,6 +135,7 @@ class EventForm extends React.Component {
             <label className="input-title">EVENT TITLE
               <input
                 type="text"
+                value={this.state.title}
                 placeholder="Give it a short distinct name"
                 onChange={this.update('title')}></input>
             </label>
@@ -102,10 +151,12 @@ class EventForm extends React.Component {
                 <div className="date">
                   <input
                     type="date"
+                    value={this.state.date}
                     onChange={this.update('date')}></input>
 
                   <input
                     type="time"
+                    value={this.state.time}
                     onChange={this.update('time')}></input>
                 </div>
               </label>
@@ -142,17 +193,20 @@ class EventForm extends React.Component {
 
             <label className="input-title">EVENT DESCRIPTION
               <textarea
+              value={this.state.description}
                 onChange={this.update('description')}></textarea>
             </label>
 
             <label className="input-title">ORGANIZER NAME
               <input
+                value={this.state.organizer_name}
                 onChange={this.update('organizer_name')}
                 placeholder="Who's organizing this event?"></input>
             </label>
 
             <label className="input-title">ORGANIZER DESCRIPTION
               <textarea
+                value={this.state.organizer_description}
                 onChange={this.update('organizer_description')}></textarea>
             </label>
           </form>
