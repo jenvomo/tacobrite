@@ -5,7 +5,7 @@ class MyEventItem extends React.Component {
 
   render () {
     const { id, title, date, time } = this.props.event;
-    // console.log(this.props);
+
     return (
       <div>
         <div>{title}</div>
