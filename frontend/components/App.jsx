@@ -7,7 +7,7 @@ import NewEventContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
 import MyEventsContainer from './event/my_events_container';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedToEventsRoute, ProtectedToLoginRoute } from '../util/route_util';
 
 const App = () => (
   <div>
@@ -17,8 +17,8 @@ const App = () => (
     <Switch>
       <AuthRoute path='/login' component={LoginContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
-      <ProtectedRoute path='/myevents' component={MyEventsContainer} />
-      <Route path='/event/new' component={NewEventContainer} />
+      <ProtectedToEventsRoute path='/myevents' component={MyEventsContainer} />
+      <ProtectedToLoginRoute path='/event/new' component={NewEventContainer} />
       <Route path='/event/:eventId' component={EventShowContainer} />
       <Route path='/events' component={EventIndexContainer} />
       <Redirect to='/' />
