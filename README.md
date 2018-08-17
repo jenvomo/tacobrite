@@ -1,11 +1,16 @@
-# Eventliter
+# Eventliter  ![logo](https://github.com/jenkennedy/Eventliter/blob/master/app/assets/images/favicon.png)
 
 Eventliter is an event registration site where user can browse, create, manage, and register for different events.
 
-![Eventliter Screenshot](https://github.com/jenkennedy/Eventliter/blob/master/EventliterScreenshot.png "Eventliter Screenshot")
-
 [Eventliter Live Site](https://eventliter.herokuapp.com/#/login)
 
-Technologies:
+![Eventliter Screenshot](https://github.com/jenkennedy/Eventliter/blob/master/EventliterScreenshot.png "Eventliter Screenshot")
+
+
+#### Technologies
  * AWS
  * React
+
+## Key Features
+ * Create / Edit events
+ * Browse events
