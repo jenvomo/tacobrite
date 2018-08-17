@@ -193,7 +193,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 110px;
+    height: 160px;
     padding: 60px 10px;
     border-top: 1px solid #D2D6DF;
 
@@ -203,6 +203,11 @@
       font-size: 35px;
       text-align: center;
       padding: 10px 0;
+    }
+
+    .login-errors {
+      height: 50px;
+      color: red;
     }
 
     button {

@@ -223,7 +223,7 @@ class EventForm extends React.Component {
 
         <div className="complete-create">
           <p className="almost-msg">Nice job! You're almost done.</p>
-          <p className='login-errors'>{this.props.errors}</p>
+          <p className='login-errors'>{this.props.errors.join(', ')}</p>
           <button onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
         </div>
       </div>

@@ -41,7 +41,7 @@ class EventShow extends React.Component {
               </div>
 
               <div className="tickets-bar">
-                <div>Bookmark</div>
+                <div></div>
                 <button>TICKETS</button>
               </div>
 
