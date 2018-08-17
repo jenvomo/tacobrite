@@ -63,19 +63,9 @@ class EventForm extends React.Component {
             time: `${event.time.hour}:${event.time.min}`
           })
         }
-
-        // this.setState({
-        //   id: event.id,
-        //   title: event.title,
-        //   description: event.description,
-        //   organizer_name: event.organizer_name,
-        //   organizer_description: event.organizer_description,
-        //   imageUrl: event.imageUrl})
-        })
+      })
     }
-
   }
-
 
   update(field) {
     return (e) => {
