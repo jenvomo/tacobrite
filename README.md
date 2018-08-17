@@ -1,4 +1,3 @@
-![logo](https://github.com/jenkennedy/Eventliter/blob/master/app/assets/images/favicon.png)
 # Eventliter  
 
 Eventliter is an event registration site where user can browse, create, manage, and register for different events.
@@ -10,8 +9,19 @@ Eventliter is an event registration site where user can browse, create, manage, 
 
 #### Technologies
  * AWS
+    * User can upload a photo for their event
  * React
 
 ## Key Features
- * Create / Edit events
  * Browse events
+ * Create events
+ * Manage events created
+
+
+## Future Directions
+ * Google maps integration for event locations
+ * Register for an event
+ * Event categories
+ * Search for a specific event or by location
+ * Bookmark events
+ * Users show page to view bookmarked events and tickets purchased
