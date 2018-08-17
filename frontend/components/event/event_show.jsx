@@ -7,11 +7,6 @@ class EventShow extends React.Component {
     this.props.fetchEvent(eventId);
   }
 
-  // componentWillReceiveProps() {
-  //   const eventId = this.props.match.params.eventId;
-  //   this.props.fetchEvent(eventId);
-  // }
-
   render () {
     const { event } = this.props;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

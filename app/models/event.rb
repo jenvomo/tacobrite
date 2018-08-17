@@ -12,6 +12,16 @@
 #  img_url               :string
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  organizer_name        :string
+#  end_date              :date
+#  end_time              :time
+#  loc_ln_one            :string
+#  loc_ln_two            :string
+#  loc_city              :string
+#  loc_state             :string
+#  loc_zip               :string
+#  loc_lat               :float
+#  loc_long              :float
 #
 
 class Event < ApplicationRecord
@@ -24,6 +34,15 @@ class Event < ApplicationRecord
   belongs_to :organizer,
   foreign_key: :organizer_id,
   class_name: :User
+
+  has_one :event_category,
+  foreign_key: :event_id,
+  class_name: :EventCategory
+
+  has_one :category,
+  through: :event_category,
+  source: :category
+
 
   def ensure_photo
     unless self.photo.attached?

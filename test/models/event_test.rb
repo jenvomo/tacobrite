@@ -12,6 +12,16 @@
 #  img_url               :string
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  organizer_name        :string
+#  end_date              :date
+#  end_time              :time
+#  loc_ln_one            :string
+#  loc_ln_two            :string
+#  loc_city              :string
+#  loc_state             :string
+#  loc_zip               :string
+#  loc_lat               :float
+#  loc_long              :float
 #
 
 require 'test_helper'

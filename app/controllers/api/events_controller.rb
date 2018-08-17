@@ -8,6 +8,7 @@ class Api::EventsController < ApplicationController
     end
 
     if @event.save
+      # CategoryEvent.create({event_id: @event.id, category_id: params[:event][:category_id]})
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422
