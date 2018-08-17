@@ -14,6 +14,8 @@
       json.min event.time.min
     end
 
+    json.loc_ln_one event.loc_ln_one
+
     json.imageUrl url_for(event.photo)
   end
 end

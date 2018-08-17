@@ -11,11 +11,11 @@ demo_user = User.create({email: 'demo@demo.com', password: 'password', first_nam
 users = User.create({email: 'haseeb@aa.io', password: 'usersarestupid', first_name: 'haseeb', last_name: 'local celebrity'})
 
 Event.destroy_all
-event1 = Event.create({ title: 'aA Happy Hour', description: 'Come network and have a brewski', date: Date.today, time: Time.now, organizer_id: 2})
-event2 = Event.create({ title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2})
-event3 = Event.create({ title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2})
-event4 = Event.create({ title: 'Food Truck: Breakfast Tacos', description: 'Come get your taco fix', date: Date.new(2018,8,25), time: Time.now, organizer_id: 2, organizer_name: 'Jen', organizer_description: 'Lover of tacos'})
-event5 = Event.create({ title: 'BISCUIT FESTIVAL', description: 'PUT SOME SOUTH IN YOUR MOUTH!', date: Date.new(2018,10,27), time: Time.now, organizer_id: 2})
+event1 = Event.create({ title: 'aA Happy Hour', description: 'Come network and have a brewski', date: Date.today, time: Time.now, organizer_id: 2, loc_ln_one: '825 Battery St'})
+event2 = Event.create({ title: 'free lunch', description: 'if you finish your full stack by this friday', date: Date.new(2018,8,9), time: Time.now, organizer_id: 2, loc_ln_one: '825 Battery St'})
+event3 = Event.create({ title: 'bagel day', description: 'Bagels for the current cohort survivors', date: (Date.today + 7), time: Time.now, organizer_id: 2, loc_ln_one: '825 Battery St'})
+event4 = Event.create({ title: 'Food Truck: Breakfast Tacos', description: 'Come get your taco fix', date: Date.new(2018,8,25), time: Time.now, organizer_id: 2, organizer_name: 'Jen', organizer_description: 'Lover of tacos', loc_ln_one: 'San Francisco'})
+event5 = Event.create({ title: 'BISCUIT FESTIVAL', description: 'PUT SOME SOUTH IN YOUR MOUTH!', date: Date.new(2018,10,27), time: Time.now, organizer_id: 2, loc_ln_one: 'Ferry Building'})
 
 # heroku
 event1.photo.attach(io: File.open("app/assets/images/happyhour.jpg"), filename: "happyhour.jpg")

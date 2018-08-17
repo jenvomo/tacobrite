@@ -34,7 +34,7 @@ class EventShow extends React.Component {
 
                   <div className="title">{event.title}</div>
 
-                  <div className="loc">Location</div>
+                  <div className="loc">{event.loc_ln_one}</div>
 
                   <div className="price">FREE</div>
                 </div>

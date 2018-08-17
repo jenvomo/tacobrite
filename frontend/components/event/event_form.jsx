@@ -11,6 +11,9 @@ class EventForm extends React.Component {
         description: '',
         date: '',
         time: '',
+        end_date: '',
+        end_time: '',
+        loc_ln_one: '',
         organizer_name: '',
         organizer_description: '',
         photoFile: null,
@@ -80,6 +83,9 @@ class EventForm extends React.Component {
     formData.append('event[description]', this.state.description);
     formData.append('event[date]', this.state.date);
     formData.append('event[time]', this.state.time);
+    formData.append('event[end_date]', this.state.end_date);
+    formData.append('event[end_time]', this.state.end_time);
+    formData.append('event[loc_ln_one]', this.state.loc_ln_one);
     if (this.state.photoFile) {
       formData.append('event[photo]', this.state.photoFile);
     }
@@ -142,7 +148,9 @@ class EventForm extends React.Component {
             <label className="input-title">LOCATION
               <input
                 type="text"
-                placeholder="Search for a venue or address."></input>
+                value={this.state.loc_ln_one}
+                placeholder="Search for a venue or address."
+                onChange={this.update('loc_ln_one')}></input>
             </label>
 
             <div className="event-date-info">
@@ -162,8 +170,14 @@ class EventForm extends React.Component {
 
               <label className="input-title">ENDS
                 <div className="date">
-                  <input type="date"></input>
-                  <input type="time"></input>
+                  <input
+                    type="date"
+                    value={this.state.end_date}
+                    onChange={this.update('end_date')}></input>
+                  <input
+                    type="time"
+                    value={this.state.end_time}
+                    onChange={this.update('end_time')}></input>
                 </div>
               </label>
             </div>

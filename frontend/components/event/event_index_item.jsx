@@ -4,8 +4,8 @@ import { withRouter, Link } from 'react-router-dom';
 class EventIndexItem extends React.Component {
 
   render () {
-    
-    const { id, title, date, time, imageUrl } = this.props.event;
+
+    const { id, title, date, time, imageUrl, loc_ln_one } = this.props.event;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -25,7 +25,7 @@ class EventIndexItem extends React.Component {
             { time.min < 10 ?
               <p className='date'>{days[date.cwday]}, {months[date.month - 1]} {date.day}, {time.hour}:0{time.min}</p> :
               <p className='date'>{days[date.cwday]}, {months[date.month - 1]} {date.day}, {time.hour}:{time.min}</p>}
-            <p className='location'>Location</p>
+            <p className='location'>{loc_ln_one}</p>
           </div>
         </div>
         </Link>
