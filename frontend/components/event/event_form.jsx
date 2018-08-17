@@ -31,41 +31,29 @@ class EventForm extends React.Component {
         const { event } = this.props;
         this.setState(event);
         this.setState({id: event.id});
+        this.setState({time: event.time.time.slice(-13, -8)});
+        this.setState({end_time: event.end_time.time.slice(-13, -8)});
+        this.setState({date: event.date.date});
+        this.setState({end_date: event.end_date.date});
 
-        if ((event.date.month < 10) && (event.date.day < 10)) {
-          this.setState({
-            date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
-          })
-        } else if ((event.date.month < 10) && (event.date.day >= 10)){
-          this.setState({
-            date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
-          })
-        } else if ((event.date.month >= 10) && (event.date.day < 10)){
-          this.setState({
-            date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
-          })
-        } else {
-          this.setState({
-            date: `${event.date.yr}-${event.date.month}-${event.date.day}`
-          })
-        }
-        if ((event.time.hour < 10) && (event.time.min < 10)) {
-          this.setState({
-            time: `0${event.time.hour}:0${event.time.min}`
-          })
-        } else if ((event.time.hour < 10) && (event.time.min >= 10)){
-          this.setState({
-            time: `0${event.time.hour}:${event.time.min}`
-          })
-        } else if ((event.time.hour >= 10) && (event.time.min < 10)){
-          this.setState({
-            time: `${event.time.hour}:0${event.time.min}`
-          })
-        } else {
-          this.setState({
-            time: `${event.time.hour}:${event.time.min}`
-          })
-        }
+          // if ((event.date.month < 10) && (event.date.day < 10)) {
+          //   this.setState({
+          //     date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
+          //   })
+          // } else if ((event.date.month < 10) && (event.date.day >= 10)){
+          //   this.setState({
+          //     date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
+          //   })
+          // } else if ((event.date.month >= 10) && (event.date.day < 10)){
+          //   this.setState({
+          //     date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
+          //   })
+          // } else {
+          //   this.setState({
+          //     date: `${event.date.yr}-${event.date.month}-${event.date.day}`
+          //   })
+          // }
+
       })
     }
   }

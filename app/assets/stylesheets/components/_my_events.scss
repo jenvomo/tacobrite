@@ -1,0 +1,129 @@
+
+.manage-events {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8FA;
+
+  .container {
+    width: 1080px;
+    margin: auto;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 50px;
+      padding: 20px 0;
+
+      .manage {
+        color: #282C35;
+        font-size: 35px;
+        font-weight: 600;
+      }
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+
+      .left-pane {
+        display: flex;
+        flex-direction: column;
+        width: 780px;
+        padding: 0 15px;
+
+        input {
+          border: 1px #D2D6DF solid;
+          background-color: #fff;
+          border-radius: 3px;
+          vertical-align: middle;
+          height: 40px;
+          width: 370px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          padding-left: 10px;
+
+          ::placeholder {
+            color: #D2D6DF;
+          }
+        }
+
+        .my-event {
+          background-color: #fff;
+          width: 780px;
+          height: 94px;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: row;
+
+          .details {
+            padding: 15px 5px 10px 10px;
+            width: 565px;
+
+            .title {
+              color: #007f8c;
+              font-size: 20px;
+              line-height: 30px;
+              font-weight: 400;
+            }
+
+            .date {
+              color: #666A73;
+              font-size: 15px;
+              font-weight: 400;
+            }
+
+            .options {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              margin-top: 10px;
+              // width:
+
+              .option {
+                color: #666A73;
+                font-size: 15px;
+                margin-right: 20px;
+              }
+            }
+
+            .options:hover {
+              color: #5694f7;
+            }
+          }
+
+          .tickets {
+            width: 175px;
+            margin-top: 25px;
+
+            .tickets-progress-bar {
+              background-color: #ededed;
+              height: 5px;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .right-pane {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        padding: 0 15px;
+
+        .header {
+          font-size: 28px;
+          color: #666a73;
+          line-height: 35px;
+        }
+
+        .desc {
+          color: #666a73;
+          font-size: 15px;
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+}

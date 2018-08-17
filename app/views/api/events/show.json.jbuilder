@@ -6,10 +6,24 @@ json.date do
   json.yr @event.date.year
   json.date @event.date
 end
+json.end_date do
+  json.month @event.end_date.month
+  json.day @event.end_date.day
+  json.cwday @event.end_date.cwday
+  json.yr @event.end_date.year
+  json.date @event.end_date
+end
 
 json.time do
   json.hour @event.time.hour
   json.min @event.time.min
+  json.time @event.time
+end
+
+json.end_time do
+  json.hour @event.end_time.hour
+  json.min @event.end_time.min
+  json.time @event.end_time
 end
 
 json.loc_ln_one @event.loc_ln_one

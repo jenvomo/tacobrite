@@ -12,6 +12,7 @@
     json.time do
       json.hour event.time.hour
       json.min event.time.min
+      json.time event.time
     end
 
     json.loc_ln_one event.loc_ln_one
