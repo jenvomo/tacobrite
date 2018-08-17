@@ -13,7 +13,7 @@ class MyEvents extends React.Component {
           <div className='container'>
             <div className='header'>
               <div className='manage'>Manage Events</div>
-              <div>Dropdown for organizer</div>
+              <div className='organizer-dropdown'></div>
             </div>
 
             <div className='main-content'>
@@ -30,10 +30,10 @@ class MyEvents extends React.Component {
               </div>
 
               <div className='right-pane'>
-                <label className='header'>Merchant Agreement Update</label>
+                <label className='right-header'>Merchant Agreement Update</label>
                 <p className='desc'>We’ve updated our Merchant Agreement. By continuing your use of Eventliter, you agree to the updated Merchant Agreement.</p>
 
-                <label className='header'>Eventliter Organizer</label>
+                <label className='right-header'>Eventliter Organizer</label>
                 <p className='desc'>Manage orders and check-ins with your iPad, iPhone, or iPod touch with the new Eventliter Organizer app.</p>
               </div>
             </div>

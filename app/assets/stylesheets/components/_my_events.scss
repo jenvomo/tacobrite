@@ -13,7 +13,7 @@
       flex-direction: row;
       justify-content: space-between;
       height: 50px;
-      padding: 20px 0;
+      padding: 20px 15px;
 
       .manage {
         color: #282C35;
@@ -30,7 +30,7 @@
         display: flex;
         flex-direction: column;
         width: 780px;
-        padding-right: 15px;
+        padding: 0 15px;
 
         input {
           border: 1px #D2D6DF solid;
@@ -112,7 +112,7 @@
         width: 240px;
         padding: 0 15px;
 
-        .header {
+        .right-header {
           font-size: 28px;
           color: #666a73;
           line-height: 35px;
