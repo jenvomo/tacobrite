@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
   render () {
     if (this.props.formType === 'login') {
       return (
-        <div>
+        <div className="session-form">
 
           <img className="icon" src={window.images.user}></img>
 

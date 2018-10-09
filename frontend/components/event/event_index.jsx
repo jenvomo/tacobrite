@@ -35,6 +35,7 @@ class EventIndex extends React.Component {
           </ul>) : (
             <p>event index</p>
           )
+          
         }
       </div>
     )

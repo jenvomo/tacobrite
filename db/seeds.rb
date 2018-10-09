@@ -23,9 +23,9 @@ event3.photo.attach(io: File.open("app/assets/images/bagels.jpg"), filename: "ba
 event4.photo.attach(io: File.open("app/assets/images/kimchi-egg-breakfast-tacos.jpg"), filename: "kimchi-egg-breakfast-tacos.jpg")
 event5.photo.attach(io: File.open("app/assets/images/biscuits.jpg"), filename: "biscuits.jpg")
 
-# Category.destroy_all
-# cat1 = Category.create({title: 'Puffy Tacos', description: 'Puffy tacos are a fluffier version of their hard taco cousin.  Made by frying a tortilla'})
-# cat2 = Category.create({title: 'Hard Tacos', description: 'Crispy corn taco shells that remind you of childhood.'})
-# cat3 = Category.create({title: 'Soft Tacos', description: 'Warm flour tortillas that act as a superb canvas for all of the delicious toppings!'})
-# cat4 = Category.create({title: 'Taquitos', description: 'Long cylindars of deliciousness, fried, and meant to be devoured quickly.'})
-# cat5 = Category.create({title: 'Misc Tacos', description: 'Tacos too good they don\'t fall into a category!'})
+Category.destroy_all
+cat1 = Category.create({title: 'Puffy Tacos', description: 'Puffy tacos are a fluffier version of their hard taco cousin.  Made by frying a tortilla'})
+cat2 = Category.create({title: 'Hard Tacos', description: 'Crispy corn taco shells that remind you of childhood.'})
+cat3 = Category.create({title: 'Soft Tacos', description: 'Warm flour tortillas that act as a superb canvas for all of the delicious toppings!'})
+cat4 = Category.create({title: 'Taquitos', description: 'Long cylindars of deliciousness, fried, and meant to be devoured quickly.'})
+cat5 = Category.create({title: 'Misc Tacos', description: 'Tacos too good they don\'t fall into a category!'})

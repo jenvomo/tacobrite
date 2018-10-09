@@ -7,6 +7,7 @@ import NewEventContainer from './event/new_event_form_container';
 import EditEventContainer from './event/edit_event_form_container';
 import EventShowContainer from './event/event_show_container';
 import MyEventsContainer from './event/my_events_container';
+import FooterComponent from './footer/footer';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedToEventsRoute, ProtectedToLoginRoute } from '../util/route_util';
 
@@ -25,6 +26,9 @@ const App = () => (
       <Route path='/events' component={EventIndexContainer} />
       <Redirect to='/events' />
     </Switch>
+    <footer>
+      <Route path='/' component={FooterComponent} />
+    </footer>
   </div>
 );
 
