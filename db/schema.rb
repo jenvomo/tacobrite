@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2018_08_17_174450) do
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "password_digest", null: false
     t.string "img_url"
     t.string "session_token", null: false
@@ -87,8 +89,6 @@ ActiveRecord::Schema.define(version: 2018_08_17_174450) do
     t.float "home_loc_long"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
     t.index ["email"], name: "index_users_on_email"
   end
 
