@@ -29,3 +29,9 @@ cat2 = Category.create({title: 'Hard Tacos', description: 'Crispy corn taco shel
 cat3 = Category.create({title: 'Soft Tacos', description: 'Warm flour tortillas that act as a superb canvas for all of the delicious toppings!'})
 cat4 = Category.create({title: 'Taquitos', description: 'Long cylindars of deliciousness, fried, and meant to be devoured quickly.'})
 cat5 = Category.create({title: 'Misc Tacos', description: 'Tacos too good they don\'t fall into a category!'})
+
+EventCategory.create({event_id: event1.id, category_id: cat1.id})
+EventCategory.create({event_id: event2.id, category_id: cat1.id})
+EventCategory.create({event_id: event3.id, category_id: cat1.id})
+EventCategory.create({event_id: event4.id, category_id: cat2.id})
+EventCategory.create({event_id: event5.id, category_id: cat3.id})
