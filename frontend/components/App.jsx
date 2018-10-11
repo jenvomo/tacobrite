@@ -24,7 +24,7 @@ const App = () => (
         <ProtectedToEventsRoute path='/myevents' component={MyEventsContainer} />
         <ProtectedToLoginRoute path='/event/new' component={NewEventContainer} formType='new' />
         <ProtectedToLoginRoute path='/event/:eventId/edit' component={EditEventContainer} formType='edit' />
-        <Route path='/event/:eventId' component={EventShowContainer} />
+        <Route exact path='/event/:eventId' component={EventShowContainer} />
         <Route path='/events' component={EventIndexContainer} />
         <Redirect to='/events' />
       </ScrollToTop>
