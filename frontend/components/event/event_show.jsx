@@ -13,10 +13,17 @@ class EventShow extends React.Component {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
     // const { date, time, title, description, imageUrl } = this.props.event;
-
     return (
       <div className="event-show">
         { event ? (
+          <div>
+            <header className="background">
+            <div className="background-img-container">
+              <img className="background-img" src={event.imageUrl} />
+
+            </div>
+              <div className="lower-background"></div>
+            </header>
             <div className="event-container">
               <div className="event-show-header">
                 <img src={event.imageUrl} />
@@ -61,6 +68,7 @@ class EventShow extends React.Component {
                 <div className="desc">{event.organizer_description}</div>
               </div>
             </div>
+          </div>
         ) : (
           <div>loading</div>
         )}

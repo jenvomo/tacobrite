@@ -1,13 +1,38 @@
 .event-show {
-  background: #f4f5f7;
-  opacity: 20%;
+  position: relative;
+  
+  .background {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    box-shadow: none;
+    
+    .background-img-container {
+      height: 66vh;
+      min-height: 500px;
+      overflow: hidden;
+      box-sizing: border-box;
 
-  .event-container {
-    display: flex;
-    flex-direction: column;
-    width: 1080px;
-    margin: auto;
-    padding-top: 40px;
+      .background-img {
+        filter: blur(30px);
+        background-size: cover;
+      }
+    }
+
+    .lower-background {
+      background: #f4f5f7;
+      opacity: 20%;
+      height: 500px;
+    }
+  }
+
+.event-container {
+  display: flex;
+  flex-direction: column;
+  width: 1080px;
+  margin: auto;
+  padding: 40px 0;
+
 
     .event-show-header {
       display: flex;
