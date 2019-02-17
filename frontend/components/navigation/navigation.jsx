@@ -10,8 +10,8 @@ const Navigation = ({ currentUser, logout }) => {
       </Link>
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
-        <li>Help</li>
-        <Link  className='nav-link'to='/login'>Sign In</Link>
+        <li className='nav-link'>Help</li>
+        <Link className='nav-link' to='/login'>Sign In</Link>
       </ul>
     </section>
   );
@@ -23,8 +23,8 @@ const Navigation = ({ currentUser, logout }) => {
       </Link>
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
-        <Link className='nav-link' to='/event/new'>Create Event</Link>
         <li className='nav-link'>Help</li>
+        <Link className='nav-link create' to='/event/new'>Create Event</Link>
         <li className='user-dropdown'><img className="user-drop-img" src={window.images.user}></img>
           <UserNavigation currentUser={currentUser} logout={logout} />
         </li>

@@ -1,3 +1,11 @@
+.user-dropdown {
+  height: 60px;
+
+  img {
+    padding: 15px 0;
+
+  }
+}
 .user-dropdown-items {
   display: none;
   position: absolute;
@@ -7,6 +15,7 @@
 .user-dropdown:hover .user-dropdown-items {
   display: block;
   border: 1px solid lightgray;
+  z-index: 1;
 
   .item {
     width: 200px;
