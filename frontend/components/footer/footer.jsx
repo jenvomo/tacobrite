@@ -28,7 +28,7 @@ const Footer = state => {
 
       <div className="site-basics">
         <img src={window.images.logo_footer}></img>
-        <text>2018 Eventliter</text>
+        <div>2018 Eventliter</div>
       </div>
     </div>
   );
