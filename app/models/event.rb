@@ -43,6 +43,8 @@ class Event < ApplicationRecord
   through: :event_category,
   source: :category
 
+  has_many :tickets
+
 
   def ensure_photo
     unless self.photo.attached?
