@@ -5,7 +5,7 @@ const mapStateToProps = state => ({
   currentUser: state.session.id
 });
 
-const map mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())
 });
 
