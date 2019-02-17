@@ -1,5 +1,60 @@
 .footer {
   background-color: rgb(30, 10, 60);
-  height: 150px;
+  min-height: 150px;
   width: 100vw;
+  color: #DBDAE3;
+  display: flex;
+  flex-direction: column;
+
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 0 70px 0;
+    
+    h1 {
+      color: #A9A8B3;
+      font-size: 15px;
+      padding: 7px 0;
+    }
+    .links {
+      color: #DBDAE3;
+      font-size: 13px;
+      padding: 2px 0;
+    }
+
+    .find-events {
+      display: flex;
+      flex-direction: column;
+
+    }
+    
+    .meet-developer {
+      display: flex;
+      flex-direction: column;
+      
+      
+      .dev-links {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+      }
+    }
+  }
+    
+    img {
+      height: 30px;
+      width: 30px;
+      padding: 15px 15px 5px 15px;
+    }
+
+  .site-basics {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    color: #A9A8B3;
+  }
 }
