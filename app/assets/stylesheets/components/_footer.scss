@@ -5,6 +5,11 @@
   color: #DBDAE3;
   display: flex;
   flex-direction: column;
+  
+  img {
+    height: 30px;
+    width: 30px;
+  }
 
   .footer-top {
     display: flex;
@@ -36,25 +41,30 @@
       
       .dev-links {
         display: flex;
-        flex-direction: row;
-        margin: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        img {
+          height: 30px;
+          width: 30px;
+          padding: 5px 0;
+        }
       }
     }
   }
     
-    img {
-      height: 30px;
-      width: 30px;
-      padding: 15px 15px 5px 15px;
-    }
+    
+    .site-basics {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px;
+      color: #A9A8B3;
 
-  .site-basics {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-    color: #A9A8B3;
+      img {
+        padding: 5px;
+      }
   }
 }

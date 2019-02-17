@@ -12,6 +12,11 @@ const Footer = state => {
           <Link className="links" to={`/events`}>Browse Events</Link>
         </div>
 
+        <div className="create-event">
+          <h1>Plan Events</h1>
+          <Link className="links" to={`/event/new`}>Create an Event</Link>
+        </div>
+
         <div className="meet-developer">
           <h1>Meet the Developer</h1>
 
