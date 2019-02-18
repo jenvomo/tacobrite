@@ -1,4 +1,4 @@
-json.extract! @event, :id, :title, :description, :organizer_description, :organizer_name
+json.extract! @event, :id, :title, :description, :organizer_description, :organizer_name, :loc_ln_one, :tix_title, :tix_title, :tix_desc, :tix_qty, :tix_price, :sale_start_date, :sale_start_time, :sale_end_date, :sale_end_time, :tix_qty_per_min, :tix_qty_per_max
 json.date do
   json.month @event.date.month
   json.day @event.date.day
@@ -25,7 +25,5 @@ json.end_time do
   json.min @event.end_time.min
   json.time @event.end_time
 end
-
-json.loc_ln_one @event.loc_ln_one
 
 json.imageUrl url_for(@event.photo)

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Redirect } from 'react-router';
+import EventTix from './event_tix';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -83,7 +84,7 @@ class EventForm extends React.Component {
       formData.append('event[id]', this.state.id);
 
     }
-    console.log(this.props);
+
     this.props.processForm(formData).then(
       railsitem => {
         this.props.history.push(`/event/${railsitem.event.id}`);
@@ -125,7 +126,7 @@ class EventForm extends React.Component {
               <p className="section-num">1</p>
               <div className="section-title">Event Details</div>
             </div>
-            <label className="input-title">EVENT TITLE
+            <label className="input-title">Event Title
               <input
                 type="text"
                 value={this.state.title}
@@ -133,7 +134,7 @@ class EventForm extends React.Component {
                 onChange={this.update('title')}></input>
             </label>
 
-            <label className="input-title">LOCATION
+            <label className="input-title">Location
               <input
                 type="text"
                 value={this.state.loc_ln_one}
@@ -142,7 +143,7 @@ class EventForm extends React.Component {
             </label>
 
             <div className="event-date-info">
-              <label className="input-title">STARTS
+              <label className="input-title">Starts
                 <div className="date">
                   <input
                     type="date"
@@ -156,7 +157,7 @@ class EventForm extends React.Component {
                 </div>
               </label>
 
-              <label className="input-title">ENDS
+              <label className="input-title">Ends
                 <div className="date">
                   <input
                     type="date"
@@ -170,7 +171,7 @@ class EventForm extends React.Component {
               </label>
             </div>
 
-            <label className="event-img">EVENT IMAGE
+            <label className="event-img">Event Image
               <div className="img-input-container">
 
               {preview ?
@@ -192,32 +193,36 @@ class EventForm extends React.Component {
               </div>
             </label>
 
-            <label className="input-title">EVENT DESCRIPTION
+            <label className="input-title">Event Description
               <textarea
               value={this.state.description}
                 onChange={this.update('description')}></textarea>
             </label>
 
-            <label className="input-title">ORGANIZER NAME
+            <label className="input-title">Organizer Name
               <input
                 value={this.state.organizer_name}
                 onChange={this.update('organizer_name')}
                 placeholder="Who's organizing this event?"></input>
             </label>
 
-            <label className="input-title">ORGANIZER DESCRIPTION
+            <label className="input-title">Organizer Description
               <textarea
                 value={this.state.organizer_description}
                 onChange={this.update('organizer_description')}></textarea>
             </label>
+
+            <EventTix />
           </form>
         </div>
+
 
         <div className="complete-create">
           <p className="almost-msg">Nice job! You're almost done.</p>
           <p className='login-errors'>{this.props.errors.join(', ')}</p>
           <button onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
         </div>
+
       </div>
     )
   }
