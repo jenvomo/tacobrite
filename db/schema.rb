@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_17_231505) do
+ActiveRecord::Schema.define(version: 2019_02_18_181414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,15 +70,23 @@ ActiveRecord::Schema.define(version: 2019_02_17_231505) do
     t.string "loc_zip"
     t.float "loc_lat"
     t.float "loc_long"
+    t.string "tix_title", null: false
+    t.text "tix_desc"
+    t.integer "tix_qty", null: false
+    t.float "tix_price", null: false
+    t.date "sale_start_date"
+    t.time "sale_start_time"
+    t.date "sale_end_date"
+    t.time "sale_end_time"
+    t.integer "tix_qty_per_min"
+    t.integer "tix_qty_per_max"
     t.index ["organizer_id"], name: "index_events_on_organizer_id"
   end
 
   create_table "tickets", force: :cascade do |t|
     t.integer "event_id", null: false
     t.integer "user_id", null: false
-    t.float "price", null: false
     t.integer "qty", null: false
-    t.date "sale_end_date", null: false
     t.index ["event_id", "user_id"], name: "index_tickets_on_event_id_and_user_id", unique: true
     t.index ["event_id"], name: "index_tickets_on_event_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"

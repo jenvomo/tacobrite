@@ -1,0 +1,1 @@
+json.extract! @ticket, :id, :user_id, :event_id, :qty

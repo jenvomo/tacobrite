@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord 
-    validates :event_id, :user_id, :price, :qty, :sale_end_date, presence: true
+    validates :event_id, :user_id, :qty, presence: true
     
     belongs_to :owner,
     foreign_key: :user_id,
