@@ -1,10 +1,26 @@
 import React from 'react';
 
 class EventShow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.buyTix = this.buyTix.bind(this);
+  }
 
   componentDidMount() {
     const eventId = this.props.match.params.eventId;
     this.props.fetchEvent(eventId);
+  }
+
+  buyTix(e) {
+    e.preventDefault();
+    const formData = new FormData();
+
+    formData.append('ticket[qty]', 1);
+    formData.append('ticket[event_id]', this.props.match.params.eventId);
+    formData.append('ticket[user_id]', 2);
+    formData.append('ticket[price]', 10.00);
+    formData.append('ticket[sale_end_date]', new Date());
+    this.props.purchaseTicket(formData);
   }
 
   render () {
@@ -44,17 +60,17 @@ class EventShow extends React.Component {
 
               <div className="tickets-bar">
                 <div></div>
-                <button>TICKETS</button>
+                <button onClick={this.buyTix}>Tickets</button>
               </div>
 
               <div className="event-content">
                 <div className="event-desc">
-                  <div className="desc-header">DESCRIPTION</div>
-                  <div className="desc">{event.description}</div>
+                  <div className="desc-header">Description</div>
+                  <p className="desc">{event.description}</p>
                 </div>
 
               <div className="timing">
-                <div className="header">DATE AND TIME</div>
+                <div className="header">Date and Time</div>
                 { event.time.min < 10 ?
                   <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
                   <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
