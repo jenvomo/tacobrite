@@ -1,0 +1,92 @@
+.tix-form {
+    border: 1px solid #DBDAE3;
+    margin-top: 15px;
+    border-radius: 6px;
+    
+    
+    .tix-info-container {
+        background-color:  #EDECF2;
+        display: grid;
+        grid-template-columns: 40% 15% 25% 20%;
+        color: #39364f;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        
+        .tix-info-title {
+            padding: 10px 5px;
+            line-height: 20px;
+        }
+
+        .first {
+            padding-left: 20px;
+        }
+    }
+    
+    .tix-info-inputs {
+        display: grid;
+        grid-template-columns: 40% 15% 25% 20%;
+        background-color: white;
+        border-top: 1px solid #DBDAE3;
+        border-bottom: 1px solid #DBDAE3;
+        
+        input {
+            border: 1px #DBDAE3 solid;
+            border-radius: 3px;
+            padding: 9px 12px;
+            margin: 10px 5px;
+        }
+        
+        .first {
+            margin-left: 20px;
+        }
+    }
+    
+    .tix-lower-container {
+        padding: 15px;
+        
+        .tix-set {
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #39364F;
+            font-weight: 400;
+            border-bottom: 1px solid #DBDAE3;
+            width: 100%;
+        }
+
+        .input-title {
+            // box-sizing: border-box;
+            width: 660px;
+
+            input {
+                width: 100%;
+            }
+
+            .date {
+                width: 332px;
+            }
+        }
+    }
+    
+    select {
+        width: 664px;
+        background-color: #fff;
+        border: 1px solid #D2D6DF;
+        border-radius: 3px;
+        font-size: 16px;
+        height: 48px;
+        padding: 9px 12px;
+        color: #45494E;
+        margin-top: 5px;
+        cursor: text;
+    }
+    
+    select::placeholder {
+        color: #c6c9d1;
+    }
+    
+    select:focus, input:focus, textarea:focus {
+        border: 2px solid #3659E3;
+        outline: none;
+    }
+}
