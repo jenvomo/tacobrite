@@ -7,19 +7,29 @@ class EventForm extends React.Component {
   constructor(props) {
     super(props);
 
-      this.state = {
-        title: '',
-        description: '',
-        date: '',
-        time: '',
-        end_date: '',
-        end_time: '',
-        loc_ln_one: '',
-        organizer_name: '',
-        organizer_description: '',
-        photoFile: null,
-        imageUrl: ''
-      };
+    this.state = {
+      title: '',
+      description: '',
+      date: '',
+      time: '',
+      end_date: '',
+      end_time: '',
+      loc_ln_one: '',
+      organizer_name: '',
+      organizer_description: '',
+      photoFile: null,
+      imageUrl: '',
+      tix_title: '',
+      tix_qty: '',
+      tix_price: '',
+      tix_desc: '',
+      sale_start_date: '',
+      sale_start_time: '',
+      sale_end_date: '',
+      sale_end_time: '',
+      tix_qty_per_min: 1,
+      tix_qty_per_max: '',
+    };
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,6 +46,10 @@ class EventForm extends React.Component {
         this.setState({end_time: event.end_time.time.slice(-13, -8)});
         this.setState({date: event.date.date});
         this.setState({end_date: event.end_date.date});
+        this.setState({sale_start_time: event.sale_start_time.slice(-13, -8)});
+        this.setState({sale_start_date: event.sale_start_date.date});
+        this.setState({sale_end_date: event.sale_end_date.date});
+        this.setState({sale_end_time: event.sale_end_time.slice(-13, -8)});
 
           // if ((event.date.month < 10) && (event.date.day < 10)) {
           //   this.setState({
@@ -80,6 +94,16 @@ class EventForm extends React.Component {
     }
     formData.append('event[organizer_name]', this.state.organizer_name);
     formData.append('event[organizer_description]', this.state.organizer_description);
+    formData.append('event[tix_title]', this.state.tix_title);
+    formData.append('event[tix_qty]', this.state.tix_qty);
+    formData.append('event[tix_price]', this.state.tix_price);
+    formData.append('event[tix_desc]', this.state.tix_desc);
+    formData.append('event[sale_start_date]', this.state.sale_start_date);
+    formData.append('event[sale_start_time]', this.state.sale_start_time);
+    formData.append('event[sale_end_date]', this.state.sale_end_date);
+    formData.append('event[sale_end_time]', this.state.sale_end_time);
+    formData.append('event[tix_qty_per_min]', this.state.tix_qty_per_min);
+    formData.append('event[tix_qty_per_max]', this.state.tix_qty_per_max);
     if (this.props.formType === 'edit') {
       formData.append('event[id]', this.state.id);
 
@@ -212,7 +236,7 @@ class EventForm extends React.Component {
                 onChange={this.update('organizer_description')}></textarea>
             </label>
 
-            <EventTix />
+            <EventTix update={this.update} event={this.state} />
           </form>
         </div>
 
