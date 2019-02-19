@@ -10,17 +10,20 @@ const usersReducer = (state = {}, action) => {
       return merge({}, state, { [action.user.id]: action.user });
     case RECEIVE_EVENT:
       const nextState = merge({}, state);
-      const eventArray = Object.values(nextState)[0].myEvents;
-
-      let exists = false;
-      eventArray.forEach(id => {
-        if ( id === action.event.id ) {
-          exists = true;
-        }
-      });
-      if ( !exists ) eventArray.push(action.event.id);
-
-      return nextState;
+      if (Object.values(nextState)[0]) {
+        const eventArray = Object.values(nextState)[0].myEvents;
+  
+        let exists = false;
+        eventArray.forEach(id => {
+          if ( id === action.event.id ) {
+            exists = true;
+          }
+        });
+        if ( !exists ) eventArray.push(action.event.id);
+        return nextState;
+      } else {
+        return state;
+      }
     default:
       return state;
   };
