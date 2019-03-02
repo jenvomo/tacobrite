@@ -1,4 +1,5 @@
 import React from 'react';
+import TicketModalContainer from '../tickets/tickets_modal_container';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class EventShow extends React.Component {
     // const { date, time, title, description, imageUrl } = this.props.event;
     return (
       <div className="event-show">
+        <TicketModalContainer />
         { event ? (
           <div>
             <header className="background">
@@ -60,7 +62,7 @@ class EventShow extends React.Component {
 
               <div className="tickets-bar">
                 <div></div>
-                <button onClick={this.buyTix}>Tickets</button>
+                <button onClick={this.props.openModal}>Tickets</button>
               </div>
 
               <div className="event-content">
