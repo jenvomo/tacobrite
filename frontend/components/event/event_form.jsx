@@ -104,6 +104,7 @@ class EventForm extends React.Component {
     formData.append('event[sale_end_time]', this.state.sale_end_time);
     formData.append('event[tix_qty_per_min]', this.state.tix_qty_per_min);
     formData.append('event[tix_qty_per_max]', this.state.tix_qty_per_max);
+    
     if (this.props.formType === 'edit') {
       formData.append('event[id]', this.state.id);
 

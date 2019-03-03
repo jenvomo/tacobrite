@@ -32,7 +32,7 @@
       grid-template-columns: 5% 90% 5%;
       justify-items: center;
       line-height: 20px;
-      // box-shadow: 0 0 2px 0 rgba(0,0,0,.25)
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
 
       h1 {
         grid-column-start: 2;
@@ -83,6 +83,10 @@
           border: 1px #DBDAE3 solid;
           border-radius: 3px;
         }
+
+        .select:focus {
+          border: 2px solid #3659E3;
+        }
       }
     }
     
@@ -98,13 +102,14 @@
         align-self: center;
         color: #39364F;
         font-weight: 400;
+        margin-left: 10px;
       }
 
       button {
-        width: 65px;
-        height: 40px;
+        width: 70px;
+        height: 44px;
         background-color: #0D8547;
-        padding: 0 30px;
+        padding: 0 27px;
         margin: 0 15px;
         border-radius: 3px;
         color: #fff;

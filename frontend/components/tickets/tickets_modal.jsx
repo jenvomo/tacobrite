@@ -3,6 +3,16 @@ import React from 'react';
 class TicketsModal extends React.Component {
   constructor (props) {
     super(props);
+
+    this.state = {
+      qty: 1
+    }
+    this.updateQty = this.updateQty.bind(this);
+  }
+
+  updateQty(e) {
+    console.log(this.state.qty);
+    this.setState({qty: e.currentTarget.value});
   }
 
   handleSubmit(e) {
@@ -12,9 +22,8 @@ class TicketsModal extends React.Component {
     formData.append('ticket[qty]', 1);
     formData.append('ticket[event_id]', this.props.match.params.eventId);
     formData.append('ticket[user_id]', 2);
-    formData.append('ticket[price]', 10.00);
-    formData.append('ticket[sale_end_date]', new Date());
-    this.props.purchaseTicket(formData).then(ticket => this.props.closeModal());
+    formData.append('ticket[price]', this.props.event.tix_price);
+    this.props.purchaseTicket(formData).then(railsitem => this.props.closeModal());
   }
 
   render () {
@@ -35,7 +44,7 @@ class TicketsModal extends React.Component {
                 <div className="ticket-price">{this.props.event.tix_price}</div>
               </div>
 
-              <select>
+              <select onChange={this.updateQty} defaultValue="1">
                 <option value="1">1</option>
                 <option value="2">2</option>
               </select>
@@ -43,7 +52,7 @@ class TicketsModal extends React.Component {
           </div>
 
           <div className="tickets-footer">
-            <div>QTY:</div>
+            <div>QTY: {this.state.qty}</div>
             <div className="price">FREE</div>
             <button className="tickets-checkout" onClick={this.handleSubmit.bind(this)}>Checkout</button>
           </div>
