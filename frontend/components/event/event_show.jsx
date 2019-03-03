@@ -4,24 +4,11 @@ import TicketModalContainer from '../tickets/tickets_modal_container';
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
-    this.buyTix = this.buyTix.bind(this);
   }
 
   componentDidMount() {
     const eventId = this.props.match.params.eventId;
     this.props.fetchEvent(eventId);
-  }
-
-  buyTix(e) {
-    e.preventDefault();
-    const formData = new FormData();
-
-    formData.append('ticket[qty]', 1);
-    formData.append('ticket[event_id]', this.props.match.params.eventId);
-    formData.append('ticket[user_id]', 2);
-    formData.append('ticket[price]', 10.00);
-    formData.append('ticket[sale_end_date]', new Date());
-    this.props.purchaseTicket(formData);
   }
 
   render () {
