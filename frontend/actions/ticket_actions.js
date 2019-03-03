@@ -18,3 +18,11 @@ export const receiveTicket = ticket => {
         ticket
     })
 };
+
+export const receiveTicketErrors = errors => {
+    debugger
+    return ({
+        type: RECEIVE_TICKET_ERRORS,
+        errors
+    })
+};
