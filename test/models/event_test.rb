@@ -22,6 +22,16 @@
 #  loc_zip               :string
 #  loc_lat               :float
 #  loc_long              :float
+#  tix_title             :string           not null
+#  tix_desc              :text
+#  tix_qty               :integer          not null
+#  tix_price             :float            not null
+#  sale_start_date       :date
+#  sale_start_time       :time
+#  sale_end_date         :date
+#  sale_end_time         :time
+#  tix_qty_per_min       :integer
+#  tix_qty_per_max       :integer
 #
 
 require 'test_helper'

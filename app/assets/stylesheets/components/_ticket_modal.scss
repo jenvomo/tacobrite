@@ -53,7 +53,36 @@
         height: 90px;
         margin: 20px 20px;
         border-left: solid #3659E3 15px;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,.25)
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+        display: flex;
+        justify-content: space-between;
+        
+        .ticket-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 20px;
+
+          .ticket-title {
+            color: #1E0A3C;
+            font-size: 18px;
+          }
+
+          .ticket-price {
+            color:  #39364F;
+            font-size: 15px;
+          }
+        }
+
+        select {
+          margin: 20px;
+          width: 80px;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: #FFF;
+          border: 1px #DBDAE3 solid;
+          border-radius: 3px;
+        }
       }
     }
     
