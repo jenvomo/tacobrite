@@ -75,7 +75,7 @@ event5 = Event.create({
     tix_price: 0.00})
 
 event1.photo.attach(io: File.open("app/assets/images/happyhour.jpg"), filename: "happyhour.jpg")
-event2.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
+event2.photo.attach(io: File.open("app/assets/images/free_lunch.jpg"), filename: "free_lunch.jpg")
 event3.photo.attach(io: File.open("app/assets/images/bagels.jpg"), filename: "bagels.jpg")
 event4.photo.attach(io: File.open("app/assets/images/kimchi-egg-breakfast-tacos.jpg"), filename: "kimchi-egg-breakfast-tacos.jpg")
 event5.photo.attach(io: File.open("app/assets/images/biscuits.jpg"), filename: "biscuits.jpg")
