@@ -1,5 +1,6 @@
 import React from 'react';
 import TicketModalContainer from '../tickets/tickets_modal_container';
+import {ScaleLoader} from 'react-spinners';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class EventShow extends React.Component {
     const { event } = this.props;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
+   
     // const { date, time, title, description, imageUrl } = this.props.event;
     return (
       <div className="event-show">
@@ -75,7 +76,10 @@ class EventShow extends React.Component {
             </div>
           </div>
         ) : (
-          <div>loading</div>
+          <ScaleLoader 
+              sizeUnit={"px"}
+              size={150}
+              color={'#EF6730'}/>
         )}
       </div>
     )
