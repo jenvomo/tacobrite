@@ -8,7 +8,7 @@
 
 User.destroy_all
 demo_user = User.create({email: 'demo@demo.com', password: 'password', first_name: 'demo', last_name: 'demo'})
-users = User.create({email: 'haseeb@aa.io', password: 'usersarestupid', first_name: 'haseeb', last_name: 'local celebrity'})
+haseeb = User.create({email: 'haseeb@aa.io', password: 'usersarestupid', first_name: 'haseeb', last_name: 'local celebrity'})
 
 Event.destroy_all
 event1 = Event.create({ 
@@ -18,7 +18,7 @@ event1 = Event.create({
     time: Time.now, 
     end_date: Date.new(2020, 2, 3), 
     end_time: Time.now, 
-    organizer_id: 2, 
+    organizer_id: demo_user.id, 
     loc_ln_one: '825 Battery St',
     tix_title: 'Early Bird',
     tix_qty: 50,
@@ -30,7 +30,7 @@ event2 = Event.create({
     time: Time.now, 
     end_date: Date.new(2018,8,9), 
     end_time: Time.now, 
-    organizer_id: 2, 
+    organizer_id: demo_user.id, 
     loc_ln_one: '825 Battery St',
     tix_title: 'RSVP',
     tix_qty: 50,
@@ -42,7 +42,7 @@ event3 = Event.create({
     time: Time.now, 
     end_date: (Date.today + 7), 
     end_time: Time.now, 
-    organizer_id: 2, 
+    organizer_id: haseeb.id, 
     loc_ln_one: '825 Battery St',
     tix_title: 'RSVP',
     tix_qty: 50,
@@ -54,7 +54,7 @@ event4 = Event.create({
     time: Time.now, 
     end_date: Date.new(2018,8,25), 
     end_time: Time.now, 
-    organizer_id: 2, 
+    organizer_id: haseeb.id, 
     organizer_name: 'Jen', 
     organizer_description: 'Lover of tacos', 
     loc_ln_one: 'San Francisco',
@@ -68,7 +68,7 @@ event5 = Event.create({
     time: Time.now, 
     end_date: Date.new(2018,10,27), 
     end_time: Time.now, 
-    organizer_id: 2, 
+    organizer_id: demo_user.id, 
     loc_ln_one: 'Ferry Building',
     tix_title: 'RSVP',
     tix_qty: 50,
