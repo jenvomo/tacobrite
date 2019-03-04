@@ -23,7 +23,7 @@
     .lower-background {
       background: #f4f5f7;
       opacity: 20%;
-      height: 100%;
+      height: 80%;
     }
   }
 
@@ -43,6 +43,8 @@
         width: 720px;
         height: 360px;
         border-top-left-radius: 5px;
+        object-fit: cover;
+
       }
 
       .header-info {

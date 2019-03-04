@@ -48,7 +48,6 @@
         flex-direction: row;
         border-bottom: 1px solid rgb(219, 218, 227);
         padding-top: 20px;
-        // margin-top: 
 
         .section-num {
           width: 50px;
@@ -170,7 +169,7 @@
               color: #919399;
               font-size: 12px;
             }
-
+            
             input {
               display: none;
             }
@@ -178,6 +177,7 @@
             .preview {
               height: 190px;
               width: 380px;
+              object-fit: cover;
             }
           }
 

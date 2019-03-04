@@ -43,7 +43,7 @@ class EventShow extends React.Component {
 
                   <div className="loc">{event.loc_ln_one}</div>
 
-                  <div className="price">FREE</div>
+                  <div className="price">${event.tix_price}.00</div>
                 </div>
               </div>
 
@@ -61,8 +61,8 @@ class EventShow extends React.Component {
               <div className="timing">
                 <div className="header">Date and Time</div>
                 { event.time.min < 10 ?
-                  <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
-                  <div className="date">{days[event.date.cwday]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
+                  <div className="date">{days[event.date.cwday -1]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
+                  <div className="date">{days[event.date.cwday -1]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
                 }
               </div>
             </div>
