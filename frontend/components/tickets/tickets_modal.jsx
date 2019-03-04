@@ -11,7 +11,6 @@ class TicketsModal extends React.Component {
   }
 
   updateQty(e) {
-    console.log(this.state.qty);
     this.setState({qty: e.currentTarget.value});
   }
 
@@ -41,7 +40,7 @@ class TicketsModal extends React.Component {
             <div className="ticket-item">
               <div className="ticket-info">
                 <div className="ticket-title">{this.props.event.tix_title}</div>
-                <div className="ticket-price">{this.props.event.tix_price}</div>
+                <div className="ticket-price">${this.props.event.tix_price}.00</div>
               </div>
 
               <select onChange={this.updateQty} defaultValue="1">
@@ -61,7 +60,7 @@ class TicketsModal extends React.Component {
 
           <div className="tickets-footer">
             <div>QTY: {this.state.qty}</div>
-            <div className="price">FREE</div>
+            <div className="price">${this.props.event.tix_price * this.state.qty}.00</div>
             <button className="tickets-checkout" onClick={this.handleSubmit.bind(this)}>Checkout</button>
           </div>
         </div>
