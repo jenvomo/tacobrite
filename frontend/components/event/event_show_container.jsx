@@ -5,7 +5,8 @@ import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    event: state.entities.events[ownProps.match.params.eventId]
+    event: state.entities.events[ownProps.match.params.eventId],
+    currentUser: state.session.id
   }
 };
 

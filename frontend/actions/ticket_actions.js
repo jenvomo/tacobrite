@@ -20,7 +20,6 @@ export const receiveTicket = ticket => {
 };
 
 export const receiveTicketErrors = errors => {
-    debugger
     return ({
         type: RECEIVE_TICKET_ERRORS,
         errors

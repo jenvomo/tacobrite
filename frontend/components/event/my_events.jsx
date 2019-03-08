@@ -7,7 +7,6 @@ class MyEvents extends React.Component {
   }
 
   render () {
-    // debugger;
     if (this.props.events) {
       return (
         <div className='manage-events'>

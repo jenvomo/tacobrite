@@ -20,7 +20,6 @@ class TicketsModal extends React.Component {
 
     formData.append('ticket[qty]', 1);
     formData.append('ticket[event_id]', this.props.match.params.eventId);
-    formData.append('ticket[user_id]', 2);
     formData.append('ticket[price]', this.props.event.tix_price);
     this.props.purchaseTicket(formData).then(railsitem => this.props.closeModal());
   }

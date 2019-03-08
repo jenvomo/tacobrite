@@ -5,11 +5,20 @@ import {ScaleLoader} from 'react-spinners';
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
+    this.getTickets = this.getTickets.bind(this);
   }
 
   componentDidMount() {
     const eventId = this.props.match.params.eventId;
     this.props.fetchEvent(eventId);
+  }
+
+  getTickets() {
+    if (this.props.currentUser) {
+      this.props.openModal();
+    } else {
+      this.props.history.push("/login");
+    }
   }
 
   render () {
@@ -50,7 +59,7 @@ class EventShow extends React.Component {
 
               <div className="tickets-bar">
                 <div></div>
-                <button onClick={this.props.openModal}>Tickets</button>
+                <button onClick={this.getTickets}>Tickets</button>
               </div>
 
               <div className="event-content">

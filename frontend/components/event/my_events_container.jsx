@@ -4,7 +4,6 @@ import MyEvents from './my_events';
 import React from 'react';
 
 const mapStateToProps = state => {
-  // debugger
   return {
     myEvents: state.entities.users[state.session.id].myEvents,
     events: state.entities.events
