@@ -16,11 +16,11 @@ Eventliter is an event registration site where user can browse, create, manage, 
  * Browse events
  * Create events
  * Manage events created
+ * Get tickets for an event
 
 
 ## Future Directions
  * Google maps integration for event locations
- * Register for an event
  * Event categories
  * Search for a specific event or by location
  * Bookmark events
