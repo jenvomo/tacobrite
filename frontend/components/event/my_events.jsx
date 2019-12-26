@@ -41,8 +41,7 @@ class MyEvents extends React.Component {
         </div>
       )
     } else {
-      return
-      <div>Hello</div>
+      return <div>Hello</div>
     }
   }
 }

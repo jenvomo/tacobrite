@@ -7,9 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore vs code config for testing
-/.vscode
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -35,3 +32,5 @@ bundle.js.map
 .byebug_history
 .DS_Store
 npm-debug.log
+.vscode/
+app/views/layouts/application.html.erb

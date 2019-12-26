@@ -1,7 +1,8 @@
-export const fetchEvents = () => (
+export const fetchEvents = (bounds) => (
   $.ajax({
     method: 'GET',
-    url: '/api/events'
+    url: '/api/events',
+    bounds
   })
 );
 

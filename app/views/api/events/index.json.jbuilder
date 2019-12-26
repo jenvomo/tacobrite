@@ -16,6 +16,8 @@
     end
 
     json.loc_ln_one event.loc_ln_one
+    json.lat event.loc_lat
+    json.lng event.loc_long
 
     json.imageUrl url_for(event.photo)
   end

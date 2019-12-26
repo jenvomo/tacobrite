@@ -22,7 +22,11 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    if params[:bounds]
+      @events = Event.in_bounds(params[:bounds])
+    else
+      @events = Event.all
+    end
     render :index
   end
 

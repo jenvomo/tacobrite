@@ -1,4 +1,6 @@
 json.extract! @event, :id, :title, :description, :organizer_description, :organizer_name, :loc_ln_one, :tix_title, :tix_title, :tix_desc, :tix_qty, :tix_price, :sale_start_date, :sale_start_time, :sale_end_date, :sale_end_time, :tix_qty_per_min, :tix_qty_per_max
+json.lat @event.loc_lat
+json.lng @event.loc_long
 json.date do
   json.month @event.date.month
   json.day @event.date.day

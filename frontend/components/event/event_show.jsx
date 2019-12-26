@@ -1,5 +1,5 @@
 import React from 'react';
-import TicketModalContainer from '../tickets/tickets_modal_container';
+import TicketModalContainer from '../ticket/tickets_modal_container';
 import {ScaleLoader} from 'react-spinners';
 
 class EventShow extends React.Component {
@@ -87,7 +87,7 @@ class EventShow extends React.Component {
         ) : (
           <ScaleLoader 
               sizeUnit={"px"}
-              size={150}
+              size={200}
               color={'#EF6730'}/>
         )}
       </div>

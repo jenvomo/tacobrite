@@ -61,4 +61,16 @@ class Event < ApplicationRecord
       self.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
     end
   end
+
+  def self.in_bounds(bounds)
+    # google map bounds will be in the following format:
+    # {
+    #   "northEast"=> {"lat"=>"37.80971", "lng"=>"-122.39208"},
+    #   "southWest"=> {"lat"=>"37.74187", "lng"=>"-122.47791"}
+    # }
+
+    Event
+      .where(loc_lat: 'BETWEEN #{bounds.northEast.lat} AND #{bounds.southWest.lat}')
+      .where(loc_long: 'BETWEEN #{bounds.northEast.lng} AND #{bounds.southWest.lng}')
+  end
 end

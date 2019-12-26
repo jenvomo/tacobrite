@@ -20,6 +20,8 @@ event1 = Event.create({
     end_time: Time.now, 
     organizer_id: demo_user.id, 
     loc_ln_one: '825 Battery St',
+    loc_lat: 37.799280,
+    loc_long: -122.401384,
     tix_title: 'Early Bird',
     tix_qty: 50,
     tix_price: 5.00})
@@ -32,6 +34,8 @@ event2 = Event.create({
     end_time: Time.now, 
     organizer_id: demo_user.id, 
     loc_ln_one: '825 Battery St',
+    loc_lat: 37.799280,
+    loc_long: -122.401384,
     tix_title: 'RSVP',
     tix_qty: 50,
     tix_price: 10.00})
@@ -44,6 +48,8 @@ event3 = Event.create({
     end_time: Time.now, 
     organizer_id: haseeb.id, 
     loc_ln_one: '825 Battery St',
+    loc_lat: 37.799280,
+    loc_long: -122.401384,
     tix_title: 'RSVP',
     tix_qty: 50,
     tix_price: 0.00})
@@ -58,6 +64,8 @@ event4 = Event.create({
     organizer_name: 'Jen', 
     organizer_description: 'Lover of tacos', 
     loc_ln_one: 'San Francisco',
+    loc_lat: 37.785990,
+    loc_long:  -122.401029,
     tix_title: 'General Admission',
     tix_qty: 50,
     tix_price: 15.00})
@@ -70,6 +78,8 @@ event5 = Event.create({
     end_time: Time.now, 
     organizer_id: demo_user.id, 
     loc_ln_one: 'Ferry Building',
+    loc_lat: 37.795867, 
+    loc_long: -122.393396,
     tix_title: 'RSVP',
     tix_qty: 50,
     tix_price: 0.00})
@@ -87,6 +97,7 @@ cat3 = Category.create({title: 'Soft Tacos', description: 'Warm flour tortillas 
 cat4 = Category.create({title: 'Taquitos', description: 'Long cylindars of deliciousness, fried, and meant to be devoured quickly.'})
 cat5 = Category.create({title: 'Misc Tacos', description: 'Tacos too good they don\'t fall into a category!'})
 
+EventCategory.destroy_all
 EventCategory.create({event_id: event1.id, category_id: cat1.id})
 EventCategory.create({event_id: event2.id, category_id: cat1.id})
 EventCategory.create({event_id: event3.id, category_id: cat1.id})
