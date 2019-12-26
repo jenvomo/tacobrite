@@ -9,6 +9,13 @@ class Api::TicketsController < ApplicationController
         end
     end
 
+    def index
+        @tickets = Ticket.where(user_id: params[:user_id])
+    end
+
+    def destroy
+    end
+
     private
 
     def ticket_params

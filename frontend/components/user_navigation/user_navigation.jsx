@@ -10,7 +10,7 @@ export class UserNavigation extends React.Component {
     return (
       <ul className='user-dropdown-items'>
         <li className='item'><Link to='/events'>Browse Events</Link></li>
-        <li className='item'>Tickets</li>
+        <li className='item'><Link to='/mytickets'>Tickets</Link></li>
         <li className='item'>Saved</li>
         <li className='item'><Link to='/myevents'>Manage Events</Link></li>
         <li className='item'><Link to='/event/new'>Create Event</Link></li>
