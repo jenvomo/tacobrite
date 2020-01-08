@@ -34,3 +34,5 @@ bundle.js.map
 npm-debug.log
 .vscode/
 app/views/layouts/application.html.erb
+# Ignore application configuration
+/config/application.yml
