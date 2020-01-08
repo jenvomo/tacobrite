@@ -2,11 +2,11 @@ class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = {};
+    this.removeMarker = this.removeMarker.bind(this);
   }
 
   updateMarkers(events) {
-    console.log("update em!");
-    events.forEach( event => {
+    Object.values(events).forEach( event => {
       let myLatLng = { lat: event.lat, lng: event.lng};
       this.markers[event.id] = new google.maps.Marker({
         position: myLatLng,
@@ -14,6 +14,17 @@ class MarkerManager {
         title: event.title
       });
     })
+
+    Object.keys(this.markers).forEach( eventId => {
+      if (!events[eventId]) {
+        this.removeMarker(eventId);
+      }
+    })
+  }
+
+  removeMarker(eventId) {
+    debugger
+    delete this.markers[eventId];
   }
 }
 

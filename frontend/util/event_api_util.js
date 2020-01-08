@@ -1,10 +1,16 @@
-export const fetchEvents = (bounds) => (
-  $.ajax({
-    method: 'GET',
-    url: '/api/events',
-    bounds
-  })
-);
+export const fetchEvents = (bounds) => {
+  if (bounds) {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/events?northLat=${bounds.northEast.lat}&southLat=${bounds.southWest.lat}&westLng=${bounds.southWest.lng}&eastLng=${bounds.northEast.lng}`
+    })
+  } else {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/events`
+    })
+  }
+};
 
 export const fetchEvent = id => (
   $.ajax({
