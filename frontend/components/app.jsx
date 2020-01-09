@@ -23,7 +23,7 @@ const App = () => (
       <Switch>
         <AuthRoute path='/login' component={LoginContainer} />
         <AuthRoute path='/signup' component={SignupContainer} />
-        <ScrollToTop>
+        {/* <ScrollToTop> */}
           <ProtectedToEventsRoute path='/myevents' component={MyEventsContainer} />
           <ProtectedToLoginRoute exact path='/event/new' component={NewEventContainer} formType='new' />
           <ProtectedToLoginRoute path='/event/:eventId/edit' component={EditEventContainer} formType='edit' />
@@ -32,7 +32,7 @@ const App = () => (
           <Route path='/events' component={EventIndexContainer} />
           <Route path='/mytickets' component={MyTicketsContainer} />
           <Redirect to='/events' />
-        </ScrollToTop>
+        {/* </ScrollToTop> */}
       </Switch>
     </div>
     <footer>
