@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/Root';
+import Root from './components/root';
 import configureStore from './store/store';
 import { logout } from './actions/session_actions';
 import { fetchEvents, fetchEvent, createEvent } from './actions/event_actions';

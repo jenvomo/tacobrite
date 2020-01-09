@@ -9,7 +9,7 @@ import EditEventContainer from './event/edit_event_form_container';
 import EventShowContainer from './event/event_show_container';
 import MyEventsContainer from './event/my_events_container';
 import MyTicketsContainer from './ticket/my_tickets_container';
-import SearchContainer from '../components/search/search_container';
+import SearchContainer from './search/search_container';
 import FooterComponent from './footer/footer';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedToEventsRoute, ProtectedToLoginRoute } from '../util/route_util';
