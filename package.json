@@ -23,8 +23,8 @@
     "lodash": ">=4.17.12"
   },
   "engines": {
-    "node": "8.9.4",
-    "npm": "5.6.0"
+    "node": "10.14.1",
+    "npm": "6.13.4"
   },
   "scripts": {
     "start": "webpack --watch --mode=development",
