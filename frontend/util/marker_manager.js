@@ -26,6 +26,15 @@ class MarkerManager {
     debugger
     delete this.markers[eventId];
   }
+
+  addMarker(event) {
+    let myLatLng = { lat: event.lat, lng: event.lng };
+    new google.maps.Marker({
+      position: myLatLng,
+      map: this.map,
+      title: event.title
+    });
+  }
 }
 
 export default MarkerManager;
