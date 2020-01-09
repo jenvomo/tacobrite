@@ -1,6 +1,7 @@
 import React from 'react';
 import TicketModalContainer from '../ticket/tickets_modal_container';
 import {ScaleLoader} from 'react-spinners';
+import EventShowMap from './event_show_map';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -82,7 +83,10 @@ class EventShow extends React.Component {
                 <div className="info">Organizer of {event.title}</div>
                 <div className="desc">{event.organizer_description}</div>
               </div>
+              
+            <EventShowMap event={event} /> 
             </div>
+
           </div>
         ) : (
           <ScaleLoader 
