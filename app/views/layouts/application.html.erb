@@ -9,12 +9,7 @@
     <%= javascript_include_tag 'application' %>
 
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-    <script type="text/javascript">
-      function initMap() {
-        
-        }
-    </script>
-        <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}&callback=initMap" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
   </head>
 
   <body>
