@@ -23,7 +23,7 @@ class MarkerManager {
   }
 
   removeMarker(eventId) {
-    debugger
+    this.markers[eventId].setMap(null);
     delete this.markers[eventId];
   }
 

@@ -9,22 +9,39 @@ class EventIndex extends React.Component {
   render () {
     const { events } = this.props;
     return (
-      <div>
+      <div className="event-index">
+        <header className="background">
+          <div className="background-img-container">
+            <img className="background-img" src={window.images.splash} />
+          </div>
+          <div className="lower-background"></div>
+        </header>
 
         <div className='browse-events-header'>
-          <div className='city-stuff'>
-            <div className='browse-loc-container'>
-              <div className='browsing'>Browsing in </div>
-              <div className='browse-loc'>San Francisco, CA</div>
-            </div>
-            <div className='city-info'>
-                <p className='to-do'>Things to do in</p>
-                <p className='city'>San Francisco</p>
-                <p className='city-description'>San Francisco has something for everyone. Foodies should enjoy a burrito in the Mission and go to the Farmers Market at the Ferry Building. Shop shoes and boutiques in Hayes Valley. Get outside and stroll Golden Gate Park, say "Hi" to the Bison. See the city from the water by taking a ferry or catamaran under the bridge. See current events below.</p>
-            </div>
+          <img className='event-index-img' src={window.images.splash}></img>
+          <div className="spalsh-words">
+            <div className="splash-verbiage-open">Let's</div>
+            <div className="splash-verbiage-close">TACO bout it</div>
           </div>
 
-          <img className='event-index-img' src={window.images.sf}></img>
+        <div className="index-search-form"> 
+          <div>I want some tacos</div>
+          <select>
+            <option>Today</option>
+            <option>Tomorrow</option>
+            <option>This weekend</option>
+            <option>This week</option>
+            <option>Next week</option>
+            <option>This month</option>
+            <option>Next month</option>
+          </select>
+          <label>in
+            <input type="text" placeholder="San Francisco"></input>
+          </label>
+          <label>and I'm in the mood for
+            <input type="text" placeholder="Anything"></input>
+          </label>
+        </div>
         </div>
 
         { events ?
