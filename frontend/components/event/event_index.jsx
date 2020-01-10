@@ -25,8 +25,8 @@ class EventIndex extends React.Component {
           </div>
 
         <div className="index-search-form"> 
-          <div>I want some tacos</div>
-          <select>
+          <div className="want-em">I want some tacos</div>
+          <select className="pick-em">
             <option>Today</option>
             <option>Tomorrow</option>
             <option>This weekend</option>
@@ -35,10 +35,10 @@ class EventIndex extends React.Component {
             <option>This month</option>
             <option>Next month</option>
           </select>
-          <label>in
+          <label className="field">in
             <input type="text" placeholder="San Francisco"></input>
           </label>
-          <label>and I'm in the mood for
+          <label className="field">and I'm in the mood for
             <input type="text" placeholder="Anything"></input>
           </label>
         </div>
