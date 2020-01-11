@@ -31,10 +31,10 @@ class MyEvents extends React.Component {
 
               <div className='right-pane'>
                 <label className='right-header'>Merchant Agreement Update</label>
-                <p className='desc'>We’ve updated our Merchant Agreement. By continuing your use of Eventliter, you agree to the updated Merchant Agreement.</p>
+                <p className='desc'>We’ve updated our Merchant Agreement. By continuing your use of tacobrite, you agree to the updated Merchant Agreement.</p>
 
-                <label className='right-header'>Eventliter Organizer</label>
-                <p className='desc'>Manage orders and check-ins with your iPad, iPhone, or iPod touch with the new Eventliter Organizer app.</p>
+                <label className='right-header'>tacobrite organizer</label>
+                <p className='desc'>Manage orders and check-ins with your iPad, iPhone, or iPod touch with the new tacobrite organizer app.</p>
               </div>
             </div>
           </div>

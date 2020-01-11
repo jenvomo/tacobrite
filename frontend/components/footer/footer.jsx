@@ -33,7 +33,7 @@ const Footer = state => {
 
       <div className="site-basics">
         <img src={window.images.logo_footer}></img>
-        <div>2018 Eventliter</div>
+        <div>2018 tacobrite</div>
       </div>
     </div>
   );

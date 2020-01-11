@@ -8,6 +8,7 @@ const Navigation = ({ currentUser, logout }) => {
       <Link to="/events">
         <img src={window.images.logo}></img>
       </Link>
+      <SearchBar />
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <li className='nav-link'>Help</li>
