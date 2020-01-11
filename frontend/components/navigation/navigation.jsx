@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UserNavigation from '../user_navigation/user_navigation';
+import SearchBar from '../search/search_bar';
 
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -22,6 +23,7 @@ const Navigation = ({ currentUser, logout }) => {
       <Link to="/events">
         <img src={window.images.logo}></img>
       </Link>
+      <SearchBar />
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <li className='nav-link'>Help</li>

@@ -15,7 +15,7 @@
 .user-dropdown:hover .user-dropdown-items {
   display: block;
   border: 1px solid lightgray;
-  z-index: 1;
+  z-index: 300;
 
   .item {
     width: 200px;

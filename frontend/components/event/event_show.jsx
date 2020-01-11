@@ -36,7 +36,6 @@ class EventShow extends React.Component {
             <header className="background">
             <div className="background-img-container">
               <img className="background-img" src={event.imageUrl} />
-
             </div>
               <div className="lower-background"></div>
             </header>

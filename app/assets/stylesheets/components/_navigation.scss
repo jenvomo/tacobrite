@@ -15,6 +15,16 @@
     width: 180px;
   }
 
+  .search-bar {
+    width: 90%;
+
+    button {
+      display: none;
+    }
+  }
+  .search-bar::placeholder {
+    color: #c6c9d1;
+  }
 
   .main-nav-options {
     position: relative;
