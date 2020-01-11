@@ -4,8 +4,6 @@ tacobrite is an event registration site where users can browse, create, manage, 
 
 [tacobrite Live Site](https://tacobrite.herokuapp.com/)
 
-<!-- ![tacobrite screenshot](https://github.com/jenkennedy/Eventliter/blob/master/EventliterScreenshot.png "Eventliter Screenshot") -->
-
 
 #### Technologies
  * AWS
