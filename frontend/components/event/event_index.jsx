@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
+import SplashSearchForm from './splash_search_form';
 
 class EventIndex extends React.Component {
   componentDidMount () {
@@ -24,24 +25,8 @@ class EventIndex extends React.Component {
             <div className="splash-verbiage-close">TACO bout it</div>
           </div>
 
-        <div className="index-search-form"> 
-          <div className="want-em">I want some tacos</div>
-          <select className="pick-em">
-            <option>Today</option>
-            <option>Tomorrow</option>
-            <option>This weekend</option>
-            <option>This week</option>
-            <option>Next week</option>
-            <option>This month</option>
-            <option>Next month</option>
-          </select>
-          <label className="field">in
-            <input type="text" placeholder="San Francisco"></input>
-          </label>
-          <label className="field">and I'm in the mood for
-            <input type="text" placeholder="Anything"></input>
-          </label>
-        </div>
+        <SplashSearchForm />
+
         </div>
 
         { events ?

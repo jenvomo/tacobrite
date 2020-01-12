@@ -64,14 +64,14 @@
   .browse-events-header {
     // display: flex;
     // flex-direction: column;
-    width: 1080px;
+    width: 85vw;
     margin-left: 7vw;
     padding: 40px 0;
     position: relative;
 
     img {
-      width: 950px;
-      height: 450px;
+      width: 72vw;
+      height: 60vh;
       border-top-left-radius: 5px;
       object-fit: cover;
 
@@ -101,7 +101,8 @@
   .index-search-form {
     z-index: 3;
     height: 250px;
-    width: 350px;
+    max-width: 350px;
+    width: 35vw;
     background-color: white;
     color: black;
     position: absolute;
@@ -109,6 +110,9 @@
     top: 100px;
     flex-direction: column;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     .want-em {
       font-size: 12px;
@@ -116,20 +120,44 @@
     }
 
     .pick-em {
-      border: none;
-      border-radius: none;
-      font-weight: bold;
-      font-size: 18px;
-      width: 100%;
-      border-bottom: 2px solid blue;
-      background-color: white;
-      margin: 10px 0;
-      line-height: 24px;
+      border-bottom: 2px solid #DBDAE3;
+      padding: 2px 0;
+      margin: 10px 0 10px -2px;
+
+      .pick-em-select {
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        width: 100%;
+        background-color: white;
+        line-height: 24px;
+        padding-left: 0;
+        margin: 0 0 0 -5px;
+      }
+      
+      .pick-em-select:focus {
+        outline: none;
+      }
     }
 
-    // .field {
-    //   margin: 10px 0;
-    // }
+    .field {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      color: #4B4D63;
+
+      input {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1e0a3c;
+        padding: 10px 0;
+
+      }
+
+      input::placeholder {
+        color: #1e0a3c;
+      }
+    }
 
     // .pick-em:focus {
     //   border: none;
