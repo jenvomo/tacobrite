@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  fetchEvents: () => dispatch(fetchEvents())
+  fetchEvents: (filters) => dispatch(fetchEvents(filters))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventIndex);

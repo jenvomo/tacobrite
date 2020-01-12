@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_010602) do
+ActiveRecord::Schema.define(version: 2020_01_12_014741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2019_03_03_010602) do
 
   create_table "categories", force: :cascade do |t|
     t.string "title", null: false
-    t.text "description", null: false
     t.index ["title"], name: "index_categories_on_title", unique: true
   end
 

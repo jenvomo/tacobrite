@@ -22,7 +22,9 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    if params[:northLat]
+    if params[:category_id]
+      @events = Event.joins(:event_category).where('event_categories.category_id = ?', params[:category_id])
+    elsif params[:northLat]
       @events = Event.in_bounds({
         northEast: { 
           lat: params[:northLat],
@@ -57,10 +59,6 @@ class Api::EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :time, :end_date, :end_time, :organizer_description, :organizer_name, :photo, :loc_ln_one, :tix_qty, :tix_price, :tix_title, :tix_desc , :sale_start_date, :sale_start_time, :sale_end_date, :sale_end_time, :tix_qty_per_min, :tix_qty_per_max)
-  end
-
-  def bounds_params
-    params.require(:bounds).permit(:northEast, :southWest)
+    params.require(:event).permit(:title, :description, :date, :time, :end_date, :end_time, :organizer_description, :organizer_name, :photo, :loc_ln_one, :tix_qty, :tix_price, :tix_title, :tix_desc , :sale_start_date, :sale_start_time, :sale_end_date, :sale_end_time, :tix_qty_per_min, :tix_qty_per_max, :category_id)
   end
 end

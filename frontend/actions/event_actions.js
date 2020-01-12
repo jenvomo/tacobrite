@@ -5,8 +5,8 @@ export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
 
-export const fetchEvents = bounds => dispatch => {
-  return EventApiUtil.fetchEvents(bounds)
+export const fetchEvents = filters => dispatch => {
+  return EventApiUtil.fetchEvents(filters)
     .then(events => dispatch(receiveEvents(events)),
     errors => dispatch(receiveErrors(errors.responseJSON)))
 };
