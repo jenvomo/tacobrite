@@ -11,15 +11,15 @@ class EventIndex extends React.Component {
       bounds: null
     };
 
-    this.updateFilters = this.updateFilters.bind(this);
+    this.update = this.update.bind(this);
   }
   
   componentDidMount () {
     this.props.fetchEvents(this.state);
   }
 
-  updateFilters(filter, value) {
-    this.setState({[filter]: value }, () => {this.props.fetchEvents(this.state)});
+  update(filter, value) {
+    this.setState({[filter]: value }, () => {this.props.updateFilters(this.state)});
   }
 
   render () {
@@ -43,7 +43,7 @@ class EventIndex extends React.Component {
         <SplashSearchForm />
 
         </div>
-        <CategoryEventIndex updateFilters={this.updateFilters} />
+        <CategoryEventIndex update={this.update} />
         { events ?
           (<ul className='index-events-list'>
             {Object.values(events).map(event => (
