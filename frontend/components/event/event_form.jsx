@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import EventTix from './event_tix';
 

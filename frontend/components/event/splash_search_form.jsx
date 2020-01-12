@@ -1,11 +1,20 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SplashSearchForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push("/events/search");
+  }
 
-  render () {
+  render() {
     return (
-      <div className="index-search-form">
+      <form className="index-search-form" onSubmit={this.handleSubmit}>
         <div>
           <div className="want-em">I want some tacos</div>
           <div className="pick-em">
@@ -26,9 +35,10 @@ class SplashSearchForm extends React.Component {
         <label className="field">And I'm in the mood for
               <input type="text" placeholder="Anything"></input>
         </label>
-      </div>
+        <button>Submit</button>
+      </form>
     )
   }
 }
 
-export default SplashSearchForm;
+export default withRouter(SplashSearchForm);
