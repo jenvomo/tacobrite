@@ -39,7 +39,7 @@
       padding: 5px 0;
 
     }
-    
+
     .selected {
       color: #fd348b;
       border-bottom: 2px solid #fd348b;
@@ -47,6 +47,7 @@
 
     div:hover {
       border-bottom: 2px solid #fd348b;
+      cursor: pointer;
     }
   }
 }

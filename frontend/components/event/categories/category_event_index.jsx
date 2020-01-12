@@ -1,10 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class CategoryEventIndex extends React.Component {
   constructor(props) {
     super(props);
     this.select = this.select.bind(this);
     this.clickIt = this.clickIt.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   select(category) {
@@ -14,7 +16,17 @@ class CategoryEventIndex extends React.Component {
 
   clickIt(category) {
     this.props.update("category", category);
-    this.select(category);
+
+    if (category == null) {
+      this.select("All");
+    } else {
+      this.select(category);
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push("/events/search");
   }
 
   render() {
@@ -22,11 +34,14 @@ class CategoryEventIndex extends React.Component {
       <div className="categories">
         <header>
           <div>Popular in</div>
-          <input placeholder="San Francisco" />
+          <form onSubmit={this.handleSubmit}>
+            <input placeholder="San Francisco" />
+            <button></button>
+          </form>
         </header>
 
         <div className="cat-options">
-          <div id="All" onClick={() => this.clickIt(null)}>All</div>
+          <div id="All" className="selected" onClick={() => this.clickIt(null)}>All</div>
           <div id="Beef" onClick={() => this.clickIt("Beef")}>Beef</div>
           <div id="Breakfast" onClick={() => this.clickIt("Breakfast")}>Breakfast</div>
           <div id="Chicken" onClick={() => this.clickIt("Chicken")}>Chicken</div>
@@ -40,4 +55,4 @@ class CategoryEventIndex extends React.Component {
   }
 }
 
-export default CategoryEventIndex;
+export default withRouter(CategoryEventIndex);
