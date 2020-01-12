@@ -1,0 +1,52 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin: 0 7vw;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: 900;
+
+    div {
+      color: #39364F;
+    }
+
+    input {
+      color: #f86044;
+      margin-left: 10px;
+      border-bottom:2px solid #DBDAE4;
+    }
+
+    input::placeholder {
+      color: #f86044;
+    }
+
+  }
+
+  .cat-options {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 14px;
+    color: #6F7287;
+    font-weight: 600;
+
+    div {
+      margin: 20px 30px 20px 0;
+      border-bottom: 2px solid white;
+      padding: 5px 0;
+
+    }
+    
+    .selected {
+      color: #fd348b;
+      border-bottom: 2px solid #fd348b;
+    }
+
+    div:hover {
+      border-bottom: 2px solid #fd348b;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @media (min-width: 400px) {
   .index-event {
-    padding: 16px 12px;
+    padding: 16px 30px 16px 0;
 
     img {
       border-radius: 4px;
@@ -13,7 +13,7 @@
 @media (min-width: 480px) {
   .index-event {
     width: 50vw;
-    padding: 24px;
+    padding: 24px 24px 24px 0;
   }
   .index-event img {
     height: 22vw;
@@ -77,13 +77,12 @@
 
     }
 
-    .spalsh-words {
+    .splash-words {
       position: absolute;
       z-index: 1;
       color: black;
       font-weight: bold;
       padding: 100px 75px;
-      height: 100%;
 
   
       .splash-verbiage-open {
@@ -168,8 +167,8 @@
 
 
   .index-event {
-    width: 33vw;
-    padding: 16px 12px;
+    width: 28vw;
+    padding: 16px 30px 16px 0;
   }
 
   .index-event img {
@@ -219,7 +218,8 @@
 .index-events-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 10px 0 40px 0;
+  margin: 0 7vw;
 
 
   .index-event {

@@ -35,7 +35,7 @@ class EventIndex extends React.Component {
 
         <div className='browse-events-header'>
           <img className='event-index-img' src={window.images.splash}></img>
-          <div className="spalsh-words">
+          <div className="splash-words">
             <div className="splash-verbiage-open">Let's</div>
             <div className="splash-verbiage-close">TACO bout it</div>
           </div>
