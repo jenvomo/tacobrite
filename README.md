@@ -4,6 +4,7 @@ tacobrite is an event registration site where users can browse, create, manage, 
 
 [tacobrite Live Site](https://tacobrite.herokuapp.com/)
 
+[tacobrite-screenshot]!(/app/assets/images/TACOBRITE-screenshot.png)
 
 #### Technologies
  * AWS
@@ -13,7 +14,7 @@ tacobrite is an event registration site where users can browse, create, manage, 
  * Google Maps Javascript API
 
 ## Key Features
- * Browse events
+ * Browse events by category
  * Create events
  * Edit events
  * Manage events created
@@ -21,9 +22,13 @@ tacobrite is an event registration site where users can browse, create, manage, 
 
 
 ## Future Directions
- * Google maps integration for event locations (done!)
- * Event categories
+ * Google maps integration for event locations
  * Event tags
- * Search for a specific event or by location
+ * Search for events by:
+   * title
+   * location
+   * date
+   * category
+   * price
  * Bookmark events
- * Users show page to view bookmarked events and tickets purchased
+ * Users show page to view bookmarks and tickets
