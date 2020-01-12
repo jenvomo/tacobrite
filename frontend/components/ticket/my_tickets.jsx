@@ -10,7 +10,6 @@ class MyTickets extends React.Component {
   }
 
   render() {
-    debugger
     if (this.props.events && this.props.tickets) {
       // return (
       //   <div className="my-tickets">
