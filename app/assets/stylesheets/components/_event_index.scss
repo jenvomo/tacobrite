@@ -82,7 +82,7 @@
       z-index: 1;
       color: black;
       font-weight: bold;
-      padding: 100px 75px;
+      padding: 100px 50px;
 
   
       .splash-verbiage-open {
@@ -179,21 +179,10 @@
     .event-info {
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
     }
-
-    // @keyframes slidein {
-    //   from {
-    //     img {
-    //       border-radius: 4px;
-    //     }
-    //   }
-
-      // to {
-        img {
-          border-radius: 4px 4px 0 0;
-        }
-      // }
-
-    // }
+    
+    img {
+      border-radius: 4px 4px 0 0;
+    }
   }
 }
 
