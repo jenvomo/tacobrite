@@ -39,7 +39,7 @@ class SplashSearchForm extends React.Component {
           <div className="pick-em">
             <select className="pick-em-select" defaultValue="null">
               <option>Anything</option>
-              {categories.map(category => (<option>{category}</option>))}
+              {categories.map(category => (<option key={category}>{category}</option>))}
             </select>
           </div>
         </label>

@@ -2,8 +2,16 @@ import React from 'react';
 import MyEventItem from './my_event_item';
 
 class MyEvents extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bounds: null,
+      category: null
+    }
+  }
+  
   componentDidMount () {
-    this.props.fetchEvents();
+    this.props.fetchEvents(this.state);
   }
 
   render () {

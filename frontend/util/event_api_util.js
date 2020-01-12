@@ -1,5 +1,4 @@
 export const fetchEvents = (filters) => {
-  
   if (filters.bounds && filters.category) {
     return $.ajax({
       method: 'GET',
