@@ -45,14 +45,6 @@ class Event < ApplicationRecord
   foreign_key: :organizer_id,
   class_name: :User
 
-  has_one :event_category,
-  foreign_key: :event_id,
-  class_name: :EventCategory
-
-  has_one :category,
-  through: :event_category,
-  source: :category
-
   has_many :tickets
 
 

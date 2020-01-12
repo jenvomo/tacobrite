@@ -26,7 +26,8 @@ event1 = Event.create({
     loc_long: -122.401384,
     tix_title: 'Early Bird',
     tix_qty: 50,
-    tix_price: 5.00})
+    tix_price: 5.00,
+    category: "Chicken"})
 event2 = Event.create({ 
     title: 'Poblano + Cheese', 
     description: 'if you finish your full stack by this friday', 
@@ -40,7 +41,8 @@ event2 = Event.create({
     loc_long: -122.401384,
     tix_title: 'RSVP',
     tix_qty: 50,
-    tix_price: 10.00})
+    tix_price: 10.00,
+    category: "Vegetarian"})
 event3 = Event.create({ 
     title: 'Broccoli', 
     description: 'Bagels for the current cohort survivors', 
@@ -54,7 +56,8 @@ event3 = Event.create({
     loc_long: -122.401384,
     tix_title: 'RSVP',
     tix_qty: 50,
-    tix_price: 0.00})
+    tix_price: 0.00,
+    category: "Vegan"})
 event4 = Event.create({ 
     title: 'Ground Beef', 
     description: 'Come get your taco fix', 
@@ -70,7 +73,8 @@ event4 = Event.create({
     loc_long:  -122.401029,
     tix_title: 'General Admission',
     tix_qty: 50,
-    tix_price: 15.00})
+    tix_price: 15.00,
+    category: "Beef"})
 event5 = Event.create({ 
     title: 'Kimchi Egg', 
     description: 'PUT SOME SOUTH IN YOUR MOUTH!', 
@@ -84,26 +88,11 @@ event5 = Event.create({
     loc_long: -122.393396,
     tix_title: 'RSVP',
     tix_qty: 50,
-    tix_price: 0.00})
+    tix_price: 0.00,
+    category: "Breakfast"})
 
 event1.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/chicken/korean-krispy.jpg"), filename: "korean-krispy.jpg")
 event2.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/vegetarian/poblano-cheese.jpg"), filename: "poblano-cheese.jpg")
 event3.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/vegan/broccoli.jpg"), filename: "broccoli.jpg")
 event4.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/beef/ground-beef.jpg"), filename: "ground-beef.jpg")
 event5.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/breakfast/kimchi-egg.jpg"), filename: "kimchi-egg.jpg")
-
-Category.destroy_all
-cat1 = Category.create!({title: 'Pork'})
-cat2 = Category.create!({title: 'Beef'})
-cat3 = Category.create!({title: 'Breakfast'})
-cat4 = Category.create!({title: 'Vegitarian'})
-cat5 = Category.create!({title: 'Vegan'})
-cat6 = Category.create!({title: 'Chicken'})
-cat7 = Category.create!({title: 'Fish'})
-
-EventCategory.destroy_all
-EventCategory.create!({event_id: event1.id, category_id: cat6.id})
-EventCategory.create!({event_id: event2.id, category_id: cat4.id})
-EventCategory.create!({event_id: event3.id, category_id: cat5.id})
-EventCategory.create!({event_id: event4.id, category_id: cat2.id})
-EventCategory.create!({event_id: event5.id, category_id: cat3.id})

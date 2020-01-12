@@ -2,10 +2,10 @@ import { fetchEvents } from "../actions/event_actions";
 
 export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
 
-export const changeCategory = id => {
+export const changeCategory = category => {
   return ({
     type: UPDATE_CATEGORY,
-    category: id
+    category
   })
 };
 
@@ -14,8 +14,8 @@ export const changeBounds = bounds => ({
   bounds
 });
 
-export const updateCategory = id => (dispatch, getState) => {
-  dispatch(changeCategory(id));
+export const updateCategory = category => (dispatch, getState) => {
+  dispatch(changeCategory(category));
   return fetchEvents(getState().ui.filters)(dispatch);
 }
 

@@ -22,8 +22,8 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    if params[:category_id]
-      @events = Event.joins(:event_category).where('event_categories.category_id = ?', params[:category_id])
+    if params[:category]
+      @events = Event.where(category: params[:category])
     elsif params[:northLat]
       @events = Event.in_bounds({
         northEast: { 
