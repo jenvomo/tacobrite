@@ -6,8 +6,10 @@ import SearchBar from '../search/search_bar';
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <section className="main-nav">
-      <Link to="/events">
-        <img src={window.images.logo}></img>
+      <Link className="linked"to="/events">
+        <div className="logo">
+          <img src={window.images.logo}></img>
+        </div>
       </Link>
       <SearchBar />
       <ul className='main-nav-options'>
@@ -20,8 +22,10 @@ const Navigation = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <section className="main-nav">
-      <Link to="/events">
-        <img src={window.images.logo}></img>
+      <Link className="linked" to="/events">
+        <div className="logo">
+          <img src={window.images.logo}></img>
+        </div>
       </Link>
       <SearchBar />
       <ul className='main-nav-options'>

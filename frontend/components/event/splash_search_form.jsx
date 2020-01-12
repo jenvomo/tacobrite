@@ -13,6 +13,7 @@ class SplashSearchForm extends React.Component {
   }
 
   render() {
+    let categories = ["Beef", "Breakfast", "Chicken", "Fish", "Pork", "Vegan", "Vegetarian"]
     return (
       <form className="index-search-form" onSubmit={this.handleSubmit}>
         <div>
@@ -29,11 +30,18 @@ class SplashSearchForm extends React.Component {
             </select>
           </div>
         </div>
+
         <label className="field">In
               <input type="text" placeholder="San Francisco"></input>
         </label>
-        <label className="field">And I'm in the mood for
-              <input type="text" placeholder="Anything"></input>
+
+        <label className="want-em">And I'm in the mood for
+          <div className="pick-em">
+            <select className="pick-em-select" defaultValue="null">
+              <option>Anything</option>
+              {categories.map(category => (<option>{category}</option>))}
+            </select>
+          </div>
         </label>
         <button>Submit</button>
       </form>
