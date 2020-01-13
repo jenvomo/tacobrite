@@ -144,6 +144,8 @@
           margin-bottom: 30px;
           font-size: 15px;
           font-weight: 400;
+          white-space: pre-line;
+          -webkit-user-modify: read-write-plaintext-only;
         }
       }
 

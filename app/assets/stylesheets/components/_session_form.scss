@@ -3,6 +3,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.main-form {
+  margin-top: 120px;
+}
+
 .session-form {
   height: 600px;
   margin-top: 120px;
@@ -148,11 +152,11 @@ body {
     text-align: left;
     color: #fd348b;
     font-size: 12px;
-    height: 25px;
+    height: 40px;
     padding-top: 4px;
   }
 
   #password {
-    height: 95px;
+    height: 110px;
   }
 }

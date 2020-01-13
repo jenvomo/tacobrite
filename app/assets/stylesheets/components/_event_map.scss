@@ -1,10 +1,11 @@
 .map-container {
   width: 400px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   border-radius: 10px;
   margin: 0;
   border-radius: 0;
-  position: sticky;
+  position: sticky !important;
+  top: 60px;
 
   .search-events {
     list-style: none;
