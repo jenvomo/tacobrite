@@ -144,14 +144,14 @@
       flex-direction: column;
       font-size: 12px;
       color: #4B4D63;
-      border-bottom: 1px solid #DBDAE3;
-
+      height: 64px;
+      
       input {
         font-size: 18px;
         font-weight: 700;
         color: #1e0a3c;
         padding: 12px 0 5px 0;
-
+        border-bottom: 1px solid #DBDAE3;
       }
 
       input::placeholder {
