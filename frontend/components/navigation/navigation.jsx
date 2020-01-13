@@ -6,12 +6,16 @@ import SearchBar from '../search/search_bar';
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <section className="main-nav">
-      <Link className="linked"to="/events">
-        <div className="logo">
-          <img src={window.images.logo}></img>
-        </div>
-      </Link>
-      <SearchBar />
+      <div className="logo-search">
+        <Link className="linked"to="/events">
+          <div className="logo">
+            <img src={window.images.logo}></img>
+          </div>
+        </Link>
+
+        <SearchBar />
+      </div>
+
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <li className='nav-link'>Help</li>
@@ -22,12 +26,16 @@ const Navigation = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <section className="main-nav">
-      <Link className="linked" to="/events">
-        <div className="logo">
-          <img src={window.images.logo}></img>
-        </div>
-      </Link>
-      <SearchBar />
+      <div className="logo-search">
+        <Link className="linked" to="/events">
+          <div className="logo">
+            <img src={window.images.logo}></img>
+          </div>
+        </Link>
+        
+        <SearchBar />
+      </div>
+
       <ul className='main-nav-options'>
         <Link className='nav-link' to='/events'>Browse Events</Link>
         <li className='nav-link'>Help</li>
