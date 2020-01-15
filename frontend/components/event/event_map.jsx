@@ -6,12 +6,12 @@ class EventMap extends React.Component {
     
     const mapOptions = {
       center: { lat: 37.7758, lng: -122.435 }, 
-      zoom: 12
+      zoom: 10
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.props.updateBounds({
-        northEast: { lat: 37.83005348467966, lng: -122.36633544921875 },
-        southWest: { lat: 37.72150667205263, lng: -122.50366455078125 }
+        northEast: { lat: 38.17633102776857, lng: - 122.19538217544554 },
+        southWest: { lat: 37.37526986998601, lng: -122.63616567611693 }
     });
     this.MarkerManager = new MarkerManager(this.map);
   

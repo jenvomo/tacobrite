@@ -49,25 +49,6 @@ class EventForm extends React.Component {
         this.setState({sale_start_date: event.sale_start_date.date});
         this.setState({sale_end_date: event.sale_end_date.date});
         this.setState({sale_end_time: event.sale_end_time.slice(-13, -8)});
-
-          // if ((event.date.month < 10) && (event.date.day < 10)) {
-          //   this.setState({
-          //     date: `${event.date.yr}-0${event.date.month}-0${event.date.day}`
-          //   })
-          // } else if ((event.date.month < 10) && (event.date.day >= 10)){
-          //   this.setState({
-          //     date: `${event.date.yr}-0${event.date.month}-${event.date.day}`
-          //   })
-          // } else if ((event.date.month >= 10) && (event.date.day < 10)){
-          //   this.setState({
-          //     date: `${event.date.yr}-${event.date.month}-0${event.date.day}`
-          //   })
-          // } else {
-          //   this.setState({
-          //     date: `${event.date.yr}-${event.date.month}-${event.date.day}`
-          //   })
-          // }
-
       })
     }
   }
@@ -117,6 +98,7 @@ class EventForm extends React.Component {
   }
 
   handleFile(e) {
+    e.stopPropogation();
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {

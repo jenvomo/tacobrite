@@ -26,7 +26,6 @@ class EventShow extends React.Component {
     const { event } = this.props;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-   
     // const { date, time, title, description, imageUrl } = this.props.event;
     return (
       <div className="event-show">
@@ -53,7 +52,7 @@ class EventShow extends React.Component {
 
                   <div className="loc">{event.loc_ln_one}</div>
 
-                  <div className="price">${event.tix_price}.00</div>
+                  <div className="price">{event.tix_price == 0 ? 'Free' : `\$${event.tix_price}.00`}</div>
                 </div>
               </div>
 
@@ -71,8 +70,8 @@ class EventShow extends React.Component {
               <div className="timing">
                 <div className="header">Date and Time</div>
                 { event.time.min < 10 ?
-                  <div className="date">{days[event.date.cwday -1]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
-                  <div className="date">{days[event.date.cwday -1]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
+                  <div className="date">{days[event.date.cwday % 7]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:0{event.time.min}</div> :
+                  <div className="date">{days[event.date.cwday % 7]}, {months[event.date.month - 1]} {event.date.day}, {event.time.hour}:{event.time.min}</div>
                 }
               </div>
             </div>

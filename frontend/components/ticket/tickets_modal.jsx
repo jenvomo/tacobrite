@@ -39,7 +39,7 @@ class TicketsModal extends React.Component {
             <div className="ticket-item">
               <div className="ticket-info">
                 <div className="ticket-title">{this.props.event.tix_title}</div>
-                <div className="ticket-price">${this.props.event.tix_price}.00</div>
+                <div className="ticket-price">{this.props.event.tix_price == 0 ? 'Free' : `\$${this.props.event.tix_price}.00`}</div>
               </div>
 
               <select onChange={this.updateQty} defaultValue="1">
