@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { updateFilters } from '../../actions/filter_actions';
 import { fetchEvents } from '../../actions/event_actions';
+import { fetchCategories } from '../../actions/category_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   events: state.entities.events,
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   updateFilters: (filters) => dispatch(updateFilters(filters)),
-  fetchEvents: (filters) => dispatch(fetchEvents(filters))
+  fetchEvents: (filters) => dispatch(fetchEvents(filters)),
+  fetchCategories: () => dispatch(fetchCategories())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventIndex);

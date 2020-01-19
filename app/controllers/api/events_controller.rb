@@ -22,7 +22,8 @@ class Api::EventsController < ApplicationController
 
   def index
     if params[:category]
-      @events = Event.where(category: params[:category])
+      cat_id = Category.where(title: params[:category])
+      @events = Event.where(category_id: cat_id)
     elsif params[:northLat]
       @events = Event.in_bounds({
         northEast: { 

@@ -42,13 +42,11 @@ class CategoryEventIndex extends React.Component {
 
         <div className="cat-options">
           <div id="All" className="selected" onClick={() => this.clickIt(null)}>All</div>
-          <div id="Beef" onClick={() => this.clickIt("Beef")}>Beef</div>
-          <div id="Breakfast" onClick={() => this.clickIt("Breakfast")}>Breakfast</div>
-          <div id="Chicken" onClick={() => this.clickIt("Chicken")}>Chicken</div>
-          <div id="Fish" onClick={() => this.clickIt("Fish")}>Fish</div>
-          <div id="Pork" onClick={() => this.clickIt("Pork")}>Pork</div>
-          <div id="Vegan" onClick={() => this.clickIt("Vegan")}>Vegan</div>
-          <div id="Vegetarian" onClick={() => this.clickIt("Vegetarian")}>Vegetarian</div>
+
+          {this.props.categories.map(category => (
+            <div key={category.id} id={category.title} onClick={() => this.clickIt(category.title)}>{category.title}</div>
+          ))}
+
         </div>
       </div>
     )

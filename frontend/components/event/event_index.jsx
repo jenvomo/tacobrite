@@ -16,6 +16,7 @@ class EventIndex extends React.Component {
   
   componentDidMount () {
     this.props.fetchEvents(this.state);
+    this.props.fetchCategories();
   }
 
   update(filter, value) {
@@ -43,7 +44,7 @@ class EventIndex extends React.Component {
         <SplashSearchForm />
 
         </div>
-        <CategoryEventIndex update={this.update} />
+        {this.props.categories ? <CategoryEventIndex categories={Object.values(this.props.categories)} update={this.update} /> : null }
         { events ?
           (<ul className='index-events-list'>
             {Object.values(events).map(event => (
