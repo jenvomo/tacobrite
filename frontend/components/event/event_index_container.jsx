@@ -6,7 +6,8 @@ import { fetchEvents } from '../../actions/event_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   events: state.entities.events,
-  errors: state.errors
+  errors: state.errors,
+  categories: state.entities.categories
 });
 
 

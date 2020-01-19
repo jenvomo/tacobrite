@@ -6,7 +6,8 @@ import ticketsReducer from './tickets_reducer';
 const entitiesReducer = combineReducers({
   users: usersReducer,
   events: eventsReducer,
-  tickets: ticketsReducer
+  tickets: ticketsReducer,
+  categories: categoriesReducer
 });
 
 export default entitiesReducer;

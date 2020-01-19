@@ -45,12 +45,14 @@ class Event < ApplicationRecord
   foreign_key: :organizer_id,
   class_name: :User
 
+  belongs_to :category
+
   has_many :tickets
 
 
   def ensure_photo
     unless self.photo.attached?
-      self.photo.attach(io: File.open("app/assets/images/SCORE.jpg"), filename: "SCORE.jpg")
+      self.photo.attach(io: File.open("app/assets/images/misc.png"), filename: "misc.png")
     end
   end
 
