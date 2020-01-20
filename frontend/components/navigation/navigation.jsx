@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UserNavigation from '../user_navigation/user_navigation';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 const Navigation = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -13,7 +13,7 @@ const Navigation = ({ currentUser, logout }) => {
           </div>
         </Link>
 
-        <SearchBar />
+        <SearchBarContainer />
       </div>
 
       <ul className='main-nav-options'>
@@ -33,7 +33,7 @@ const Navigation = ({ currentUser, logout }) => {
           </div>
         </Link>
         
-        <SearchBar />
+        <SearchBarContainer />
       </div>
 
       <ul className='main-nav-options'>

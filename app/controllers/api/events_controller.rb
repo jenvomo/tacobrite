@@ -21,7 +21,9 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    if params[:category]
+    if params[:search]
+      @events = query_params
+    elsif params[:category]
       cat_id = Category.where(title: params[:category])
       @events = Event.where(category_id: cat_id)
     elsif params[:northLat]
@@ -60,5 +62,21 @@ class Api::EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :description, :date, :time, :end_date, :end_time, :organizer_description, :organizer_name, :photo, :loc_ln_one, :tix_qty, :tix_price, :tix_title, :tix_desc , :sale_start_date, :sale_start_time, :sale_end_date, :sale_end_time, :tix_qty_per_min, :tix_qty_per_max, :category_id)
+  end
+
+  def query_params
+    q_params = params[:search].split(" ")
+    events = []
+
+    q_params.each do |word|
+      # Category.where("lower(title) LIKE ?", "%#{word.downcase}%").each do |category|
+      #   cat_id = category.id
+      #   events += Event.where("category_id = ?", cat_id) if cat_id
+      # end
+
+      events += Event.where("lower(title) LIKE ?", "%#{word.downcase}%")
+    end
+    # debugger
+    return events
   end
 end

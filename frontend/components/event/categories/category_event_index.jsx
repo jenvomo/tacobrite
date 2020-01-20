@@ -26,6 +26,7 @@ class CategoryEventIndex extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.updateSearch({search: ""})
     this.props.history.push("/events/search");
   }
 

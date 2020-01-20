@@ -1,7 +1,8 @@
-import { fetchEvents } from "../actions/event_actions";
+import { fetchEvents, fetchEvent } from "../actions/event_actions";
 
 export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
 export const UPDATE_FILTERS = 'UPDATE_FILTERS';
+export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 
 export const changeCategory = category => {
   return ({
@@ -9,6 +10,11 @@ export const changeCategory = category => {
     category
   })
 };
+
+export const changeSearch = search => ({
+  type: UPDATE_SEARCH,
+  search
+})
 
 export const changeBounds = bounds => ({
   type: UPDATE_BOUNDS,
@@ -32,5 +38,10 @@ export const updateBounds = bounds => (dispatch, getState) => {
 
 export const updateFilters = filters => (dispatch, getState) => {
   dispatch(changeFilters(filters));
+  return fetchEvents(getState().ui.filters)(dispatch);
+}
+
+export const updateSearch = search => (dispatch, getState) => {
+  dispatch(changeSearch(search));
   return fetchEvents(getState().ui.filters)(dispatch);
 }

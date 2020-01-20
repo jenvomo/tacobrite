@@ -1,5 +1,16 @@
 export const fetchEvents = (filters) => {
-  if (filters.bounds && filters.category) {
+  // debugger
+  if (filters.bounds && filters.category && filters.search) {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/events?category=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}&search=${filters.search}`
+    })
+  } else if (filters.bounds && filters.search) {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/events?northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}&search=${filters.search}`
+    })
+  } else if (filters.bounds && filters.category) {
     return $.ajax({
       method: 'GET',
       url: `/api/events?category=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}`

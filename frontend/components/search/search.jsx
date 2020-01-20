@@ -8,7 +8,10 @@ class Search extends React.Component {
     return (
       <div className="events-search">
         <div className="filters"></div>
-        <EventSearchIndex events={this.props.events} />
+        <EventSearchIndex 
+          events={this.props.events} 
+          updateSearch={this.props.updateSearch} 
+          search={this.props.search} />
         <EventMap 
           events={this.props.events} 
           fetchEvents={this.props.fetchEvents} 
