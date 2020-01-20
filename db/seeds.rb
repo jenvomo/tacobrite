@@ -516,6 +516,133 @@ loc_ln_one: '1045 San Pablo Ave, Albany, CA ',
     tix_price: 10.00,
     category_id: cat6.id})
 
+event_18 = Event.create({ 
+    title: 'Tacos Al Pastor', 
+    description: 'Traditional Tacos Al Pastor start with layers of marinated pork that are slowly grilled on a spit, reminiscent of shawarma for gyros. My version is done in the kitchen, and I’m sharing four ways to make it. One method slow roasted in the oven, another on the grill, the other in a Slow Cooker and lastly in the Instant Pot. Just imagine the aroma of marinated pork shoulder, flavored with various chiles, pineapple, onion, garlic and cinnamon slow roasting. Sound good?
+
+I for one don’t see why carnitas needs to get all the attention. Tacos Al Pastor is one to try!
+
+However you choose to make this, know that your house will have the absolute best aroma to entice anyone for a delicious meal. Al Pastor is the new carnitas.', 
+    date: (Date.today + 4), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 4), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: demo_user.id, 
+    organizer_name: 'Kevin is Cooking',
+    organizer_description: 'However you choose to make this, know that your house will have the absolute best aroma to entice anyone for a delicious meal. Al Pastor is the new carnitas.',
+    loc_ln_one: '301 Corte Madera Town Center, Corte Madera, CA',
+    loc_lat: 37.936275, 
+    loc_long: -122.518824,
+    tix_title: 'Early Bird',
+    tix_qty: 50,
+    tix_price: 25.00,
+    category_id: cat5.id})
+
+event_19 = Event.create({ 
+    title: 'Queso Fundido', 
+    description: 'Are you ready for the most weirdly delicious mash-up of two of our favorite things?!  Queso fundido-melty cheese layered with chorizo, cilantro, green onions, etc.- and tacos-which need no further explanation-will meet here to create a cheese-filled double-layered taco.  Seriously, what is going on?!  And how has Taco Bell not created and trademarked this?!
+    
+I’ve made queso fundido but to put it in a taco?  That’s just crazy.  No, actually that’s just how the mind of Jessica, from How Sweet Eats. works.  I saw it come through my e-mail one day and knew it would be on the menu within the week!  It’s pretty simple to put together too…the cheese sauce only takes a few minutes and you just need to sauté some fresh chorizo and poblano peppers to create the filling.  If you’ve never had a poblano, they’re not super spicy, but do have a little kick.  Definitely try them with this as they’re traditional in a queso fundido and very delicious alongside the chorizo! Serve with any accompaniments you like-I, of course, need green onions, cilantro, cheese and sour cream. 
+        
+Have I told you that dairy is more greatest foe…but also the one I love the most?  I could never stop eating it.
+
+Have I also told you about how I used to order queso fundido (literally just a big skillet of hot melted cheese) for dinner at a restaurant I frequented when traveling for work?  Like that was all I ate…for dinner…#livingmybestlife.', 
+    date: (Date.today + 5), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 5), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: demo_user.id, 
+    organizer_name: 'Never Not Hungry',
+    organizer_description: 'Cooking puts a fire in my belly unlike anything I have ever felt before and gives me a place in this world. I have been and continue to be endlessly awed and inspired by other cooks and want to pay it forward for others.  My dream for this site is to inspire others to get into their kitchens and cook for themselves and those they love. I want everyone to learn, experiment, experience and improve, to try new recipes and taste new cultures and for all to believe they are capable of creating delicious and beautiful food in their own kitchens. Please pull up a chair, grab a dog to put on your lap (I’m one dog-lovin’ mother**), and join me as I do something that scares me: share my love with the world.',
+    loc_ln_one: '600 Monterey Blvd, San Francisco, CA',
+    loc_lat: 37.734427, 
+    loc_long: -122.448526,
+    tix_title: 'RSVP',
+    tix_qty: 50,
+    tix_price: 5.00,
+    category_id: cat5.id})
+
+event_20 = Event.create({ 
+    title: 'Blackened Salmon Tacos', 
+    description: 'It’s safe to say salmon and I are having a moment. Crispy fillets, burgers, citrus bakes and now the favorite—my forever love language—tacos are added to the mix. To be honest, I haven’t made a salmon taco before so I wasn’t entirely sure what to expect, but the truth of the matter is, making these was a truly anointed moment and God is gracing us with His goodness in this taco. 
+
+The rub and the coriander in the slaw are what, I think, really make this taco. I imagine the rub would be good on a lot of proteins other than salmon, but I’ll leave that to the grill masters of the universe and I’ll stick with my fish and veggies. It has a bit of coconut sugar in it, so it offers a hint of sweetness to kind of round out some of the spices and flavors. I recommend using coconut sugar, but if you don’t have any you could try halving the amount of sugar and using brown sugar, or honey may be an interesting substitute. I used about half of the rub for 2 3oz fillets (only covering the flesh side), so there was enough leftover for next time. All together this makes about 6-8 tacos depending on how much you want to fill them, and the rub is easily doubled or tripled for a larger meal or group. It would also keep in a jar for a while if you end up wanting to use it often. 
+
+And now we come to the part of the story where I practice some radial candor. The oh so lovely people at Market House sent me a few fillets of salmon to try out there service. At the the sight of their branding, it was basically love at first sight, but having had a touch and go type of relationship with delivery services, I was waiting to see how the quality of the salmon turned out to be. You know I wouldn’t lie to anyone when it comes to matters of food (the heart), love languages, and heaven knows—tacos. So believe me when I say: this salmon rules.
+
+Market House has set up their service to be extremely user friendly, informative, and favors the adamant foodie. If you like to cook, or even more so, like to eat, I would honestly recommend cruising over to their site and seeing what they have to offer. I have a few more fillets in the freezer currently, and already have a dinner and two recipes on the docket. Stay tuned for more salmon, because as we know, we’re having a moment. ', 
+    date: (Date.today + 2), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 2), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: hbh.id, 
+    organizer_name: 'FEMINISTE',
+    organizer_description: 'The most sacred space of my home is my dining room table. People let their guards down, tell stories, share their proudest moments, deepest fears and hopes for the future—food is the universal equalizer, bringing us together.  The Féminsite is simply an extension of those moments, creating fresh, flavorful meals fit for conversation and community, picnics in the park or late wine nights. Our community is what shapes us into who we are, and with the help of these recipes, I hope you’re willing to have authentic conversations with the ones you love around your own tables. ',
+    loc_ln_one: '401 13th St, San Francisco, CA ',
+    loc_lat: 37.829878, 
+    loc_long: -122.373756,
+    tix_title: 'RSVP',
+    tix_qty: 50,
+    tix_price: 0.00,
+    category_id: cat4.id})
+
+event_21 = Event.create({ 
+    title: 'Marinated Ahi Tuna', 
+    description: 'These Marinated Ahi Tuna Tacos put me right into another overstuffed taco situation! It was inevitable with tender, citrusy tuna nestled on crunchy Asian Slaw and drizzled with Cilantro Pistachio Pesto. 
+
+My kids never tire of watching me overstuff or overfill things to the point of no return. I’d be much better off with a knife and fork, but what fun would that be? Having seam-splitting tortillas and pesto running down my arm is by far the preferred m.o. 🙂
+
+Bathing the tuna in an Asian-inspired marinade gives it a deliciously subtle sweet and tangy flavor. Sweet Cara Cara orange combines with lemon, shallots, garlic, grated ginger, fresh parsley, soy sauce, and sesame and olive oil.', 
+    date: (Date.today + 5), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 5), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: hbh.id, 
+    organizer_name: 'Give it Some Thyme',
+    organizer_description: 'I’m self-taught and inspired by a vast collection of food magazines, cookbooks, and three generations of recipe binders. My initial interest in cooking started when Mom had to pull a chair up to the counter so I could see in the bowl. As I grew, so did a passion for great food. I’ve always loved food television, from PBS syndication of Julia Child and Graham Kerr to present day Food Network with Bobby, Ina, Rachael, and of course, Emeril. In full disclosure, we watched so much Emeril Live when my now 17-year-old son was a baby, one of his first words was ‘BAM!’. ',
+    loc_ln_one: '2167 Meeker Ave, Richmond, CA',
+    loc_lat: 37.934318, 
+    loc_long: -122.344833,
+    tix_title: 'Early Bird',
+    tix_qty: 50,
+    tix_price: 5.00,
+    category_id: cat4.id})
+
+event_22 = Event.create({ 
+    title: 'Salmon Poke Sushi Tacos', 
+    description: 'Gimme sushi any day and I am a happy woman! Okay, so this is not really a taco, but it’s a fun way to serve sushi. If your rolling skills are not very good or you don’t have the patience for it, this is an easier way to serve it. You will just need a 9 cm mold to make the round nori sheets. To the salmon poke, I added a bit of chili oil and a sprinkle of togarashi for some heat.', 
+    date: (Date.today + 11), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 11), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: hbh.id, 
+    organizer_name: 'Cravings in Amsterdam',
+    organizer_description: 'As long as I can remember my life has revolved around food. I love recipes that evoke memories. From helping my mom cook, watching cooking shows, to finally embarking on a mini culinary adventure on my own. Right after I finished hospitality management, I moved to Lyon for four months to take a cooking course at L’Institut Paul Bocuse. Those months were a feast for my taste buds.',
+    loc_ln_one: '',
+    loc_lat: 37.734427, 
+    loc_long: -122.448526,
+    tix_title: 'RSVP',
+    tix_qty: 50,
+    tix_price: 10.00,
+    category_id: cat4.id})
+
+event_23 = Event.create({ 
+    title: 'Crunchy Seaweed Tacos', 
+    description: 'These crunchy, fiber-packed tacos use roasted seaweed snacks as taco shells. Stuffed with heart-healthy avocado and smoked salmon, they are perfect for a guilt-free late-night snack. ', 
+    date: (Date.today + 5), 
+    time: Time.new(2020, 9, 9, 7, 30), 
+    end_date: (Date.today + 5), 
+    end_time: Time.new(2020, 9, 9, 10, 30), 
+    organizer_id: hbh.id, 
+    organizer_name: 'Food',
+    loc_ln_one: '343 Clement St, San Francisco, CA',
+    loc_lat: 37.799720, 
+    loc_long: -122.460877,
+    tix_title: 'RSVP',
+    tix_qty: 50,
+    tix_price: 10.00,
+    category_id: cat4.id})
+
 event_1.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/chicken/korean-krispy.jpg"), filename: "korean-krispy.jpg")
 event_2.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/chicken/20-min.jpg"), filename: "20-min.jpg")
 
@@ -534,3 +661,11 @@ event_14.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.c
 event_15.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/vegetarian/chickpea.jpg"), filename: "chickpea.jpg")
 event_16.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/vegetarian/corn.jpg"), filename: "corn.jpg")
 event_17.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/vegetarian/misc.jpg"), filename: "misc.jpg")
+
+event_18.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/pork/al-pastor.jpg"), filename: "al-pastor.jpg")
+event_19.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/pork/queso-fundido.jpg"), filename: "queso-fundido.jpg")
+
+event_20.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/fish/salmon.jpg"), filename: "salmon.jpg")
+event_21.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/fish/tuna.jpg"), filename: "tuna.jpg")
+event_22.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/fish/sushiTacos2.png"), filename: "sushiTacos2.png")
+event_23.photo.attach(io: open("https://tacobrite-seeds.s3-us-west-1.amazonaws.com/fish/SeaweedTacosPoke.png"), filename: "SeaweedTacosPoke.png")
