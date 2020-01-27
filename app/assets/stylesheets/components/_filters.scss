@@ -1,10 +1,14 @@
   .filters {
+    padding: 20px;
     width: 25vw;
     background-color: #F8F7FA;
+    color: #4B4D63;
 
     .title {
-      font-size: 28px;
+      font-size: 22px;
       padding: 10px 0;
+      color: #39364f;
+      font-weight: 600;
     }
 
     .cat-header {
@@ -13,17 +17,20 @@
       font-weight: bold;
 
       div {
-        padding: 5px 10px;
+        padding: 10px;
         font-weight: normal;
         font-size: 15px;
         cursor: pointer;
         margin: 5px 0;
-        border-left: 2px solid #F8F7FA;
+        border-radius: 4px;
+        border-left: 4px solid #F8F7FA;
       }
 
       .selected {
         background-color: white;
-        border-left: 2px solid #fd348b;
+        border-left: 4px solid #fd348b;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.05);
+
       }
     }
     
