@@ -11,7 +11,8 @@ class SearchBar extends React.Component {
     this.update = this.update.bind(this);
   }
   
-  submitSearch() {
+  submitSearch(e) {
+    e.preventDefault();
     this.props.updateSearch(this.state.search);
     this.setState({search: ""});
     this.props.history.push("/events/search");

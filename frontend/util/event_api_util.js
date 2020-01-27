@@ -1,9 +1,8 @@
 export const fetchEvents = (filters) => {
-  // debugger
   if (filters.bounds && filters.category && filters.search) {
     return $.ajax({
       method: 'GET',
-      url: `/api/events?category=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}&search=${filters.search}`
+      url: `/api/events?category_id=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}&search=${filters.search}`
     })
   } else if (filters.bounds && filters.search) {
     return $.ajax({
@@ -13,7 +12,12 @@ export const fetchEvents = (filters) => {
   } else if (filters.bounds && filters.category) {
     return $.ajax({
       method: 'GET',
-      url: `/api/events?category=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}`
+      url: `/api/events?category_id=${filters.category}&northLat=${filters.bounds.northEast.lat}&southLat=${filters.bounds.southWest.lat}&westLng=${filters.bounds.southWest.lng}&eastLng=${filters.bounds.northEast.lng}`
+    })
+  } else if (filters.search) {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/events?search=${filters.search}`
     })
   } else if (filters.bounds) {
     return $.ajax({
@@ -23,7 +27,7 @@ export const fetchEvents = (filters) => {
   } else if (filters.category) {
     return $.ajax({
       method: 'GET',
-      url: `/api/events?category=${filters.category}`
+      url: `/api/events?category_id=${filters.category}`
     })
   } else {
     return $.ajax({

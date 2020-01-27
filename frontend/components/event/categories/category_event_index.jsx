@@ -8,6 +8,10 @@ class CategoryEventIndex extends React.Component {
     this.clickIt = this.clickIt.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // componentWillUnmount() {
+  //   this.props.changeCategory(null);
+  // }
   
   select(category) {
     document.querySelectorAll(".selected").forEach(el => el.classList.remove("selected"));
@@ -26,7 +30,7 @@ class CategoryEventIndex extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateSearch({search: ""})
+    this.props.changeSearch(null);
     this.props.history.push("/events/search");
   }
 
@@ -45,7 +49,7 @@ class CategoryEventIndex extends React.Component {
           <div id="All" className="selected" onClick={() => this.clickIt(null)}>All</div>
 
           {this.props.categories.map(category => (
-            <div key={category.id} id={category.title} onClick={() => this.clickIt(category.title)}>{category.title}</div>
+            <div key={category.id} id={category.id} onClick={() => this.clickIt(category.id)}>{category.title}</div>
           ))}
 
         </div>

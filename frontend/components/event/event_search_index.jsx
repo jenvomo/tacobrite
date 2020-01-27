@@ -16,6 +16,7 @@ class EventSearchIndex extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     this.props.updateSearch(this.state.search);
   }
 

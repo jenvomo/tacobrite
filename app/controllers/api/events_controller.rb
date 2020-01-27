@@ -21,25 +21,7 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    if params[:search]
-      @events = query_params
-    elsif params[:category]
-      cat_id = Category.where(title: params[:category])
-      @events = Event.where(category_id: cat_id)
-    elsif params[:northLat]
-      @events = Event.in_bounds({
-        northEast: { 
-          lat: params[:northLat],
-          lng: params[:eastLng]
-        },
-        southWest: { 
-          lat: params[:southLat],
-          lng: params[:westLng]
-        }
-      })
-    else
-      @events = Event.all
-    end
+    @events = Event.search(Rack::Utils.parse_nested_query(request.query_string))
     render :index
   end
 
@@ -69,14 +51,9 @@ class Api::EventsController < ApplicationController
     events = []
 
     q_params.each do |word|
-      # Category.where("lower(title) LIKE ?", "%#{word.downcase}%").each do |category|
-      #   cat_id = category.id
-      #   events += Event.where("category_id = ?", cat_id) if cat_id
-      # end
-
-      events += Event.where("lower(title) LIKE ?", "%#{word.downcase}%")
+      events += Event
+        .where("lower(title) LIKE ?", "%#{word.downcase}%")
     end
-    # debugger
     return events
   end
 end

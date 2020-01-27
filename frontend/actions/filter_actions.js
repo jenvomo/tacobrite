@@ -3,6 +3,7 @@ import { fetchEvents, fetchEvent } from "../actions/event_actions";
 export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
 export const UPDATE_FILTERS = 'UPDATE_FILTERS';
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
+export const UPDATE_CATEGORY = 'UPDATE_CATEGORY';
 
 export const changeCategory = category => {
   return ({

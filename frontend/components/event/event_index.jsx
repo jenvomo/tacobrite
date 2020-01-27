@@ -1,6 +1,6 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
-import SplashSearchForm from './splash_search_form';
+import SplashSearchContainer from './splash_search_container';
 import CategoryEventIndex from './categories/category_event_index';
 
 class EventIndex extends React.Component {
@@ -14,7 +14,7 @@ class EventIndex extends React.Component {
     this.update = this.update.bind(this);
   }
   
-  componentDidMount () {
+  componentDidMount() {
     this.props.fetchEvents(this.state);
     this.props.fetchCategories();
   }
@@ -41,10 +41,10 @@ class EventIndex extends React.Component {
             <div className="splash-verbiage-close">TACO bout it</div>
           </div>
 
-        <SplashSearchForm />
+        <SplashSearchContainer />
 
         </div>
-        {this.props.categories ? <CategoryEventIndex categories={Object.values(this.props.categories)} update={this.update} /> : null }
+        {this.props.categories ? <CategoryEventIndex categories={Object.values(this.props.categories)} changeCategory={this.props.changeCategory} update={this.update} changeSearch={this.props.changeSearch}/> : null }
         { events ?
           (<ul className='index-events-list'>
             {Object.values(events).map(event => (

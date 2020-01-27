@@ -5,7 +5,7 @@ let defaultState = {
   southWest: { lat: 37.72150667205263, lng: -122.50366455078125 }
 };
 
-const boundsReducer = (state = defaultState, action) => {
+const boundsReducer = (state = null, action) => {
   Object.freeze(state);
 
   switch (action.type) {
