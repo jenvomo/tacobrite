@@ -7,6 +7,7 @@ import { updateBounds, updateSearch, updateCategory } from '../../actions/filter
 const mapStateToProps = state => ({
   events: state.entities.events,
   search: state.ui.filters.search,
+  selectedCategory: state.ui.filters.category,
   categories: state.entities.categories
 });
 

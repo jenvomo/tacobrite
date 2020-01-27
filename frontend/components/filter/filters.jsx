@@ -4,6 +4,19 @@ class Filters extends React.Component {
   componentDidMount() {
     this.props.fetchCategories();
   }
+
+  change(category) {
+    this.props.updateCategory(category);
+    let list = document.getElementsByClassName("cat-option");
+    for (let item of list) {
+      item.classList.remove("selected");
+    }
+    if (category == null) {
+      document.getElementById("null").classList.add("selected");
+    } else {
+      document.getElementById(category).classList.add("selected");
+    }
+  }
   
   render() {
     if (this.props.categories) {
@@ -15,12 +28,18 @@ class Filters extends React.Component {
             <div>This weekend</div>
             <div>Next Month</div>
           </div>
-            <div>More dates</div>
   
           <div className="cat-header">Category
-          <div onClick={() => this.props.updateCategory(null)}>Any category</div>
+            <div 
+              id="null" 
+              className={this.props.selectedCategory ? "cat-option" : "cat-option selected"}
+              onClick={() => this.change(null)}>Any category</div>
+
             {this.props.categories.map(category => (
-              <div onClick={() => this.props.updateCategory(category.id)}>{category.title}</div>
+              <div 
+                id={category.id} 
+                className={this.props.selectedCategory == category.id ? "cat-option selected" : "cat-option"}
+                onClick={() => this.change(category.id)}>{category.title}</div>
               ))}
           </div>
   

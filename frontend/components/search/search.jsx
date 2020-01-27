@@ -11,7 +11,8 @@ class Search extends React.Component {
         <Filters 
           categories={Object.values(this.props.categories)} 
           updateCategory={this.props.updateCategory}
-          fetchCategories={this.props.fetchCategories} /> 
+          fetchCategories={this.props.fetchCategories} 
+          selectedCategory={this.props.selectedCategory} /> 
         <EventSearchIndex 
           events={this.props.events} 
           updateSearch={this.props.updateSearch} 

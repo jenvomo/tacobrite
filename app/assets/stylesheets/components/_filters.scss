@@ -1,0 +1,30 @@
+  .filters {
+    width: 25vw;
+    background-color: #F8F7FA;
+
+    .title {
+      font-size: 28px;
+      padding: 10px 0;
+    }
+
+    .cat-header {
+      font-size: 16px;
+      padding: 20px 0;
+      font-weight: bold;
+
+      div {
+        padding: 5px 10px;
+        font-weight: normal;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 5px 0;
+        border-left: 2px solid #F8F7FA;
+      }
+
+      .selected {
+        background-color: white;
+        border-left: 2px solid #fd348b;
+      }
+    }
+    
+  }
