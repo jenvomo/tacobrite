@@ -21,10 +21,10 @@ const Footer = state => {
           <h1>Meet the Developer</h1>
 
           <div className="dev-links">
-            <a href="https://www.linkedin.com/in/meetjenniferkennedy/">
+            <a href="https://www.linkedin.com/in/meetjenvonmoltke/">
               <img src={window.images.linkedin}></img>
             </a>
-            <a href="https://github.com/jenkennedy">
+            <a href="https://github.com/jenvomo">
               <img src={window.images.github}></img>
             </a>
           </div>
