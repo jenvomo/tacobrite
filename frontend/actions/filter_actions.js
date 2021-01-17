@@ -4,6 +4,14 @@ export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
 export const UPDATE_FILTERS = 'UPDATE_FILTERS';
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 export const UPDATE_CATEGORY = 'UPDATE_CATEGORY';
+export const UPDATE_PRICE = 'UPDATE_PRICE';
+
+export const changePrice = price => {
+  return ({
+    type: UPDATE_PRICE,
+    price
+  })
+};
 
 export const changeCategory = category => {
   return ({
@@ -29,6 +37,11 @@ export const changeFilters = filters => ({
 
 export const updateCategory = category => (dispatch, getState) => {
   dispatch(changeCategory(category));
+  return fetchEvents(getState().ui.filters)(dispatch);
+}
+
+export const updatePrice = price => (dispatch, getState) => {
+  dispatch(changePrice(price));
   return fetchEvents(getState().ui.filters)(dispatch);
 }
 
