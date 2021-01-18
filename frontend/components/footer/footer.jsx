@@ -3,18 +3,26 @@ import { Link } from 'react-router-dom';
 
 
 const Footer = state => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <div className='footer'>
       <div className='footer-top'>
 
         <div className="find-events">
           <h1>Find Events</h1>
-          <Link className="links" to={`/events`}>Browse Events</Link>
+          <Link className="links"
+            onClick={scrollToTop}
+            to={`/events`}>Browse Events</Link>
         </div>
 
         <div className="create-event">
           <h1>Plan Events</h1>
-          <Link className="links" to={`/event/new`}>Create an Event</Link>
+          <Link className="links"
+            onClick={scrollToTop}
+            to={`/event/new`}>Create an Event</Link>
         </div>
 
         <div className="meet-developer">
