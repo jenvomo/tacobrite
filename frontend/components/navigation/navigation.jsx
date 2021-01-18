@@ -7,7 +7,7 @@ const Navigation = ({ currentUser, logout }) => {
   const scrollToBottom = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
-  
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -50,7 +50,9 @@ const Navigation = ({ currentUser, logout }) => {
       </div>
 
       <ul className='main-nav-options'>
-        <Link className='nav-link' to='/events'>Browse Events</Link>
+        <Link className='nav-link'
+          onClick={scrollToTop}
+          to='/events'>Browse Events</Link>
         <li className='nav-link'
           onClick={scrollToBottom}>Help</li>
         <Link className='nav-link create'

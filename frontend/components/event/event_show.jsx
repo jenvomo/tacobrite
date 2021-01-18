@@ -10,6 +10,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const eventId = this.props.match.params.eventId;
     this.props.fetchEvent(eventId);
   }
