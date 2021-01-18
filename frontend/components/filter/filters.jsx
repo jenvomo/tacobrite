@@ -39,8 +39,10 @@ class Filters extends React.Component {
       return (
         <div className="filters">
           <div className="title">Filters</div>
-          {/* <div className="cat-header">Date
-            <div id="today" 
+          <div className="cat-header">Date
+            <div id="any-time"
+                className="time-option selected">Anytime</div>
+            {/* <div id="today" 
               className="time-option"
               onClick={() => this.selectTimeFilter("today")}>Today</div>
             <div id="weekend" 
@@ -48,8 +50,8 @@ class Filters extends React.Component {
               onClick={() => this.selectTimeFilter("weekend")}>This weekend</div>
             <div id="month" 
               className="time-option selected"
-              onClick={() => this.selectTimeFilter("month")}>Next Month</div>
-          </div> */}
+              onClick={() => this.selectTimeFilter("month")}>Next Month</div> */}
+          </div>
   
           <div className="cat-header">Category
             <div 
@@ -66,7 +68,7 @@ class Filters extends React.Component {
           </div>
   
           <div className="cat-header">Price
-            <div id="any"
+            <div id="any-price"
                 className="price-option selected">Any</div>
             {/* <div id="free"
               className="price-option selected"
