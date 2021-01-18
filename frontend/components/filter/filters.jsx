@@ -10,11 +10,7 @@ class Filters extends React.Component {
     for (let item of list) {
       item.classList.remove("selected");
     }
-    if (time == null) {
-      document.getElementById("null").classList.add("selected");
-    } else {
-      document.getElementById(time).classList.add("selected");
-    }
+    document.getElementById(time).classList.add("selected");
   }
 
   selectPriceFilter(price) {
@@ -22,11 +18,7 @@ class Filters extends React.Component {
     for (let item of list) {
       item.classList.remove("selected");
     }
-    if (price == null) {
-      document.getElementById("null").classList.add("selected");
-    } else {
-      document.getElementById(price).classList.add("selected");
-    }
+    document.getElementById(price).classList.add("selected");
   }
 
   change(category) {
@@ -47,17 +39,17 @@ class Filters extends React.Component {
       return (
         <div className="filters">
           <div className="title">Filters</div>
-          <div className="cat-header">Date
+          {/* <div className="cat-header">Date
             <div id="today" 
               className="time-option"
-              onClick={() => this.selectFilter("today")}>Today</div>
+              onClick={() => this.selectTimeFilter("today")}>Today</div>
             <div id="weekend" 
               className="time-option"
-              onClick={() => this.selectFilter("weekend")}>This weekend</div>
+              onClick={() => this.selectTimeFilter("weekend")}>This weekend</div>
             <div id="month" 
               className="time-option selected"
-              onClick={() => this.selectFilter("month")}>Next Month</div>
-          </div>
+              onClick={() => this.selectTimeFilter("month")}>Next Month</div>
+          </div> */}
   
           <div className="cat-header">Category
             <div 
@@ -74,12 +66,14 @@ class Filters extends React.Component {
           </div>
   
           <div className="cat-header">Price
-            <div id="free"
+            <div id="any"
+                className="price-option selected">Any</div>
+            {/* <div id="free"
               className="price-option selected"
               onClick={() => this.selectPriceFilter("free")}>Free</div>
             <div id="paid"
               className="price-option"
-              onClick={() => this.selectPriceFilter("paid")}>Paid</div>
+              onClick={() => this.selectPriceFilter("paid")}>Paid</div> */}
           </div>
         </div>
       )
