@@ -19,7 +19,7 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "set-value": ">=2.0.1",
+    "set-value": ">=4.0.1",
     "webpack": "^4.41.4"
   },
   "engines": {
